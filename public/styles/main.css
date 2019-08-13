@@ -1,3 +1,14 @@
+body {
+  margin: 0;
+  font-family: "archivoregular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
 .App {
   text-align: center;
 }
@@ -31,3 +42,11 @@
     transform: rotate(360deg);
   }
 }
+.Header {
+  height: 20vh;
+  background-color: #263238;
+  color: white;
+  font-family: "poppinsblack" !important;
+}
+
+/*# sourceMappingURL=main.css.map */

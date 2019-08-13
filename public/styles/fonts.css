@@ -1,0 +1,35 @@
+/* Adding Custom Font Families to the available fonts in CSS */
+
+@font-face {
+    font-family: 'poppinsblack';
+        src: url('http://localhost:3000/styles/fonts/poppins-black-webfont.woff2') format('woff2'),
+            url('http://localhost:3000/styles/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'archivoregular';
+    src: url('http://localhost:3000/styles/fonts/archivo-regular-webfont.woff2') format('woff2'),
+            url('http://localhost:3000/styles/fonts/archivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'poppinsblack';
+        src: url('https://neekode.com/styles/fonts/poppins-black-webfont.woff2') format('woff2'),
+            url('https://neekode.com/styles/fonts/poppins-black-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'archivoregular';
+    src: url('https://neekode.com/styles/fonts/archivo-regular-webfont.woff2') format('woff2'),
+            url('https://neekode.com/styles/fonts/archivo-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
