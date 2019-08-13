@@ -58,7 +58,7 @@ const init = (amt,rad,spd) =>
     // Default. If the two variables are found to be undefined (as with the initial page load), their default values are set to 100 and 50
     if (!amtCirc && !radCo && !movSpd)
     {
-        amtCirc = 500; radCo = 1.5; movSpd = 0.3;
+        amtCirc = 2000; radCo = 0.5; movSpd = 0.15;
     }
 
     // Init of Canvas
