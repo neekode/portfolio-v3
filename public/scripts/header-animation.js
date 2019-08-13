@@ -1,12 +1,27 @@
-/*
-    Interactive Animation utilizing the canvas HTML element.
+/* Interactive Animation utilizing the canvas HTML element. Built Using ES6 techniques in 2018.
 
-*/
+Reimplemented and Redesigned for portfolio in 2019. 
+
+By Neeko Blomgren (2019) */
 
 const onPageLoad = () =>
 {
     // Declaration of interval object
     let interval;
+
+    // Receives HTML elements into script
+    const amtInput = document.getElementById('amtInput');       // why don't i need these lines?
+    const radInput = document.getElementById('radInput');
+    const spdInput = document.getElementById('spdInput');
+
+    // Binding event handler to Render Button
+    document.getElementById('renderer').onclick = (e) =>  { interval = renderer(interval); };
+
+    // Binding event handler to Randomize Button
+    document.getElementById('randomer').onclick = (e) =>  { interval = randomer(interval) };
+
+
+    
     // Initial Default Page Load
     interval = init();
 }

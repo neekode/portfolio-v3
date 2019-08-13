@@ -48,6 +48,14 @@ body {
   padding: 2.5vw;
   font-size: 30px;
 }
+.Header .animation-controller {
+  position: absolute;
+  color: black;
+  border: 1px solid #37474f;
+  padding: 2.5vh;
+  margin: 2.5vh;
+  bottom: 0;
+}
 
 .About {
   height: 100vh;

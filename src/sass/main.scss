@@ -73,6 +73,15 @@ body {
             font-size: 30px;
         }
     }
+
+    .animation-controller {
+        position: absolute;
+        color: black;
+        border: 1px solid $secondary-color;
+        padding: 2.5vh;
+        margin: 2.5vh;
+        bottom: 0;
+    }
 }
 
 
