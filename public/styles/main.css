@@ -19,14 +19,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Header {
+.Intro {
   height: 100vh;
   background-color: #455a64;
   color: #e8eaf6;
   font-family: "poppinsblack";
   position: relative;
 }
-.Header .container {
+.Intro .container {
   text-align: center;
   width: 50vw;
   height: 25vh;
@@ -34,21 +34,21 @@ body {
   background-color: #37474f;
   border: 1px solid #455a64;
 }
-.Header .container :first-child {
+.Intro .container :first-child {
   font-size: 2.5em;
   line-height: 7.5vh;
 }
-.Header .container :nth-child(3) {
+.Intro .container :nth-child(3) {
   font-size: 1.5em;
 }
-.Header .container .description {
+.Intro .container .description {
   font-family: "archivoregular";
   width: 33vw;
   margin-top: 5vh;
   padding: 2.5vw;
   font-size: 30px;
 }
-.Header .animation-controller {
+.Intro .animation-controller {
   position: absolute;
   color: black;
   border: 1px solid #37474f;

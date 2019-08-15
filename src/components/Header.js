@@ -1,11 +1,10 @@
 import React from 'react';
 import Ballpit from './Ballpit.js';
-//import '../styles/Header.css';
 
-function Header() {
+function Intro() {
 
   return (
-    <div className="Header">
+    <div className="Intro">
         <Ballpit /> 
 
         <div className="container center">
@@ -21,4 +20,4 @@ function Header() {
   );
 }
 
-export default Header;
+export default Intro;

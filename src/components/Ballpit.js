@@ -2,10 +2,30 @@ import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
+/* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
+
+    Provides Intro Component with particle/circle animations which bounce around the screen
+    using the window viewport as the constraints. 
+    - Main Variables (of each Circle): Amount, Radius, Speed
+    - Default Values (In that order): 500, 2.5, 0.15 
+    - Interactivity: Using the animation-controller element, user can set new values for each
+    and re-render the animation using the provided inputs and buttons. There is also a randomize option.
+
+    Uses ES6-built animation I wrote last year (found on neekode's github), polishes the logic, 
+    and refactors it to properly suit React and newer build patterns.
+
+    Potential Changes and Upgrades:
+    - Implement Color and Color Options
+    - Different Shapes
+    - 
+    - New Name lol
+*/
+
 function Ballpit() {
-    const [amount, setAmount] = useState(100);
-    const [radius, setRadius] = useState(5);
-    const [speed, setSpeed] = useState(0.25);
+
+    const [amount, setAmount] = useState(500);
+    const [radius, setRadius] = useState(2.5);
+    const [speed, setSpeed] = useState(0.15);
 
     const [intervalObj,setIntObj] = useState();
 
@@ -21,6 +41,7 @@ function Ballpit() {
 
     useEffect(() => init(), []);
 
+    // Default argument values as initial state of a, r, s
     const init = (amt = amount, rad = radius, spd = speed) => {
         // Declaration of interval object
 
@@ -88,6 +109,7 @@ function Ballpit() {
         let newAmt = Math.random() * 500;
         let newRad = Math.random() * 100;
         let newSpd = Math.random() * 3;
+
 
         int = init(newAmt,newRad,newSpd);
         return int;
