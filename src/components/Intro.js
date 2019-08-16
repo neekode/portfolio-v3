@@ -9,8 +9,7 @@ function Intro() {
 
         <div className="container center">
             <span>Neeko Blomgren:</span>
-            <br />
-            <span>Web Developer</span>
+            <span> Web Developer</span>
             <br /> 
 
             <p className="description center"> Hello! I specialize in the Front-end, specifically with React.

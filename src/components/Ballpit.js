@@ -1,7 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-
 import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes'
 
 /* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
@@ -23,6 +22,10 @@ import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes'
     - New Name lol
     - Base default values from device type/viewport (polish responsive design)
     - Make canvas resizable by user
+
+    To Others: If you would like to re-implement this component you must make sure to have the shapes.js file,
+    create an HTML element which is then referenced right down below (ctrl+f: *HERE*), 
+    and add styles to the animation-controller element(s). 
 */
 
 function Ballpit() {
@@ -41,7 +44,8 @@ function Ballpit() {
     // Default (on pageload) argument values as initial state of amount, radius, and speed. 
     const init = (amt, rad, spd, onPageLoad = false) => {
         // Canvas, Context
-        const theCanvas = document.getElementById('myCanvas');
+
+        const theCanvas = document.getElementById('myCanvas'); // *HERE*
         const theContext = theCanvas.getContext('2d');
 
         // Resize to Window Viewport on pageload
@@ -131,22 +135,26 @@ function Ballpit() {
         <canvas id="myCanvas" width="0px" height="0px"></canvas>
 
         <div className="animation-controller">
-                Amount
-                <br />
-                <input onChange={handleChange} id="amtInput" value={amount} type="text" /> <br /> 
-				<br/> Radius Coefficient <br />
-				<input onChange={handleChange} id="radInput" value={radius} type="text" /> <br />
-				<br/> Movement Speed <br />
-				<input onChange={handleChange} id="spdInput" value={speed} type="text" /> <br />
+        <span className="header"> Animation Controller </span> 
+                
+                <div> Amount </div>
+                
+                <input onChange={handleChange} id="amtInput" value={amount} type="text" /> 
+				
+                <div> Radius Coefficient  </div>
+                
+				<input onChange={handleChange} id="radInput" value={radius} type="text" />
+				<div> Speed </div>
+                
+				<input onChange={handleChange} id="spdInput" value={speed} type="text" /> 
 
-				<br />
-				<button onClick={handleClick} name="render" id="renderer">
-					Re-Render
-				</button>	
-
-				<button onClick={handleClick} name="random" id="randomer">
-					Randomize
-				</button>	
+                <br /> 
+                <div>
+                    <button onClick={handleClick} id="randomer" name="random"> Randomize </button>	
+                    <button onClick={handleClick} id="renderer" name="render"> Re-Render </button>	
+                </div>
+				
+                
 
         </div>
     </div>

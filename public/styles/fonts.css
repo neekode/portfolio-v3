@@ -1,35 +1,37 @@
 /* Adding Custom Font Families to the available fonts in CSS */
 
 @font-face {
-    font-family: 'poppinsblack';
-        src: url('http://localhost:3000/styles/fonts/poppins-black-webfont.woff2') format('woff2'),
-            url('http://localhost:3000/styles/fonts/poppins-black-webfont.woff') format('woff');
+    font-family: "Montserrat-Regular";
+  
+    src: url("./fonts/Montserrat-Regular.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/Montserrat-Regular.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
-
 }
 
 @font-face {
-    font-family: 'archivoregular';
-    src: url('http://localhost:3000/styles/fonts/archivo-regular-webfont.woff2') format('woff2'),
-            url('http://localhost:3000/styles/fonts/archivo-regular-webfont.woff') format('woff');
+    font-family: 'Montserrat-Regular';
+    src: url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff') format('woff2'),
+            url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-/* @font-face {
-    font-family: 'poppinsblack';
-        src: url('https://neekode.com/styles/fonts/poppins-black-webfont.woff2') format('woff2'),
-            url('https://neekode.com/styles/fonts/poppins-black-webfont.woff') format('woff');
+  @font-face {
+    font-family: "OpenSans-SemiBold";
+  
+    src: url("./fonts/OpenSans-SemiBold.woff") format("woff"), /* Modern Browsers */
+      url("./fonts/OpenSans-SemiBold.woff2") format("woff2"); /* Modern Browsers */
     font-weight: normal;
     font-style: normal;
-
-}
+  }
 
 @font-face {
-    font-family: 'archivoregular';
-    src: url('https://neekode.com/styles/fonts/archivo-regular-webfont.woff2') format('woff2'),
-            url('https://neekode.com/styles/fonts/archivo-regular-webfont.woff') format('woff');
+    font-family: 'OpenSans-SemiBold';
+        src: url('https://neekode.com/styles/fonts/OpenSans-SemiBold.woff') format('woff2'),
+            url('https://neekode.com/styles/fonts/OpenSans-SemiBold.woff2') format('woff');
     font-weight: normal;
     font-style: normal;
-} */
+
+}
+

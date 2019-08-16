@@ -1,7 +1,7 @@
 import React from 'react';
 //import logo from './logo.svg';
 //import './styles/App.css';
-import Header from './components/Header.js'
+import Intro from './components/Intro.js'
 import About from './components/About.js'
 import Works from './components/Works.js'
 import Connect from './components/Connect.js'
@@ -12,7 +12,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Intro />
       <About /> 
       <Works />
       <Connect />

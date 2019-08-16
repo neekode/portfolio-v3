@@ -10,11 +10,15 @@
   transform: translate(-50%, -50%);
 }
 
+html {
+  font-size: 2.5vw;
+}
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  font-family: "archivoregular";
+  font-family: "Montserrat-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -23,38 +27,54 @@ body {
   height: 100vh;
   background-color: #455a64;
   color: #e8eaf6;
-  font-family: "poppinsblack";
+  font-family: "Montserrat-Regular";
   position: relative;
 }
 .Intro .container {
   text-align: center;
   width: 50vw;
   height: 25vh;
-  opacity: 0.9;
+  opacity: 0.8;
   background-color: #37474f;
-  border: 1px solid #455a64;
+  border: 1px solid #212121;
+  border-radius: 15px 15px 15px;
 }
 .Intro .container :first-child {
-  font-size: 2.5em;
-  line-height: 7.5vh;
+  font-size: 0.9rem;
 }
-.Intro .container :nth-child(3) {
-  font-size: 1.5em;
+.Intro .container :nth-child(2) {
+  font-size: 0.65rem;
 }
 .Intro .container .description {
-  font-family: "archivoregular";
+  font-family: "Montserrat-Regular";
   width: 33vw;
-  margin-top: 5vh;
+  margin-top: 2vh;
   padding: 2.5vw;
-  font-size: 30px;
+  font-size: 0.65rem;
 }
 .Intro .animation-controller {
+  font-family: "Montserrat-Regular";
   position: absolute;
-  color: black;
-  border: 1px solid #37474f;
-  padding: 2.5vh;
+  opacity: 0.8;
+  color: #e8eaf6;
+  background-color: #37474f;
+  border: 1px solid #212121;
+  border-radius: 15px 15px 15px;
+  padding: 1.5vh;
   margin: 2.5vh;
   bottom: 0;
+  font-size: 0.35rem;
+}
+.Intro .animation-controller .header {
+  font-family: "Montserrat-Regular";
+  font-size: 0.35rem;
+}
+.Intro .animation-controller div {
+  margin-top: 1.5vh;
+  padding-bottom: 0.5vh;
+}
+.Intro .animation-controller #renderer {
+  margin-left: 0.5vw;
 }
 
 .About {

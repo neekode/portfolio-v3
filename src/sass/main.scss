@@ -3,11 +3,12 @@
 // Colors
 $primary-color: #455a64;
 $secondary-color: #37474f;
+$border-color: #212121;
 $font-color: #e8eaf6;
 
 // Fonts
-$header-font: "poppinsblack";
-$main-font: "archivoregular";
+$header-font: "Montserrat-Regular";
+$main-font: "Montserrat-Regular";
 
         // CSS Properties
 // Useful Properties
@@ -25,11 +26,17 @@ $main-font: "archivoregular";
 }
 
 // Cross-Application
+html {
+    // Makes font-sizes based on 'em' and 'rem' responive to the viewport width.
+    font-size: 2.5vw;
+}
+
 body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
     font-family: $main-font;
+
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -51,36 +58,58 @@ body {
         text-align: center;
         width: 50vw;
         height: 25vh;
-        opacity: 0.9;
+        opacity: 0.8;
         background-color: $secondary-color;
-        border: 1px solid $primary-color;;
+        border: 1px solid $border-color;
+        border-radius: 15px 15px 15px;
 
+        // Header
         :first-child {
-            font-size: 2.5em;
-            line-height: 7.5vh;
+            font-size: 0.9rem;
         }
 
-        :nth-child(3) {
-            font-size: 1.5em;
+        // Sub-Header
+        :nth-child(2) {
+            font-size: 0.65rem;
         }
 
         .description {
             font-family: $main-font;
             width: 33vw;
-            margin-top: 5vh;
+            margin-top: 2vh;
             padding: 2.5vw;
             
-            font-size: 30px;
+            font-size: 0.65rem;
         }
     }
 
     .animation-controller {
+        font-family: $main-font;
         position: absolute;
-        color: black;
-        border: 1px solid $secondary-color;
-        padding: 2.5vh;
+
+        opacity: 0.8;
+        color: $font-color;
+        background-color: $secondary-color;
+        border: 1px solid $border-color;
+        border-radius: 15px 15px 15px;
+        padding: 1.5vh;
         margin: 2.5vh;
         bottom: 0;
+        font-size: 0.35rem;
+
+        .header {
+            font-family: $header-font;
+            font-size: 0.35rem;
+        }
+
+        div {
+            margin-top: 1.5vh;
+            padding-bottom: 0.5vh;
+        }
+
+        #renderer {
+            margin-left: 0.5vw;
+        }
     }
 }
 
