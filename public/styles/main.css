@@ -33,7 +33,7 @@ body {
 .Intro .container {
   text-align: center;
   width: 50vw;
-  height: 25vh;
+  height: 33vh;
   opacity: 0.8;
   background-color: #37474f;
   border: 1px solid #212121;
@@ -42,14 +42,15 @@ body {
 .Intro .container :first-child {
   font-size: 0.9rem;
 }
-.Intro .container :nth-child(2) {
+.Intro .container :nth-child(3) {
   font-size: 0.65rem;
 }
 .Intro .container .description {
   font-family: "Montserrat-Regular";
   width: 33vw;
-  margin-top: 2vh;
+  margin-top: 0;
   padding: 2.5vw;
+  padding-top: 0;
   font-size: 0.65rem;
 }
 .Intro .animation-controller {
@@ -63,6 +64,7 @@ body {
   padding: 1.5vh;
   margin: 2.5vh;
   bottom: 0;
+  right: 0;
   font-size: 0.35rem;
 }
 .Intro .animation-controller .header {
@@ -75,6 +77,13 @@ body {
 }
 .Intro .animation-controller #renderer {
   margin-left: 0.5vw;
+}
+
+.Navbar .container {
+  position: relative;
+  width: 25%;
+  margin-top: 10%;
+  height: 5vh;
 }
 
 .About {

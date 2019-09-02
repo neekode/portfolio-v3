@@ -45,7 +45,7 @@ function Ballpit() {
     const init = (amt, rad, spd, onPageLoad = false) => {
         // Canvas, Context
 
-        const theCanvas = document.getElementById('myCanvas'); // *HERE*
+        const theCanvas = document.getElementById('myCanvas'); // *SET HTML ELEMENTS HERE*
         const theContext = theCanvas.getContext('2d');
 
         // Resize to Window Viewport on pageload
@@ -112,10 +112,16 @@ function Ballpit() {
         if (e.target.id === "randomer") {
             // Randomizes amount and radius coefficient
             // Default values chosen to to accomodate for slower computers and browsers
-            setAmount((Math.random() * 500).toFixed(3));
-            setRadius((Math.random() * 75).toFixed(3))
-            setSpeed((Math.random() * 1.25).toFixed(3))
-            setIntObj(init(amount,radius,speed));
+            let newAmt, newRad, newSpd;
+
+            newAmt = (Math.random() * 500).toFixed(3);
+            newRad = (Math.random() * 75).toFixed(3);
+            newSpd = (Math.random() * 1.25).toFixed(3);
+
+            setIntObj(init(newAmt,newRad,newSpd));
+
+            // Setting new state of Input boxes
+            setAmount(newAmt); setRadius(newRad); setSpeed(newSpd);    
         }
     }
 

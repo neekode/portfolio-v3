@@ -7,6 +7,7 @@
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.0",
     "sass": "^1.22.9",
+    "textillate": "^0.4.1",
     "webpack": "^4.39.1"
   },
   "scripts": {
