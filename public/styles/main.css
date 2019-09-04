@@ -33,16 +33,16 @@ body {
 .Intro .container {
   text-align: center;
   width: 50vw;
-  height: 33vh;
+  height: 22.5vh;
   opacity: 0.8;
   background-color: #37474f;
   border: 1px solid #212121;
   border-radius: 15px 15px 15px;
 }
-.Intro .container :first-child {
+.Intro .container .header {
   font-size: 0.9rem;
 }
-.Intro .container :nth-child(3) {
+.Intro .container .sub-header {
   font-size: 0.65rem;
 }
 .Intro .container .description {
@@ -81,9 +81,15 @@ body {
 
 .Navbar .container {
   position: relative;
-  width: 25%;
-  margin-top: 10%;
+  width: 75%;
+  margin-top: 5vh;
   height: 5vh;
+}
+.Navbar .container .nav-item {
+  float: left;
+  text-align: center;
+  margin-left: 4vw;
+  font-size: 0.75rem;
 }
 
 .About {

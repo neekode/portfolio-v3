@@ -9,13 +9,7 @@
     font-style: normal;
 }
 
-@font-face {
-    font-family: 'Montserrat-Regular';
-    src: url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff') format('woff2'),
-            url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+
 
   @font-face {
     font-family: "OpenSans-SemiBold";
@@ -26,6 +20,14 @@
     font-style: normal;
   }
 
+/* @font-face {
+    font-family: 'Montserrat-Regular';
+    src: url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff') format('woff2'),
+            url('https://neekode.com/styles/fonts/fonts/Montserrat-Regular.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'OpenSans-SemiBold';
         src: url('https://neekode.com/styles/fonts/OpenSans-SemiBold.woff') format('woff2'),
@@ -33,5 +35,5 @@
     font-weight: normal;
     font-style: normal;
 
-}
+} */
 

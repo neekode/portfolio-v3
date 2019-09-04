@@ -6,10 +6,8 @@ import About from './components/About.js'
 import Works from './components/Works.js'
 import Connect from './components/Connect.js'
 
+
 function App() {
-
-
-
   return (
     <div className="App">
       <Intro />

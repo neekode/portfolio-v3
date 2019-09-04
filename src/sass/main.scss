@@ -57,19 +57,17 @@ body {
     .container {
         text-align: center;
         width: 50vw;
-        height: 33vh;
+        height: 22.5vh;
         opacity: 0.8;
         background-color: $secondary-color;
         border: 1px solid $border-color;
         border-radius: 15px 15px 15px;
 
-        // Header
-        :first-child {
+        .header {
             font-size: 0.9rem;
         }
 
-        // Sub-Header
-        :nth-child(3) {
+        .sub-header {
             font-size: 0.65rem;
         }
 
@@ -118,9 +116,28 @@ body {
 .Navbar {
     .container {
         position: relative;
-        width: 25%;
-        margin-top: 10%;
+        width: 75%;
+        margin-top: 5vh;
         height: 5vh;
+        
+        .nav-item {
+            float: left;
+            text-align: center;
+            margin-left: 4vw;
+            font-size: 0.75rem;
+        }
+
+        // :nth-child(1) {
+
+        // }
+
+        // :nth-child(2) {
+
+        // }
+
+        // :nth-child(3) {
+
+        // }
     }
     
 }
