@@ -3,7 +3,7 @@ import React from 'react';
 function Connect() {
     
   return (
-    <div className="Connect">
+    <div id="Connect">
         <div className="container">
             Connect
         </div>

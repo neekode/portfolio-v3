@@ -41,13 +41,18 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-  
-// .App {
+
+
+#chevrons {
+    background-image: url('./../../public/img/chevrons-down.svg')
+}
+
+// #App {
     
 // }
 
     // Intro
-.Intro {
+#Intro {
     height: 100vh;
     background-color: $primary-color;
     color: $font-color;
@@ -57,22 +62,27 @@ body {
     .container {
         text-align: center;
         width: 50vw;
-        height: 22.5vh;
+        height: 27.5vh;
         opacity: 0.8;
         background-color: $secondary-color;
         border: 1px solid $border-color;
         border-radius: 15px 15px 15px;
 
         .header {
+            font-family: $main-font;
             font-size: 0.9rem;
+            margin:0;
         }
 
         .sub-header {
+            font-family: $main-font;
             font-size: 0.65rem;
+            margin:0;
+            margin-top: 1vh;
         }
 
         .description {
-            font-family: $main-font;
+            
             width: 33vw;
             margin-top: 0;
             padding: 2.5vw;
@@ -111,13 +121,24 @@ body {
             margin-left: 0.5vw;
         }
     }
+
+    .chevron-container{
+        width: 2.5vw;
+        margin-left: calc(50% - 1.25vw);
+
+        .down-chevs {
+            margin: 0;
+            top: -5vh;
+            width: 2.5vw;
+        }
+    }
 }
 
-.Navbar {
+#Navbar {
     .container {
         position: relative;
         width: 75%;
-        margin-top: 5vh;
+        margin-top: 6vh;
         height: 5vh;
         
         .nav-item {
@@ -144,19 +165,19 @@ body {
 
 
     // About 
-.About {
+#About {
     height: 100vh;
     border: 1px solid blue;
 }
 
 // Works
-.Works {
+#Works {
     height: 100vh;
     border: 1px solid yellow;
 }
 
 // Connect 
-.Connect {
+#Connect {
     height: 100vh;
     border: 1px solid red;
 }

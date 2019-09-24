@@ -23,37 +23,45 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.Intro {
+#chevrons {
+  background-image: url("./../../public/img/chevrons-down.svg");
+}
+
+#Intro {
   height: 100vh;
   background-color: #455a64;
   color: #e8eaf6;
   font-family: "Montserrat-Regular";
   position: relative;
 }
-.Intro .container {
+#Intro .container {
   text-align: center;
   width: 50vw;
-  height: 22.5vh;
+  height: 27.5vh;
   opacity: 0.8;
   background-color: #37474f;
   border: 1px solid #212121;
   border-radius: 15px 15px 15px;
 }
-.Intro .container .header {
-  font-size: 0.9rem;
-}
-.Intro .container .sub-header {
-  font-size: 0.65rem;
-}
-.Intro .container .description {
+#Intro .container .header {
   font-family: "Montserrat-Regular";
+  font-size: 0.9rem;
+  margin: 0;
+}
+#Intro .container .sub-header {
+  font-family: "Montserrat-Regular";
+  font-size: 0.65rem;
+  margin: 0;
+  margin-top: 1vh;
+}
+#Intro .container .description {
   width: 33vw;
   margin-top: 0;
   padding: 2.5vw;
   padding-top: 0;
   font-size: 0.65rem;
 }
-.Intro .animation-controller {
+#Intro .animation-controller {
   font-family: "Montserrat-Regular";
   position: absolute;
   opacity: 0.8;
@@ -67,42 +75,51 @@ body {
   right: 0;
   font-size: 0.35rem;
 }
-.Intro .animation-controller .header {
+#Intro .animation-controller .header {
   font-family: "Montserrat-Regular";
   font-size: 0.35rem;
 }
-.Intro .animation-controller div {
+#Intro .animation-controller div {
   margin-top: 1.5vh;
   padding-bottom: 0.5vh;
 }
-.Intro .animation-controller #renderer {
+#Intro .animation-controller #renderer {
   margin-left: 0.5vw;
 }
+#Intro .chevron-container {
+  width: 2.5vw;
+  margin-left: calc(50% - 1.25vw);
+}
+#Intro .chevron-container .down-chevs {
+  margin: 0;
+  top: -5vh;
+  width: 2.5vw;
+}
 
-.Navbar .container {
+#Navbar .container {
   position: relative;
   width: 75%;
-  margin-top: 5vh;
+  margin-top: 6vh;
   height: 5vh;
 }
-.Navbar .container .nav-item {
+#Navbar .container .nav-item {
   float: left;
   text-align: center;
   margin-left: 4vw;
   font-size: 0.75rem;
 }
 
-.About {
+#About {
   height: 100vh;
   border: 1px solid blue;
 }
 
-.Works {
+#Works {
   height: 100vh;
   border: 1px solid yellow;
 }
 
-.Connect {
+#Connect {
   height: 100vh;
   border: 1px solid red;
 }

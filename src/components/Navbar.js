@@ -4,14 +4,13 @@ import React from 'react';
 // import { useRef } from 'react';
 // import { textillate } from 'textillate';
 
-
-
+import 'jquery';
 
 function Navbar() {
   
     
   return (
-    <div className="Navbar">
+    <div id="Navbar">
         <div className="container center">
             <span className="nav-item">about me</span>
 

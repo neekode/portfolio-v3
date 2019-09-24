@@ -3,7 +3,7 @@ import React from 'react';
 function Works() {
     
   return (
-    <div className="Works">
+    <div id="Works">
         <div className="container">
             Works
         </div>
