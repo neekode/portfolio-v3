@@ -116,7 +116,7 @@ function Ballpit() {
 
             newAmt = (Math.random() * 500).toFixed(3);
             newRad = (Math.random() * 75).toFixed(3);
-            newSpd = (Math.random() * 1).toFixed(3);
+            newSpd = (Math.random() * 0.75).toFixed(3);
 
             setIntObj(init(newAmt,newRad,newSpd));
 

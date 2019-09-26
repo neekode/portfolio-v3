@@ -8,6 +8,7 @@ import { useRef } from 'react';
 
 import $ from 'jquery';
 import '../scripts/morphext';
+import AnchorLink from 'react-anchor-link-smooth-scroll'
 
 import downChevs from './../assets/chevrons-down.svg';
 
@@ -29,9 +30,9 @@ function Intro() {
         separator: "/",
         speed: 2250,
         complete: function () {
-            if (this.index === 5) {
-                $(this.element).text("(and I'm looking for work :D )");
-            }
+          if (this.index === 5) {
+              $(this.element).text("(and I'm looking for work :D )");
+          }
         }
       });
 
@@ -42,7 +43,6 @@ function Intro() {
   }
 
   const handleMouseEnter = () => {
-    debugger;
     $(exploreMore.current).addClass('animated infinite bounce')
   }
 
@@ -70,7 +70,7 @@ function Intro() {
             <Navbar />
 
             <div className='chevron-container' ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <a href="#Works"> <img className='down-chevs' alt='down chevs' src={downChevs} /> </a>
+              <AnchorLink href="#Works"> <img className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
             </div>
         </div>
     </div>
