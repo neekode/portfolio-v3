@@ -1,33 +1,59 @@
 import React from 'react';
-// import { useState } from 'react';
-// import { useEffect } from 'react';
-import { useRef } from 'react';
-// import { textillate } from 'textillate';
+import { useContext, useRef, useState, useEffect } from 'react';
+import { SectionContext } from './../App';
 
-import { $ } from 'jquery';
-import AnchorLink from 'react-anchor-link-smooth-scroll'
+import $ from 'jquery';
 
 function Navbar() {
+  const { section, selectSection } = useContext( SectionContext );
 
-  let navItem = useRef();
-  
-  const handleMouseEnter = () => {
-    $(navItem.current).addClass('animated infinite bounce')
+  // First, declaring state of the currently hovered over element. Initializing it to an empty jquery object to set the object type
+  const [hoverEl, setHoverEl] = useState($());
+
+  // declaring individual refs for each element in question. (Must be an easier way to do this.)
+  const aboutLink = useRef(); const worksLink = useRef(); const connectLink = useRef();
+
+  // use effect, once subscribed to the [hoverEl] as a second argument, fires the callback function whenever
+  // at any point if hoverEl mutates.
+  useEffect(() => {
+    hoverEl.addClass('animated infinite bounce')
+  }, [hoverEl])
+
+  const handleMouseEnter = (e) => {
+    switch (e.target.id) {
+      case "about-link" : {
+        setHoverEl($(aboutLink.current));
+        break;
+      }
+
+      case "works-link" : {
+        setHoverEl($(worksLink.current));
+        break;
+      }
+
+      case "connect-link" : {
+        setHoverEl($(connectLink.current));
+        break;
+      }
+      default: {
+        break;
+      }
+    }
+      
   }
 
-  const handleMouseLeave = () => {
-    $(navItem.current).removeClass('animated infinite bounce')
+  const handleMouseLeave = (e) => {
+    hoverEl.removeClass('animated infinite bounce')
   }
+
+  //href="#Works"  ref={item} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
     
   return (
     <div id="Navbar">
         <div className="container center">
-            
-
-            <AnchorLink href="#Works" > <span className="nav-item" ref={navItem} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>works</span> </AnchorLink>
-            <AnchorLink href="#About"   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> <span className="nav-item">about me</span> </AnchorLink>
-            <AnchorLink href="#Connect"   onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> <span className="nav-item">connect</span> </AnchorLink>
-
+          <span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about </span>
+          <span id='works-link' ref={worksLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span>
+          <span id='connect-link' ref={connectLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span>
         </div>
     </div>
   );

@@ -4,7 +4,7 @@ function Connect() {
     
   return (
     <div id="Connect">
-        <div className="container">
+        <div className="section-container center">
             Connect
         </div>
     </div>

@@ -1,5 +1,4 @@
 import React from 'react';
-import Ballpit from './Ballpit.js';
 import Navbar from './Navbar.js';
 
 import { useState } from 'react';
@@ -35,26 +34,25 @@ function Intro() {
           }
         }
       });
-
-      
     }
-
     return func();
   }
 
-  const handleMouseEnter = () => {
-    $(exploreMore.current).addClass('animated infinite bounce')
-  }
+  // const handleMouseEnter = () => {
+  //   $(exploreMore.current).addClass('animated infinite bounce')
+  // }
 
-  const handleMouseLeave = () => {
-    $(exploreMore.current).removeClass('animated infinite bounce')
-  }
+  // const handleMouseLeave = () => {
+  //   $(exploreMore.current).removeClass('animated infinite bounce')
+  // }
+
+  // <div className='chevron-container' ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+  //             <AnchorLink href="#Works"> <img className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
+  //           </div>
 
   return (
     <div id="Intro">
-        <Ballpit /> 
-
-        <div className="container center" >
+        <div className="section-container center" >
             <h2 id="intro-header" className="header">Neeko Blomgren:</h2>
             <h3 id="intro-sub-header" className="sub-header" ref={subHeader}> 
               Front-End Web Specialist /
@@ -63,15 +61,10 @@ function Intro() {
               using React (Hooks), ES6 Javscript, Sass, Webpack, & more /
               Based out of Seattle, WA /
             </h3>
-
-            {/* <p className="description center"> Hello! I specialize in the Front-end, specifically with React.
-                                            I'm based out of Seattle, WA. Thanks for stopping by. </p> */}
             
             <Navbar />
 
-            <div className='chevron-container' ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <AnchorLink href="#Works"> <img className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
-            </div>
+            
         </div>
     </div>
   );

@@ -16,11 +16,11 @@ $main-font: "Montserrat-Regular";
 .unshown {
     display: none;
 }
-    // (only works inside "position: relative" parent elements)
+    // (works inside "position: absolute" parent elements)
 .center {
     margin: 0;
     position: absolute;
-    top: 50%;
+    margin-top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -35,13 +35,13 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
+    overflow-y: hidden;
     font-family: $main-font;
 
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
 
 #chevrons {
     background-image: url('./../../public/img/chevrons-down.svg')
@@ -51,10 +51,84 @@ body {
     
 // }
 
-    // Intro
-#Intro {
+.section-container {
+    text-align: center;
+    width: 50vw;
+    height: 27.5vh;
+    opacity: 0.9;
+    background-color: $secondary-color;
+    border: 1px solid $border-color;
+    border-radius: 15px 15px 15px;
+
+    .header {
+        font-family: $main-font;
+        font-size: 0.9rem;
+        margin:0;
+    }
+
+    .sub-header {
+        font-family: $main-font;
+        font-size: 0.65rem;
+        margin:0;
+        margin-top: 1vh;
+    }
+
+    .description {
+        
+        width: 33vw;
+        margin-top: 0;
+        padding: 2.5vw;
+        padding-top: 0;
+        
+        font-size: 0.65rem;
+    }
+}
+
+#intro-link {
+    position: absolute;
+    width: 10vw;
+}
+
+#Background {
     height: 100vh;
     background-color: $primary-color;
+    color: $font-color;
+    font-family: $header-font;
+    position: absolute;
+
+    .animation-controller {
+        font-family: $main-font;
+        position: absolute;
+
+        opacity: 0.9;
+        color: $font-color;
+        background-color: $secondary-color;
+        border: 1px solid $border-color;
+        border-radius: 15px 15px 15px;
+        padding: 1.5vh;
+        margin: 5vh;
+        bottom: 0;
+        right: 0;
+        font-size: 0.35rem;
+
+        .header {
+            font-family: $header-font;
+            font-size: 0.35rem;
+        }
+
+        div {
+            margin-top: 1.5vh;
+            padding-bottom: 0.5vh;
+        }
+
+        #renderer {
+            margin-left: 0.5vw;
+        }
+    }
+}
+
+    // Intro
+#Intro {
     color: $font-color;
     font-family: $header-font;
     position: relative;
@@ -92,35 +166,7 @@ body {
         }
     }
 
-    .animation-controller {
-        font-family: $main-font;
-        position: absolute;
-
-        opacity: 0.9;
-        color: $font-color;
-        background-color: $secondary-color;
-        border: 1px solid $border-color;
-        border-radius: 15px 15px 15px;
-        padding: 1.5vh;
-        margin: 2.5vh;
-        bottom: 0;
-        right: 0;
-        font-size: 0.35rem;
-
-        .header {
-            font-family: $header-font;
-            font-size: 0.35rem;
-        }
-
-        div {
-            margin-top: 1.5vh;
-            padding-bottom: 0.5vh;
-        }
-
-        #renderer {
-            margin-left: 0.5vw;
-        }
-    }
+    
 
     .chevron-container{
         width: 2.5vw;
@@ -144,7 +190,7 @@ body {
         .nav-item {
             float: left;
             text-align: center;
-            margin-left: 4vw;
+            margin-left: 5vw;
             font-size: 0.75rem;
         }
 
@@ -166,18 +212,15 @@ body {
 
     // About 
 #About {
-    height: 100vh;
-    border: 1px solid blue;
+
 }
 
 // Works
 #Works {
-    height: 100vh;
-    border: 1px solid yellow;
+
 }
 
 // Connect 
 #Connect {
-    height: 100vh;
-    border: 1px solid red;
+
 }

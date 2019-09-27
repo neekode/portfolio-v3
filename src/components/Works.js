@@ -4,7 +4,7 @@ function Works() {
     
   return (
     <div id="Works">
-        <div className="container">
+        <div className="section-container center">
             Works
         </div>
     </div>

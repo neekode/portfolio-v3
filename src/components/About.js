@@ -4,7 +4,7 @@ function About() {
     
   return (
     <div id="About">
-        <div className="container">
+        <div className="section-container center">
             About!
         </div>
     </div>
