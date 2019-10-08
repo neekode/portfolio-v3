@@ -1,10 +1,41 @@
     // Style Variables
 
 // Colors
-$primary-color: #455a64;
-$secondary-color: #37474f;
-$border-color: #212121;
-$font-color: #e8eaf6;
+
+$global-colors : (
+    primary: #455a64,
+    secondary: #37474f,
+    border: #212121,
+    font: #e8eaf6,
+);
+
+$intro-colors : (
+    primary: #3F415B,
+    secondary: #999AA2,
+    border: #94A1B6,
+    font: #F8F9F9,
+);
+
+$about-colors : (
+    primary: #31425F,
+    secondary: #6C6862,
+    border: #72D9D3,
+    font: #F4F7F5,
+);
+
+$works-colors : (
+    primary: #515D56,
+    secondary: #AB625E,
+    border: #EAC683,
+    font: #FAF9F9,
+);
+
+$connect-colors : (
+    primary: #2B2E40,
+    secondary: #716F82,
+    border: #606072,
+    font: #FAFAFA,
+);
 
 // Fonts
 $header-font: "Montserrat-Regular";
@@ -38,7 +69,6 @@ body {
     //overflow-y: hidden;
     font-family: $main-font;
 
-
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -52,19 +82,22 @@ body {
 // }
 
 .section {
-    height:100vh;
+    height:120vh;
     pointer-events: none;
+    position: relative;
+    //border: 1px solid red !important;
+    z-index: 2;
 }
 
 .container {
-    color: $font-color;
-    font-family: $header-font;
+    color: map-get($global-colors, font);
+    background-color: map-get($global-colors, secondary);
+    border: 1px solid map-get($global-colors, border);
+
     text-align: center;
     width: 50vw;
     height: 50vh;
     opacity: 0.9;
-    background-color: $secondary-color;
-    border: 1px solid $border-color;
     border-radius: 15px 15px 15px;
     pointer-events: auto;
 
@@ -82,7 +115,6 @@ body {
     }
 
     .description {
-        
         width: 33vw;
         margin-top: 0;
         padding: 2.5vw;
@@ -106,10 +138,8 @@ body {
     left: 0;
 }
 
-#Ballpit {
+#Background {
     height: 100vh;
-    background-color: $primary-color;
-    color: $font-color;
     font-family: $header-font;
     position: fixed;
 
@@ -119,9 +149,7 @@ body {
         position: absolute;
 
         opacity: 0.9;
-        color: $font-color;
-        background-color: $secondary-color;
-        border: 1px solid $border-color;
+        
         border-radius: 15px 15px 15px;
         padding: 1.5vh;
         margin: 5vh;
@@ -136,12 +164,61 @@ body {
 
         div {
             margin-top: 1.5vh;
+            
             padding-bottom: 0.5vh;
         }
 
         #renderer {
             margin-left: 0.5vw;
         }
+    }
+}
+
+.Background-Intro {
+    background-color: map-get($intro-colors, primary);
+    color: map-get($intro-colors, font);
+    font-family: $header-font;
+
+    .animation-controller {
+        color: map-get($intro-colors, font);
+        background-color: map-get($intro-colors, secondary);
+        border: 1px solid map-get($intro-colors, border);
+    }
+}
+
+.Background-About {
+    background-color: map-get($about-colors, primary);
+    color: map-get($about-colors, font);
+    font-family: $header-font;
+
+    .animation-controller {
+        color: map-get($about-colors, font);
+        background-color: map-get($about-colors, secondary);
+        border: 1px solid map-get($about-colors, border);
+    }
+}
+
+.Background-Works {
+    background-color: map-get($works-colors, primary);
+    color: map-get($works-colors, font);
+    font-family: $header-font;
+
+    .animation-controller {
+        color: map-get($works-colors, font);
+        background-color: map-get($works-colors, secondary);
+        border: 1px solid map-get($works-colors, border);
+    }
+}
+
+.Background-Connect {
+    background-color: map-get($connect-colors, primary);
+    color: map-get($connect-colors, font);
+    font-family: $header-font;
+
+    .animation-controller {
+        color: map-get($connect-colors, font);
+        background-color: map-get($connect-colors, secondary);
+        border: 1px solid map-get($connect-colors, border);
     }
 }
 
@@ -201,7 +278,6 @@ body {
 
     // About 
 #About {
-    margin-top: 10vh;
     .container {
         width: 65vw;   
         height: 50vh
@@ -210,22 +286,17 @@ body {
 
 // Works
 #Works {
-    margin-top: 10vh;
     .container {
         width: 80vw;   
         height: 75vh;
     }
-
-    top: 100vh;
 }
 
 // Connect 
 #Connect {
-    margin-top: 10vh;
+    height: 100vh;
     .container {
         width: 50vw;   
         height: 35vh;
     }
-
-    top: 100vh;
 }

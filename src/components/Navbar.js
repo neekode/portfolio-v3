@@ -1,6 +1,6 @@
 import React from 'react';
 import { useContext, useRef, useState, useEffect } from 'react';
-import { SectionContext } from './../App';
+import SectionContext from './../scripts/context'
 
 import $ from 'jquery';
 

@@ -1,6 +1,3 @@
-import React from 'react';
-import Content from './components/Content';
-
 // FOR LATER
 // import { useState } from 'react';
 // import { useEffect } from 'react';
@@ -8,26 +5,34 @@ import Content from './components/Content';
 // import  $  from 'jquery';
 // import AnchorLink from 'react-anchor-link-smooth-scroll';
 
-// Creating initial context
-const { createContext, useState } = React;
-// Setting context to variable, then exporting it to be available across the application
-export const SectionContext = createContext(null);
+import  React  from 'react';
+import { useContext, useEffect, useReducer } from 'react';
+import Content from './components/Content';
+
+import Context  from './scripts/context';
+import reducer from './scripts/reducer';
 
 function App() {
-  // Declaring section state and then initializing with intro as default state
-  const [section, setSection] = useState('Intro')
+  // Initializes state in context
+  const initialState = useContext(Context);
+  // Initializes reducer to allow state and dispatch items to be used
 
-  // Function which uses a switch case to determine 
-  function selectSection(sectionName) {
-    setSection(() => { return sectionName; })
+  // NOTE: this is global state, able to be used anywhere in the application. this should only be used where it's necessary for a piece of state
+  // to be used EVERYWHERE IN THE APPLICATION. component-based state should be used whenever context is unnecessaru, and is utilized with useState();
+  const [state, dispatch] = useReducer(reducer, initialState);
+
+  // Is fired for default value of section. 
+  useEffect(() => init(), []);
+
+  const init = () => {
+      dispatch({ type: 'SWITCH_SECTION' , payload: 'Intro'})
   }
-
 
   return (
     <div id="App">
-      <SectionContext.Provider value={{ section, selectSection }} >
+      <Context.Provider value={{ state, dispatch }} >
         <Content />
-      </SectionContext.Provider>
+      </Context.Provider>
     </div>
   );
 }

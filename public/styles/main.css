@@ -28,19 +28,20 @@ body {
 }
 
 .section {
-  height: 100vh;
+  height: 120vh;
   pointer-events: none;
+  position: relative;
+  z-index: 2;
 }
 
 .container {
   color: #e8eaf6;
-  font-family: "Montserrat-Regular";
+  background-color: #37474f;
+  border: 1px solid #212121;
   text-align: center;
   width: 50vw;
   height: 50vh;
   opacity: 0.9;
-  background-color: #37474f;
-  border: 1px solid #212121;
   border-radius: 15px 15px 15px;
   pointer-events: auto;
 }
@@ -77,21 +78,16 @@ body {
   left: 0;
 }
 
-#Ballpit {
+#Background {
   height: 100vh;
-  background-color: #455a64;
-  color: #e8eaf6;
   font-family: "Montserrat-Regular";
   position: fixed;
 }
-#Ballpit .animation-controller {
+#Background .animation-controller {
   z-index: 500 !important;
   font-family: "Montserrat-Regular";
   position: absolute;
   opacity: 0.9;
-  color: #e8eaf6;
-  background-color: #37474f;
-  border: 1px solid #212121;
   border-radius: 15px 15px 15px;
   padding: 1.5vh;
   margin: 5vh;
@@ -99,16 +95,60 @@ body {
   right: 0;
   font-size: 0.35rem;
 }
-#Ballpit .animation-controller .header {
+#Background .animation-controller .header {
   font-family: "Montserrat-Regular";
   font-size: 0.35rem;
 }
-#Ballpit .animation-controller div {
+#Background .animation-controller div {
   margin-top: 1.5vh;
   padding-bottom: 0.5vh;
 }
-#Ballpit .animation-controller #renderer {
+#Background .animation-controller #renderer {
   margin-left: 0.5vw;
+}
+
+.Background-Intro {
+  background-color: #3F415B;
+  color: #F8F9F9;
+  font-family: "Montserrat-Regular";
+}
+.Background-Intro .animation-controller {
+  color: #F8F9F9;
+  background-color: #999AA2;
+  border: 1px solid #94A1B6;
+}
+
+.Background-About {
+  background-color: #31425F;
+  color: #F4F7F5;
+  font-family: "Montserrat-Regular";
+}
+.Background-About .animation-controller {
+  color: #F4F7F5;
+  background-color: #6C6862;
+  border: 1px solid #72D9D3;
+}
+
+.Background-Works {
+  background-color: #515D56;
+  color: #FAF9F9;
+  font-family: "Montserrat-Regular";
+}
+.Background-Works .animation-controller {
+  color: #FAF9F9;
+  background-color: #AB625E;
+  border: 1px solid #EAC683;
+}
+
+.Background-Connect {
+  background-color: #2B2E40;
+  color: #FAFAFA;
+  font-family: "Montserrat-Regular";
+}
+.Background-Connect .animation-controller {
+  color: #FAFAFA;
+  background-color: #716F82;
+  border: 1px solid #606072;
 }
 
 #Intro {
@@ -142,26 +182,18 @@ body {
   animation-duration: 1s;
 }
 
-#About {
-  margin-top: 10vh;
-}
 #About .container {
   width: 65vw;
   height: 50vh;
 }
 
-#Works {
-  margin-top: 10vh;
-  top: 100vh;
-}
 #Works .container {
   width: 80vw;
   height: 75vh;
 }
 
 #Connect {
-  margin-top: 10vh;
-  top: 100vh;
+  height: 100vh;
 }
 #Connect .container {
   width: 50vw;

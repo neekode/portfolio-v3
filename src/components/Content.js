@@ -1,60 +1,90 @@
+import $ from 'jquery';
 import React from 'react';
 import Intro from './Intro'
 import About from './About'
 import Works from './Works'
 import Connect from './Connect'
 
-import Ballpit from './Ballpit';
-import AnimationController from './AnimationController';
+import Background from './Background';
 
-import $ from 'jquery';
-
-import { SectionContext } from './../App';
-
-const { createContext, useContext, useState } = React;
-
+import Context from './../scripts/context';
+import { useContext, useEffect } from 'react';
 
 function Content() {
-  const { section, selectSection } = useContext(
-    SectionContext
-  );
+  
+  const sectionEls = {
+    intro: {},
+    about: {},
+    works: {},
+    connect: {}
+  }
+
+  const { state, dispatch } = useContext( Context );
+  
+  // useEffect calls with an empty array as the second argument render once before the component mounts, and then once after. 
+  // Useful for default or initial values. 
+  useEffect(() => init(), []);
+  
+  //useEffect(() => changeBg(), [state.section]);
+
+  
+  const init = () => {
+    // For some reason, the onScroll event doesn't seem to fire with the conventional listener being put into the "div" element down below,
+    // So using useEffect above allows us to attach the handler manually.
+    window.addEventListener("scroll", handleScroll)
+
+    // Initializing elements and wrapping in jQuery for easy accessiblity
+    sectionEls.intro = $('#Intro'); 
+    sectionEls.about = $('#About'); 
+    sectionEls.works = $('#Works'); 
+    sectionEls.connect = $('#Connect')
+  }
 
   const handleScroll = (e) => { 
       let currentPos = window.scrollY;
 
-      let introTop = $('#Intro').offset().top;
-      let aboutTop = $('#About').offset().top;
-      let worksTop = $('#Works').offset().top;
-      let connectTop = $('#Connect').offset().top;
+      const elTops = {
+        intro: sectionEls.intro.offset().top,
+        about: sectionEls.about.offset().top,
+        works: sectionEls.works.offset().top,
+        connect: sectionEls.connect.offset().top
+      }
 
-      console.log(currentPos)
+      if (currentPos => elTops.intro && currentPos < elTops.about + 50) { 
+        dispatch({ type: 'SWITCH_SECTION', payload :'Intro'} ) 
+      };
+      
+      if (currentPos > elTops.about - 50 && currentPos  <= elTops.works + 50) { 
+        dispatch({ type: 'SWITCH_SECTION', payload :'About'} )  
+      };
 
-      if (currentPos => introTop && currentPos < aboutTop + 300) { selectSection('Intro') };
+      if (currentPos > elTops.works - 50 && currentPos <= elTops.connect + 50) { 
+        dispatch({ type: 'SWITCH_SECTION', payload :'Works'} )  
+      };
 
-      if (currentPos > aboutTop - 300 && currentPos  <= worksTop + 300) { selectSection('About') };
-      if (currentPos > worksTop - 300 && currentPos <= connectTop + 300) { selectSection('Works') };
-      if (currentPos > connectTop - 300) { selectSection('Connect') };
+      if (currentPos > elTops.connect - 50) { 
+        dispatch({ type: 'SWITCH_SECTION', payload :'Connect'} ) 
+      };
 
+      
+  }
+
+  const changeBg = () => {
+     if (state.section === 'About') {
+       sectionEls.intro.addClass('#About-background');
+     }
   }
     
   return (
-    <div onWheel={handleScroll} id="Content">
-        <Ballpit /> 
+    <div id="Content">
+        <Background sectionTheme={state.section} /> 
         
         <Intro />
         <About />
         <Works />
-
         <Connect />
 
-        {/* rewrite this lol */}
-
-        <div id='test'> {section} </div>
-
-        {/* {section === 'intro-link' ? <Intro /> : null}
-        {section === 'about-link' ?  : null}
-        {section === 'works-link' ?  : null}
-        {section === 'connect-link' ?  : null}  */}
+        <div id='test'> {state.section} </div>
     </div>
   );
 }
