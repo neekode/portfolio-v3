@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from 'react';
-import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes'
+import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes';
 
 /* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
 
@@ -137,33 +137,32 @@ function Ballpit() {
     }
 
   return (
-    <div className="Ballpit">
-        <canvas id="myCanvas" width="0px" height="0px"></canvas>
+        <div id="Ballpit">
+            <canvas id="myCanvas" width="0px" height="0px"></canvas>
 
-        <div className="animation-controller">
-        <span className="header"> Animation Controller </span> 
-                
-                <div> Amount </div>
-                
-                <input onChange={handleChange} id="amtInput" value={amount} type="text" /> 
-				
-                <div> Radius Coefficient  </div>
-                
-				<input onChange={handleChange} id="radInput" value={radius} type="text" />
-				<div> Speed </div>
-                
-				<input onChange={handleChange} id="spdInput" value={speed} type="text" /> 
+            <div className="animation-controller">
+            <span className="header"> Animation Controller </span> 
+                    
+                    <div> Amount </div>
+                    
+                    <input onChange={handleChange} id="amtInput" value={amount} type="text" /> 
+                    
+                    <div> Radius Coefficient  </div>
+                    
+                    <input onChange={handleChange} id="radInput" value={radius} type="text" />
+                    <div> Speed </div>
+                    
+                    <input onChange={handleChange} id="spdInput" value={speed} type="text" /> 
 
-                <br /> 
-                <div>
-                    <button onClick={handleClick} id="randomer" name="random"> Randomize </button>	
-                    <button onClick={handleClick} id="renderer" name="render"> Re-Render </button>	
-                </div>
-				
-                
-
+                    <br /> 
+                    <div>
+                        <button onClick={handleClick} id="randomer" name="random"> Randomize </button>	
+                        <button onClick={handleClick} id="renderer" name="render"> Re-Render </button>	
+                    </div>
+                    
+            </div>
         </div>
-    </div>
+
   );
 }
 

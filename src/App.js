@@ -15,12 +15,13 @@ export const SectionContext = createContext(null);
 
 function App() {
   // Declaring section state and then initializing with intro as default state
-  const [section, setSection] = useState('intro-link')
+  const [section, setSection] = useState('Intro')
 
   // Function which uses a switch case to determine 
-  function selectSection(e) {
-    setSection(() => { return e.target.id; })
+  function selectSection(sectionName) {
+    setSection(() => { return sectionName; })
   }
+
 
   return (
     <div id="App">

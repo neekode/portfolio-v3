@@ -20,7 +20,7 @@ $main-font: "Montserrat-Regular";
 .center {
     margin: 0;
     position: absolute;
-    margin-top: 25%;
+    margin-top: 22.5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -35,7 +35,7 @@ body {
     margin: 0;
     padding: 0;
     overflow-x: hidden;
-    overflow-y: hidden;
+    //overflow-y: hidden;
     font-family: $main-font;
 
 
@@ -51,14 +51,22 @@ body {
     
 // }
 
-.section-container {
+.section {
+    height:100vh;
+    pointer-events: none;
+}
+
+.container {
+    color: $font-color;
+    font-family: $header-font;
     text-align: center;
     width: 50vw;
-    height: 27.5vh;
+    height: 50vh;
     opacity: 0.9;
     background-color: $secondary-color;
     border: 1px solid $border-color;
     border-radius: 15px 15px 15px;
+    pointer-events: auto;
 
     .header {
         font-family: $main-font;
@@ -89,14 +97,24 @@ body {
     width: 10vw;
 }
 
-#Background {
+#test {
+    z-index: 1000;
+    font-size: 1em;
+    position: fixed;
+    color: white;
+    top: 0;
+    left: 0;
+}
+
+#Ballpit {
     height: 100vh;
     background-color: $primary-color;
     color: $font-color;
     font-family: $header-font;
-    position: absolute;
+    position: fixed;
 
     .animation-controller {
+        z-index: 500 !important;
         font-family: $main-font;
         position: absolute;
 
@@ -129,53 +147,22 @@ body {
 
     // Intro
 #Intro {
-    color: $font-color;
-    font-family: $header-font;
     position: relative;
 
     .container {
-        text-align: center;
         width: 50vw;
         height: 27.5vh;
-        opacity: 0.9;
-        background-color: $secondary-color;
-        border: 1px solid $border-color;
-        border-radius: 15px 15px 15px;
+        
 
-        .header {
-            font-family: $main-font;
-            font-size: 0.9rem;
-            margin:0;
-        }
-
-        .sub-header {
-            font-family: $main-font;
-            font-size: 0.65rem;
-            margin:0;
-            margin-top: 1vh;
-        }
-
-        .description {
-            
-            width: 33vw;
-            margin-top: 0;
-            padding: 2.5vw;
-            padding-top: 0;
-            
-            font-size: 0.65rem;
-        }
-    }
-
-    
-
-    .chevron-container{
-        width: 2.5vw;
-        margin-left: calc(50% - 1.25vw);
-
-        .down-chevs {
-            margin: 0;
-            top: -5vh;
+        .chevron-container{
             width: 2.5vw;
+            margin-left: calc(50% - 1.25vw);
+    
+            .down-chevs {
+                margin: 0;
+                top: -5vh;
+                width: 2.5vw;
+            }
         }
     }
 }
@@ -190,8 +177,10 @@ body {
         .nav-item {
             float: left;
             text-align: center;
-            margin-left: 5vw;
+            margin-left: 3.5vw;
             font-size: 0.75rem;
+
+            animation-duration: 1s;
         }
 
         // :nth-child(1) {
@@ -212,15 +201,31 @@ body {
 
     // About 
 #About {
-
+    margin-top: 10vh;
+    .container {
+        width: 65vw;   
+        height: 50vh
+    }
 }
 
 // Works
 #Works {
+    margin-top: 10vh;
+    .container {
+        width: 80vw;   
+        height: 75vh;
+    }
 
+    top: 100vh;
 }
 
 // Connect 
 #Connect {
+    margin-top: 10vh;
+    .container {
+        width: 50vw;   
+        height: 35vh;
+    }
 
+    top: 100vh;
 }

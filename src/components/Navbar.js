@@ -16,7 +16,7 @@ function Navbar() {
   // use effect, once subscribed to the [hoverEl] as a second argument, fires the callback function whenever
   // at any point if hoverEl mutates.
   useEffect(() => {
-    hoverEl.addClass('animated infinite bounce')
+    hoverEl.addClass('animated pulse')
   }, [hoverEl])
 
   const handleMouseEnter = (e) => {
@@ -43,7 +43,7 @@ function Navbar() {
   }
 
   const handleMouseLeave = (e) => {
-    hoverEl.removeClass('animated infinite bounce')
+    hoverEl.removeClass('animated pulse')
   }
 
   //href="#Works"  ref={item} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
@@ -51,7 +51,7 @@ function Navbar() {
   return (
     <div id="Navbar">
         <div className="container center">
-          <span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about </span>
+          <span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span>
           <span id='works-link' ref={worksLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span>
           <span id='connect-link' ref={connectLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span>
         </div>

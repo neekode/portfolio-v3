@@ -4,29 +4,57 @@ import About from './About'
 import Works from './Works'
 import Connect from './Connect'
 
-import Background from './Background';
+import Ballpit from './Ballpit';
+import AnimationController from './AnimationController';
+
+import $ from 'jquery';
 
 import { SectionContext } from './../App';
 
 const { createContext, useContext, useState } = React;
 
-function Content() {
 
+function Content() {
   const { section, selectSection } = useContext(
     SectionContext
   );
+
+  const handleScroll = (e) => { 
+      let currentPos = window.scrollY;
+
+      let introTop = $('#Intro').offset().top;
+      let aboutTop = $('#About').offset().top;
+      let worksTop = $('#Works').offset().top;
+      let connectTop = $('#Connect').offset().top;
+
+      console.log(currentPos)
+
+      if (currentPos => introTop && currentPos < aboutTop + 300) { selectSection('Intro') };
+
+      if (currentPos > aboutTop - 300 && currentPos  <= worksTop + 300) { selectSection('About') };
+      if (currentPos > worksTop - 300 && currentPos <= connectTop + 300) { selectSection('Works') };
+      if (currentPos > connectTop - 300) { selectSection('Connect') };
+
+  }
     
   return (
-    <div id="Content">
-      <Background /> 
+    <div onWheel={handleScroll} id="Content">
+        <Ballpit /> 
+        
+        <Intro />
+        <About />
+        <Works />
+
+        <Connect />
 
         {/* rewrite this lol */}
-        {section === 'intro-link' ? <Intro /> : null}
-        {section === 'about-link' ? <About /> : null}
-        {section === 'works-link' ? <Works /> : null}
-        {section === 'connect-link' ? <Connect /> : null}
 
-        <span id='intro-link' onClick={selectSection}>back!</span>
+        <div id='test'> {section} </div>
+
+        {/* {section === 'intro-link' ? <Intro /> : null}
+        {section === 'about-link' ?  : null}
+        {section === 'works-link' ?  : null}
+        {section === 'connect-link' ?  : null}  */}
     </div>
   );
 }

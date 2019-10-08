@@ -5,7 +5,7 @@
 .center {
   margin: 0;
   position: absolute;
-  margin-top: 25%;
+  margin-top: 22.5%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
@@ -18,7 +18,6 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  overflow-y: hidden;
   font-family: "Montserrat-Regular";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -28,27 +27,35 @@ body {
   background-image: url("./../../public/img/chevrons-down.svg");
 }
 
-.section-container {
+.section {
+  height: 100vh;
+  pointer-events: none;
+}
+
+.container {
+  color: #e8eaf6;
+  font-family: "Montserrat-Regular";
   text-align: center;
   width: 50vw;
-  height: 27.5vh;
+  height: 50vh;
   opacity: 0.9;
   background-color: #37474f;
   border: 1px solid #212121;
   border-radius: 15px 15px 15px;
+  pointer-events: auto;
 }
-.section-container .header {
+.container .header {
   font-family: "Montserrat-Regular";
   font-size: 0.9rem;
   margin: 0;
 }
-.section-container .sub-header {
+.container .sub-header {
   font-family: "Montserrat-Regular";
   font-size: 0.65rem;
   margin: 0;
   margin-top: 1vh;
 }
-.section-container .description {
+.container .description {
   width: 33vw;
   margin-top: 0;
   padding: 2.5vw;
@@ -61,14 +68,24 @@ body {
   width: 10vw;
 }
 
-#Background {
+#test {
+  z-index: 1000;
+  font-size: 1em;
+  position: fixed;
+  color: white;
+  top: 0;
+  left: 0;
+}
+
+#Ballpit {
   height: 100vh;
   background-color: #455a64;
   color: #e8eaf6;
   font-family: "Montserrat-Regular";
-  position: absolute;
+  position: fixed;
 }
-#Background .animation-controller {
+#Ballpit .animation-controller {
+  z-index: 500 !important;
   font-family: "Montserrat-Regular";
   position: absolute;
   opacity: 0.9;
@@ -82,55 +99,30 @@ body {
   right: 0;
   font-size: 0.35rem;
 }
-#Background .animation-controller .header {
+#Ballpit .animation-controller .header {
   font-family: "Montserrat-Regular";
   font-size: 0.35rem;
 }
-#Background .animation-controller div {
+#Ballpit .animation-controller div {
   margin-top: 1.5vh;
   padding-bottom: 0.5vh;
 }
-#Background .animation-controller #renderer {
+#Ballpit .animation-controller #renderer {
   margin-left: 0.5vw;
 }
 
 #Intro {
-  color: #e8eaf6;
-  font-family: "Montserrat-Regular";
   position: relative;
 }
 #Intro .container {
-  text-align: center;
   width: 50vw;
   height: 27.5vh;
-  opacity: 0.9;
-  background-color: #37474f;
-  border: 1px solid #212121;
-  border-radius: 15px 15px 15px;
 }
-#Intro .container .header {
-  font-family: "Montserrat-Regular";
-  font-size: 0.9rem;
-  margin: 0;
-}
-#Intro .container .sub-header {
-  font-family: "Montserrat-Regular";
-  font-size: 0.65rem;
-  margin: 0;
-  margin-top: 1vh;
-}
-#Intro .container .description {
-  width: 33vw;
-  margin-top: 0;
-  padding: 2.5vw;
-  padding-top: 0;
-  font-size: 0.65rem;
-}
-#Intro .chevron-container {
+#Intro .container .chevron-container {
   width: 2.5vw;
   margin-left: calc(50% - 1.25vw);
 }
-#Intro .chevron-container .down-chevs {
+#Intro .container .chevron-container .down-chevs {
   margin: 0;
   top: -5vh;
   width: 2.5vw;
@@ -145,8 +137,35 @@ body {
 #Navbar .container .nav-item {
   float: left;
   text-align: center;
-  margin-left: 5vw;
+  margin-left: 3.5vw;
   font-size: 0.75rem;
+  animation-duration: 1s;
+}
+
+#About {
+  margin-top: 10vh;
+}
+#About .container {
+  width: 65vw;
+  height: 50vh;
+}
+
+#Works {
+  margin-top: 10vh;
+  top: 100vh;
+}
+#Works .container {
+  width: 80vw;
+  height: 75vh;
+}
+
+#Connect {
+  margin-top: 10vh;
+  top: 100vh;
+}
+#Connect .container {
+  width: 50vw;
+  height: 35vh;
 }
 
 /*# sourceMappingURL=main.css.map */
