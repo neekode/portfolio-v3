@@ -50,7 +50,7 @@ function Navbar() {
     
   return (
     <div id="Navbar">
-        <div className={state.section !== 'Intro' ? "Navbar-fixed container center" : "container center"}>
+        <div className={state.section !== 'Intro' ? "Navbar-fixed container" : "container"}>
           <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span></AnchorLink>
           <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
           <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>

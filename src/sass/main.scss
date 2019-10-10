@@ -177,10 +177,11 @@ body {
 
 #Navbar {
     .container {
-        position: relative;
+        position: absolute;
         height: 5vh;
         width: 100vw;
-        padding-left: 64.5%;
+        top: 100vh;
+        padding-left: 31%;
 
         background-color: map-get($global-colors, secondary);
         
@@ -191,7 +192,7 @@ body {
             text-align: center;
             margin:auto;
             margin-left: 3.5vw;
-            font-size: 0.75rem;
+            font-size: 0.75rem; 
             
             animation-duration: 1s;
         }
@@ -200,7 +201,7 @@ body {
 
 .Navbar-fixed {
     position: fixed !important;
-    top: 2.5vh !important;
+    top: 0 !important;
     margin: 0;
 }
 
