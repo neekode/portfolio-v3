@@ -51,8 +51,8 @@ function Intro() {
               I'm a Front-End Web Dev from Seattle.
             </h3>
 
-            <div className='chevron-container' ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-              <AnchorLink href="#About"> <img className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
+            <div className='chevron-container' >
+              <AnchorLink href="#About"> <img ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
             </div>
         </div>
     </div>

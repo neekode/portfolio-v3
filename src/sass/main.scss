@@ -3,15 +3,15 @@
 // Colors
 
 $global-colors : (
-    primary: #455a64,
-    secondary: #37474f,
+    primary: #1F3039,
+    secondary: #34346C,
     border: #212121,
     font: #F8F9F9,
     font-secondary: #72D9D3,
 );
 
 $intro-colors : (
-    primary: #3F415B,
+    primary: #3F576D,
     secondary: #999AA2,
     border: #94A1B6,
 );
@@ -23,7 +23,7 @@ $about-colors : (
 );
 
 $works-colors : (
-    primary: #255171,
+    primary: #3F415B,
     secondary: #AB625E,
     border: #EAC683,
 );
@@ -145,7 +145,7 @@ body {
         position: absolute;
 
         color: map-get($global-colors, font);
-        background-color: map-get($global-colors, secondary);
+        background-color: map-get($global-colors, primary);
         border: 1px solid map-get($global-colors, border);
 
         opacity: 0.9;
@@ -183,7 +183,9 @@ body {
         top: 100vh;
         padding-left: 31%;
 
-        background-color: map-get($global-colors, secondary);
+        background-color: map-get($global-colors, primary);
+        border-bottom: 1px solid map-get($global-colors, font);
+        z-index: 50;
         
         .nav-item {
             color: map-get($global-colors, font);
@@ -241,8 +243,9 @@ body {
     // About 
 #About {
     .container {
-        width: 65vw;   
-        height: 50vh
+        width: 80vw;   
+        height: 75vh;
+        top: 30vh;
     }
 }
     .Background-About {
@@ -260,6 +263,7 @@ body {
     .container {
         width: 80vw;   
         height: 75vh;
+        top: 30vh;
     }
 }
     .Background-Works {
@@ -273,15 +277,15 @@ body {
 // Connect 
 #Connect {
     .container {
-        width: 50vw;   
-        height: 35vh;
+        width: 80vw;   
+        height: 75vh;
+        top: 30vh;
     }
 }
     .Background-Connect {
         background-color: map-get($connect-colors, primary);
         color: map-get($connect-colors, font);
         font-family: $header-font;
-
     }
     .container-Connect {
 

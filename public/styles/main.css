@@ -84,7 +84,7 @@ body {
   font-family: "Montserrat-Regular";
   position: absolute;
   color: #F8F9F9;
-  background-color: #37474f;
+  background-color: #1F3039;
   border: 1px solid #212121;
   opacity: 0.9;
   border-radius: 15px 15px 15px;
@@ -112,7 +112,9 @@ body {
   width: 100vw;
   top: 100vh;
   padding-left: 31%;
-  background-color: #37474f;
+  background-color: #1F3039;
+  border-bottom: 1px solid #F8F9F9;
+  z-index: 50;
 }
 #Navbar .container .nav-item {
   color: #F8F9F9;
@@ -146,13 +148,14 @@ body {
 }
 
 .Background-Intro {
-  background-color: #3F415B;
+  background-color: #3F576D;
   font-family: "Montserrat-Regular";
 }
 
 #About .container {
-  width: 65vw;
-  height: 50vh;
+  width: 80vw;
+  height: 75vh;
+  top: 30vh;
 }
 
 .Background-About {
@@ -163,16 +166,18 @@ body {
 #Works .container {
   width: 80vw;
   height: 75vh;
+  top: 30vh;
 }
 
 .Background-Works {
-  background-color: #255171;
+  background-color: #3F415B;
   font-family: "Montserrat-Regular";
 }
 
 #Connect .container {
-  width: 50vw;
-  height: 35vh;
+  width: 80vw;
+  height: 75vh;
+  top: 30vh;
 }
 
 .Background-Connect {
