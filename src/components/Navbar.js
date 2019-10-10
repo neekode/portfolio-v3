@@ -16,7 +16,7 @@ function Navbar() {
   // use effect, once subscribed to the [hoverEl] as a second argument, fires the callback function whenever
   // at any point if hoverEl mutates.
   useEffect(() => {
-    hoverEl.addClass('animated bounce')
+    hoverEl.addClass('animated infinite bounce')
   }, [hoverEl])
 
   const handleMouseEnter = (e) => {
@@ -43,7 +43,7 @@ function Navbar() {
   }
 
   const handleMouseLeave = (e) => {
-    hoverEl.removeClass('animated pulse')
+    hoverEl.removeClass('animated infinite pulse')
   }
 
   //href="#Works"  ref={item} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}

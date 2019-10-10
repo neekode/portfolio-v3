@@ -7,17 +7,17 @@ $global-colors : (
     secondary: #34346C,
     border: #212121,
     font: #F8F9F9,
-    font-secondary: #72D9D3,
+    font-secondary: #ED942C,
 );
 
 $intro-colors : (
-    primary: #3F576D,
+    primary: #31425F,
     secondary: #999AA2,
     border: #94A1B6,
 );
 
 $about-colors : (
-    primary: #31425F,
+    primary: #323A6A,
     secondary: #6C6862,
     border: #72D9D3,
 );
@@ -83,10 +83,10 @@ body {
 // }
 
 .section {
-    height:100vh;
+    height:130vh;
     pointer-events: none;
     position: relative;
-    //border: 1px solid red !important;
+    border: 1px solid green !important;
     z-index: 2;
 }
 
@@ -98,7 +98,7 @@ body {
     pointer-events: auto;
     color: map-get($global-colors, font);
 
-    //border: 1px solid red;
+    border: 1px solid red;
 
     .header {
         font-family: $main-font;
@@ -180,13 +180,12 @@ body {
         position: absolute;
         height: 5vh;
         width: 100vw;
-        top: 100vh;
         padding-left: 31%;
-
-        background-color: map-get($global-colors, primary);
-        border-bottom: 1px solid map-get($global-colors, font);
         z-index: 50;
         
+        background-color: map-get($global-colors, primary);
+        border-bottom: 1px solid map-get($global-colors, font);
+
         .nav-item {
             color: map-get($global-colors, font);
 
@@ -245,7 +244,7 @@ body {
     .container {
         width: 80vw;   
         height: 75vh;
-        top: 30vh;
+        top: 10vh;
     }
 }
     .Background-About {
@@ -263,7 +262,7 @@ body {
     .container {
         width: 80vw;   
         height: 75vh;
-        top: 30vh;
+        top: 10vh;
     }
 }
     .Background-Works {
@@ -279,7 +278,7 @@ body {
     .container {
         width: 80vw;   
         height: 75vh;
-        top: 30vh;
+        top: 10vh;
     }
 }
     .Background-Connect {

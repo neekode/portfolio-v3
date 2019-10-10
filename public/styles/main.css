@@ -28,13 +28,14 @@ body {
 }
 
 #neeko-blomgren {
-  color: #72D9D3;
+  color: #ED942C;
 }
 
 .section {
-  height: 100vh;
+  height: 130vh;
   pointer-events: none;
   position: relative;
+  border: 1px solid green !important;
   z-index: 2;
 }
 
@@ -45,6 +46,7 @@ body {
   opacity: 0.9;
   pointer-events: auto;
   color: #F8F9F9;
+  border: 1px solid red;
 }
 .container .header {
   font-family: "Montserrat-Regular";
@@ -110,11 +112,10 @@ body {
   position: absolute;
   height: 5vh;
   width: 100vw;
-  top: 100vh;
   padding-left: 31%;
+  z-index: 50;
   background-color: #1F3039;
   border-bottom: 1px solid #F8F9F9;
-  z-index: 50;
 }
 #Navbar .container .nav-item {
   color: #F8F9F9;
@@ -148,25 +149,25 @@ body {
 }
 
 .Background-Intro {
-  background-color: #3F576D;
+  background-color: #31425F;
   font-family: "Montserrat-Regular";
 }
 
 #About .container {
   width: 80vw;
   height: 75vh;
-  top: 30vh;
+  top: 10vh;
 }
 
 .Background-About {
-  background-color: #31425F;
+  background-color: #323A6A;
   font-family: "Montserrat-Regular";
 }
 
 #Works .container {
   width: 80vw;
   height: 75vh;
-  top: 30vh;
+  top: 10vh;
 }
 
 .Background-Works {
@@ -177,7 +178,7 @@ body {
 #Connect .container {
   width: 80vw;
   height: 75vh;
-  top: 30vh;
+  top: 10vh;
 }
 
 .Background-Connect {
