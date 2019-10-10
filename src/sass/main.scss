@@ -128,14 +128,6 @@ body {
     width: 10vw;
 }
 
-#test {
-    z-index: 1000;
-    font-size: 1em;
-    position: fixed;
-    color: white;
-    top: 0;
-    left: 0;
-}
 
 #Background {
     height: 100vh;
@@ -186,23 +178,30 @@ body {
 #Navbar {
     .container {
         position: relative;
-        width: 75%;
         height: 5vh;
-        margin-top: 5vh;
         width: 100vw;
-        padding-left: 50%;
+        padding-left: 64.5%;
+
+        background-color: map-get($global-colors, secondary);
         
         .nav-item {
+            color: map-get($global-colors, font);
+
             float: left;
             text-align: center;
+            margin:auto;
             margin-left: 3.5vw;
             font-size: 0.75rem;
-            color: map-get($global-colors, font);
+            
             animation-duration: 1s;
-
-            margin: 0;
         }
     }
+}
+
+.Navbar-fixed {
+    position: fixed !important;
+    top: 2.5vh !important;
+    margin: 0;
 }
 
 

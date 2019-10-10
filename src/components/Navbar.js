@@ -1,11 +1,11 @@
 import React from 'react';
 import { useContext, useRef, useState, useEffect } from 'react';
-import SectionContext from './../scripts/context'
+import Context from './../scripts/context'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import $ from 'jquery';
 
 function Navbar() {
-  const { section, selectSection } = useContext( SectionContext );
+  const { state } = useContext( Context );
 
   // First, declaring state of the currently hovered over element. Initializing it to an empty jquery object to set the object type
   const [hoverEl, setHoverEl] = useState($());
@@ -50,12 +50,10 @@ function Navbar() {
     
   return (
     <div id="Navbar">
-        <div className="container center">
-        <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span>  </AnchorLink>
-          
-        <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
-        <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
-          
+        <div className={state.section !== 'Intro' ? "Navbar-fixed container center" : "container center"}>
+          <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span></AnchorLink>
+          <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
+          <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
         </div>
     </div>
   );

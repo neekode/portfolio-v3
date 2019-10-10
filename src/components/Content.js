@@ -66,14 +66,6 @@ function Content() {
       if (currentPos > elTops.connect - 50) { 
         dispatch({ type: 'SWITCH_SECTION', payload :'Connect'} ) 
       };
-
-      
-  }
-
-  const changeBg = () => {
-     if (state.section === 'About') {
-       sectionEls.intro.addClass('#About-background');
-     }
   }
     
   return (
@@ -87,8 +79,6 @@ function Content() {
         <About />
         <Works />
         <Connect />
-
-        <div id='test'> {state.section} </div>
     </div>
   );
 }
