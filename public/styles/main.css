@@ -27,23 +27,24 @@ body {
   background-image: url("./../../public/img/chevrons-down.svg");
 }
 
+#neeko-blomgren {
+  color: #72D9D3;
+}
+
 .section {
-  height: 120vh;
+  height: 100vh;
   pointer-events: none;
   position: relative;
   z-index: 2;
 }
 
 .container {
-  color: #e8eaf6;
-  background-color: #37474f;
-  border: 1px solid #212121;
   text-align: center;
   width: 50vw;
   height: 50vh;
   opacity: 0.9;
-  border-radius: 15px 15px 15px;
   pointer-events: auto;
+  color: #F8F9F9;
 }
 .container .header {
   font-family: "Montserrat-Regular";
@@ -82,11 +83,18 @@ body {
   height: 100vh;
   font-family: "Montserrat-Regular";
   position: fixed;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
 }
 #Background .animation-controller {
   z-index: 500 !important;
   font-family: "Montserrat-Regular";
   position: absolute;
+  color: #F8F9F9;
+  background-color: #37474f;
+  border: 1px solid #212121;
   opacity: 0.9;
   border-radius: 15px 15px 15px;
   padding: 1.5vh;
@@ -107,48 +115,22 @@ body {
   margin-left: 0.5vw;
 }
 
-.Background-Intro {
-  background-color: #3F415B;
+#Navbar .container {
+  position: relative;
+  width: 75%;
+  height: 5vh;
+  margin-top: 5vh;
+  width: 100vw;
+  padding-left: 50%;
+}
+#Navbar .container .nav-item {
+  float: left;
+  text-align: center;
+  margin-left: 3.5vw;
+  font-size: 0.75rem;
   color: #F8F9F9;
-  font-family: "Montserrat-Regular";
-}
-.Background-Intro .animation-controller {
-  color: #F8F9F9;
-  background-color: #999AA2;
-  border: 1px solid #94A1B6;
-}
-
-.Background-About {
-  background-color: #31425F;
-  color: #F4F7F5;
-  font-family: "Montserrat-Regular";
-}
-.Background-About .animation-controller {
-  color: #F4F7F5;
-  background-color: #6C6862;
-  border: 1px solid #72D9D3;
-}
-
-.Background-Works {
-  background-color: #515D56;
-  color: #FAF9F9;
-  font-family: "Montserrat-Regular";
-}
-.Background-Works .animation-controller {
-  color: #FAF9F9;
-  background-color: #AB625E;
-  border: 1px solid #EAC683;
-}
-
-.Background-Connect {
-  background-color: #2B2E40;
-  color: #FAFAFA;
-  font-family: "Montserrat-Regular";
-}
-.Background-Connect .animation-controller {
-  color: #FAFAFA;
-  background-color: #716F82;
-  border: 1px solid #606072;
+  animation-duration: 1s;
+  margin: 0;
 }
 
 #Intro {
@@ -156,30 +138,19 @@ body {
 }
 #Intro .container {
   width: 50vw;
-  height: 27.5vh;
+  height: 20vh;
 }
 #Intro .container .chevron-container {
-  width: 2.5vw;
-  margin-left: calc(50% - 1.25vw);
+  margin-top: 2.5vh;
 }
 #Intro .container .chevron-container .down-chevs {
   margin: 0;
-  top: -5vh;
   width: 2.5vw;
 }
 
-#Navbar .container {
-  position: relative;
-  width: 75%;
-  margin-top: 6vh;
-  height: 5vh;
-}
-#Navbar .container .nav-item {
-  float: left;
-  text-align: center;
-  margin-left: 3.5vw;
-  font-size: 0.75rem;
-  animation-duration: 1s;
+.Background-Intro {
+  background-color: #3F415B;
+  font-family: "Montserrat-Regular";
 }
 
 #About .container {
@@ -187,17 +158,29 @@ body {
   height: 50vh;
 }
 
+.Background-About {
+  background-color: #31425F;
+  font-family: "Montserrat-Regular";
+}
+
 #Works .container {
   width: 80vw;
   height: 75vh;
 }
 
-#Connect {
-  height: 100vh;
+.Background-Works {
+  background-color: #255171;
+  font-family: "Montserrat-Regular";
 }
+
 #Connect .container {
   width: 50vw;
   height: 35vh;
+}
+
+.Background-Connect {
+  background-color: #2B2E40;
+  font-family: "Montserrat-Regular";
 }
 
 /*# sourceMappingURL=main.css.map */

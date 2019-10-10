@@ -4,6 +4,7 @@ import Intro from './Intro'
 import About from './About'
 import Works from './Works'
 import Connect from './Connect'
+import Navbar from './Navbar.js';
 
 import Background from './Background';
 
@@ -11,7 +12,7 @@ import Context from './../scripts/context';
 import { useContext, useEffect } from 'react';
 
 function Content() {
-  
+
   const sectionEls = {
     intro: {},
     about: {},
@@ -80,6 +81,9 @@ function Content() {
         <Background sectionTheme={state.section} /> 
         
         <Intro />
+
+        <Navbar /> 
+
         <About />
         <Works />
         <Connect />

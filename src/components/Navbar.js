@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext, useRef, useState, useEffect } from 'react';
 import SectionContext from './../scripts/context'
-
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import $ from 'jquery';
 
 function Navbar() {
@@ -16,7 +16,7 @@ function Navbar() {
   // use effect, once subscribed to the [hoverEl] as a second argument, fires the callback function whenever
   // at any point if hoverEl mutates.
   useEffect(() => {
-    hoverEl.addClass('animated pulse')
+    hoverEl.addClass('animated bounce')
   }, [hoverEl])
 
   const handleMouseEnter = (e) => {
@@ -51,9 +51,11 @@ function Navbar() {
   return (
     <div id="Navbar">
         <div className="container center">
-          <span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span>
-          <span id='works-link' ref={worksLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span>
-          <span id='connect-link' ref={connectLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span>
+        <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span>  </AnchorLink>
+          
+        <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
+        <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onClick={selectSection} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
+          
         </div>
     </div>
   );

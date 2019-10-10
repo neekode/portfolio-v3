@@ -6,35 +6,32 @@ $global-colors : (
     primary: #455a64,
     secondary: #37474f,
     border: #212121,
-    font: #e8eaf6,
+    font: #F8F9F9,
+    font-secondary: #72D9D3,
 );
 
 $intro-colors : (
     primary: #3F415B,
     secondary: #999AA2,
     border: #94A1B6,
-    font: #F8F9F9,
 );
 
 $about-colors : (
     primary: #31425F,
     secondary: #6C6862,
     border: #72D9D3,
-    font: #F4F7F5,
 );
 
 $works-colors : (
-    primary: #515D56,
+    primary: #255171,
     secondary: #AB625E,
     border: #EAC683,
-    font: #FAF9F9,
 );
 
 $connect-colors : (
     primary: #2B2E40,
     secondary: #716F82,
     border: #606072,
-    font: #FAFAFA,
 );
 
 // Fonts
@@ -77,12 +74,16 @@ body {
     background-image: url('./../../public/img/chevrons-down.svg')
 }
 
+#neeko-blomgren {
+    color: map-get($global-colors, font-secondary);
+}
+
 // #App {
     
 // }
 
 .section {
-    height:120vh;
+    height:100vh;
     pointer-events: none;
     position: relative;
     //border: 1px solid red !important;
@@ -90,16 +91,14 @@ body {
 }
 
 .container {
-    color: map-get($global-colors, font);
-    background-color: map-get($global-colors, secondary);
-    border: 1px solid map-get($global-colors, border);
-
     text-align: center;
     width: 50vw;
     height: 50vh;
     opacity: 0.9;
-    border-radius: 15px 15px 15px;
     pointer-events: auto;
+    color: map-get($global-colors, font);
+
+    //border: 1px solid red;
 
     .header {
         font-family: $main-font;
@@ -143,10 +142,19 @@ body {
     font-family: $header-font;
     position: fixed;
 
+    -webkit-transition: all 1s linear;
+    -moz-transition: all 1s linear;
+    -o-transition: all 1s linear;
+    transition: all 1s linear;
+
     .animation-controller {
         z-index: 500 !important;
         font-family: $main-font;
         position: absolute;
+
+        color: map-get($global-colors, font);
+        background-color: map-get($global-colors, secondary);
+        border: 1px solid map-get($global-colors, border);
 
         opacity: 0.9;
         
@@ -174,53 +182,29 @@ body {
     }
 }
 
-.Background-Intro {
-    background-color: map-get($intro-colors, primary);
-    color: map-get($intro-colors, font);
-    font-family: $header-font;
 
-    .animation-controller {
-        color: map-get($intro-colors, font);
-        background-color: map-get($intro-colors, secondary);
-        border: 1px solid map-get($intro-colors, border);
+#Navbar {
+    .container {
+        position: relative;
+        width: 75%;
+        height: 5vh;
+        margin-top: 5vh;
+        width: 100vw;
+        padding-left: 50%;
+        
+        .nav-item {
+            float: left;
+            text-align: center;
+            margin-left: 3.5vw;
+            font-size: 0.75rem;
+            color: map-get($global-colors, font);
+            animation-duration: 1s;
+
+            margin: 0;
+        }
     }
 }
 
-.Background-About {
-    background-color: map-get($about-colors, primary);
-    color: map-get($about-colors, font);
-    font-family: $header-font;
-
-    .animation-controller {
-        color: map-get($about-colors, font);
-        background-color: map-get($about-colors, secondary);
-        border: 1px solid map-get($about-colors, border);
-    }
-}
-
-.Background-Works {
-    background-color: map-get($works-colors, primary);
-    color: map-get($works-colors, font);
-    font-family: $header-font;
-
-    .animation-controller {
-        color: map-get($works-colors, font);
-        background-color: map-get($works-colors, secondary);
-        border: 1px solid map-get($works-colors, border);
-    }
-}
-
-.Background-Connect {
-    background-color: map-get($connect-colors, primary);
-    color: map-get($connect-colors, font);
-    font-family: $header-font;
-
-    .animation-controller {
-        color: map-get($connect-colors, font);
-        background-color: map-get($connect-colors, secondary);
-        border: 1px solid map-get($connect-colors, border);
-    }
-}
 
     // Intro
 #Intro {
@@ -228,52 +212,30 @@ body {
 
     .container {
         width: 50vw;
-        height: 27.5vh;
+        height: 20vh;
         
 
         .chevron-container{
-            width: 2.5vw;
-            margin-left: calc(50% - 1.25vw);
-    
+            margin-top: 2.5vh;
             .down-chevs {
                 margin: 0;
-                top: -5vh;
                 width: 2.5vw;
             }
         }
     }
 }
 
-#Navbar {
-    .container {
-        position: relative;
-        width: 75%;
-        margin-top: 6vh;
-        height: 5vh;
-        
-        .nav-item {
-            float: left;
-            text-align: center;
-            margin-left: 3.5vw;
-            font-size: 0.75rem;
-
-            animation-duration: 1s;
-        }
-
-        // :nth-child(1) {
-
-        // }
-
-        // :nth-child(2) {
-
-        // }
-
-        // :nth-child(3) {
-
-        // }
+    .Background-Intro {
+        background-color: map-get($intro-colors, primary);
+        color: map-get($intro-colors, font);
+        font-family: $header-font;
     }
-    
-}
+
+    .container-Intro {
+
+    }
+
+
 
 
     // About 
@@ -283,6 +245,15 @@ body {
         height: 50vh
     }
 }
+    .Background-About {
+        background-color: map-get($about-colors, primary);
+        
+        font-family: $header-font;
+    }
+
+    .container-About {
+        color: map-get($about-colors, font);
+    }
 
 // Works
 #Works {
@@ -291,12 +262,27 @@ body {
         height: 75vh;
     }
 }
+    .Background-Works {
+        background-color: map-get($works-colors, primary);
+        font-family: $header-font;
+    }
+    .container-Works {
+        color: map-get($works-colors, font);
+    }
 
 // Connect 
 #Connect {
-    height: 100vh;
     .container {
         width: 50vw;   
         height: 35vh;
     }
 }
+    .Background-Connect {
+        background-color: map-get($connect-colors, primary);
+        color: map-get($connect-colors, font);
+        font-family: $header-font;
+
+    }
+    .container-Connect {
+
+    }

@@ -31,8 +31,8 @@ import { useContext, useEffect, useState } from 'react';
 
 function Background() {
     const { state } = useContext( Context );
-    const [amount, setAmount] = useState(500);
-    const [radius, setRadius] = useState(2.5);
+    const [amount, setAmount] = useState(250);
+    const [radius, setRadius] = useState(2);
     const [speed, setSpeed] = useState(0.15);
 
     let theme = `Background-${state.section}`;
@@ -56,8 +56,6 @@ function Background() {
         // Canvas, Context
         const theCanvas = document.getElementById('myCanvas'); // *SET HTML ELEMENTS HERE*
         const theContext = theCanvas.getContext('2d');
-
-        
 
         // Resize to Window Viewport on pageload
         resizeCanvas(theCanvas);
@@ -126,8 +124,8 @@ function Background() {
             let newAmt, newRad, newSpd;
 
             newAmt = (Math.random() * 500).toFixed(3);
-            newRad = (Math.random() * 75).toFixed(3);
-            newSpd = (Math.random() * 0.5).toFixed(3);
+            newRad = (Math.random() * 15).toFixed(3);
+            newSpd = (Math.random() * 0.35).toFixed(3);
 
             setIntObj(init(newAmt,newRad,newSpd));
 

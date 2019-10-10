@@ -40,7 +40,7 @@ export const shapesModule = (ctx,c) => {
    
            Circle: (newX,newY,newR,newMoveX,newMoveY) => {
                // Changes color to white (ish)
-               ctx.strokeStyle  = "#e8eaf6";
+               ctx.strokeStyle  = "#35ADC8";
    
                let x = newX; let y = newY; let r = newR;
    
