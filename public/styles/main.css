@@ -23,43 +23,39 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#chevrons {
-  background-image: url("./../../public/img/chevrons-down.svg");
-}
-
-#neeko-blomgren {
-  color: #ED942C;
+.row {
+  margin: 0 !important;
 }
 
 .section {
-  height: 130vh;
+  height: 110vh;
   pointer-events: none;
   position: relative;
-  border: 1px solid green !important;
   z-index: 2;
 }
 
-.container {
+.box {
   text-align: center;
-  width: 50vw;
-  height: 50vh;
-  opacity: 0.9;
+  opacity: 0.95;
   pointer-events: auto;
+  background-color: #1F3039;
   color: #F8F9F9;
-  border: 1px solid red;
+  width: 80vw;
+  height: 75vh;
+  border-radius: 10px 10px 10px;
 }
-.container .header {
+.box .header {
   font-family: "Montserrat-Regular";
   font-size: 0.9rem;
   margin: 0;
 }
-.container .sub-header {
+.box .sub-header {
   font-family: "Montserrat-Regular";
   font-size: 0.65rem;
   margin: 0;
   margin-top: 1vh;
 }
-.container .description {
+.box .description {
   width: 33vw;
   margin-top: 0;
   padding: 2.5vw;
@@ -87,9 +83,8 @@ body {
   position: absolute;
   color: #F8F9F9;
   background-color: #1F3039;
-  border: 1px solid #212121;
-  opacity: 0.9;
-  border-radius: 15px 15px 15px;
+  opacity: 0.95;
+  border-radius: 10px 10px 10px;
   padding: 1.5vh;
   margin: 5vh;
   bottom: 0;
@@ -108,16 +103,17 @@ body {
   margin-left: 0.5vw;
 }
 
-#Navbar .container {
+#MyNav .box {
   position: absolute;
   height: 5vh;
   width: 100vw;
   padding-left: 31%;
   z-index: 50;
+  border-radius: 0;
   background-color: #1F3039;
   border-bottom: 1px solid #F8F9F9;
 }
-#Navbar .container .nav-item {
+#MyNav .box .nav-item {
   color: #F8F9F9;
   float: left;
   text-align: center;
@@ -127,25 +123,25 @@ body {
   animation-duration: 1s;
 }
 
-.Navbar-fixed {
+.MyNav-fixed {
   position: fixed !important;
   top: 0 !important;
-  margin: 0;
 }
 
 #Intro {
   position: relative;
 }
-#Intro .container {
+#Intro .box {
   width: 50vw;
   height: 20vh;
+  padding: 1vw;
 }
-#Intro .container .chevron-container {
-  margin-top: 2.5vh;
-}
-#Intro .container .chevron-container .down-chevs {
+#Intro .box .chevron-box .down-chevs {
   margin: 0;
   width: 2.5vw;
+}
+#Intro #neeko-blomgren {
+  color: #ED942C;
 }
 
 .Background-Intro {
@@ -153,10 +149,29 @@ body {
   font-family: "Montserrat-Regular";
 }
 
-#About .container {
-  width: 80vw;
-  height: 75vh;
-  top: 10vh;
+#About .box {
+  top: 5vh;
+}
+#About .header {
+  display: inline-block;
+  text-align: center !important;
+}
+#About #profile-picture {
+  padding: 1.5vw;
+  float: left;
+}
+#About #profile-picture img {
+  width: 20vw;
+  border-radius: 50%;
+}
+#About #profile-picture span {
+  float: left;
+  font-size: 0.8em;
+  margin: 0;
+  margin-left: 20%;
+}
+#About #about-content {
+  float: left;
 }
 
 .Background-About {
@@ -164,10 +179,8 @@ body {
   font-family: "Montserrat-Regular";
 }
 
-#Works .container {
-  width: 80vw;
-  height: 75vh;
-  top: 10vh;
+#Works .box {
+  top: 5vh;
 }
 
 .Background-Works {
@@ -175,10 +188,8 @@ body {
   font-family: "Montserrat-Regular";
 }
 
-#Connect .container {
-  width: 80vw;
-  height: 75vh;
-  top: 10vh;
+#Connect .box {
+  top: 5vh;
 }
 
 .Background-Connect {

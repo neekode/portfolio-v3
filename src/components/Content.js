@@ -4,7 +4,7 @@ import Intro from './Intro'
 import About from './About'
 import Works from './Works'
 import Connect from './Connect'
-import Navbar from './Navbar.js';
+import MyNav from './MyNav.js';
 
 import Background from './Background';
 
@@ -70,11 +70,11 @@ function Content() {
     
   return (
     <div id="Content">
-        <Background sectionTheme={state.section} /> 
+        <Background /> 
         
         <Intro />
 
-        <Navbar /> 
+        <MyNav /> 
 
         <About />
         <Works />

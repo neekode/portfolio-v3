@@ -33,7 +33,7 @@ function Background() {
     const { state } = useContext( Context );
     const [amount, setAmount] = useState(250);
     const [radius, setRadius] = useState(2);
-    const [speed, setSpeed] = useState(0.15);
+    const [speed, setSpeed] = useState(0.10);
 
     let theme = `Background-${state.section}`;
 
@@ -125,7 +125,7 @@ function Background() {
 
             newAmt = (Math.random() * 500).toFixed(3);
             newRad = (Math.random() * 15).toFixed(3);
-            newSpd = (Math.random() * 0.35).toFixed(3);
+            newSpd = (Math.random() * 0.15).toFixed(3);
 
             setIntObj(init(newAmt,newRad,newSpd));
 

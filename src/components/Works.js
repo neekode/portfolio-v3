@@ -4,7 +4,7 @@ function Works() {
     
   return (
     <div className="section" id="Works">
-        <div className="container center">
+        <div className="box center">
           <h2 id="works-header" className="header">Work:</h2>
               <h3 id="works-sub-header" className="sub-header"> 
                 work </h3>

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useContext, useRef, useState, useEffect } from 'react';
-import Context from './../scripts/context'
+import Context from '../scripts/context'
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 import $ from 'jquery';
 
-function Navbar() {
+function MyNav() {
   const { state } = useContext( Context );
 
   // First, declaring state of the currently hovered over element. Initializing it to an empty jquery object to set the object type
@@ -16,7 +16,7 @@ function Navbar() {
   // use effect, once subscribed to the [hoverEl] as a second argument, fires the callback function whenever
   // at any point if hoverEl mutates.
   useEffect(() => {
-    hoverEl.addClass('animated infinite bounce')
+    hoverEl.addClass('animated bounce')
   }, [hoverEl])
 
   const handleMouseEnter = (e) => {
@@ -43,14 +43,14 @@ function Navbar() {
   }
 
   const handleMouseLeave = (e) => {
-    hoverEl.removeClass('animated infinite pulse')
+    hoverEl.removeClass('animated bounce')
   }
 
   //href="#Works"  ref={item} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}
     
   return (
-    <div id="Navbar">
-        <div className={state.section !== 'Intro' ? "Navbar-fixed container" : "container"}>
+    <div id="MyNav">
+        <div className={state.section !== 'Intro' ? "MyNav-fixed box" : "box"}>
           <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span></AnchorLink>
           <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
           <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
@@ -59,4 +59,4 @@ function Navbar() {
   );
 }
 
-export default Navbar;
+export default MyNav;

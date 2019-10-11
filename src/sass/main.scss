@@ -70,35 +70,34 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
-#chevrons {
-    background-image: url('./../../public/img/chevrons-down.svg')
-}
-
-#neeko-blomgren {
-    color: map-get($global-colors, font-secondary);
-}
-
 // #App {
     
-// }
+// }\
+
+.row {
+    margin: 0 !important;
+}
 
 .section {
-    height:130vh;
+    height:110vh;
     pointer-events: none;
     position: relative;
-    border: 1px solid green !important;
+    //border: 1px solid green !important;
     z-index: 2;
 }
 
-.container {
+.box {
     text-align: center;
-    width: 50vw;
-    height: 50vh;
-    opacity: 0.9;
+    opacity: 0.95;
     pointer-events: auto;
+    background-color: map-get($global-colors, primary);
     color: map-get($global-colors, font);
+    width: 80vw;   
+    height: 75vh;
 
-    border: 1px solid red;
+    border-radius: 10px 10px 10px;
+
+    //border: 1px solid red;
 
     .header {
         font-family: $main-font;
@@ -146,11 +145,10 @@ body {
 
         color: map-get($global-colors, font);
         background-color: map-get($global-colors, primary);
-        border: 1px solid map-get($global-colors, border);
 
-        opacity: 0.9;
-        
-        border-radius: 15px 15px 15px;
+        opacity: 0.95;
+
+        border-radius: 10px 10px 10px;
         padding: 1.5vh;
         margin: 5vh;
         bottom: 0;
@@ -175,13 +173,14 @@ body {
 }
 
 
-#Navbar {
-    .container {
+#MyNav {
+    .box {
         position: absolute;
         height: 5vh;
         width: 100vw;
         padding-left: 31%;
         z-index: 50;
+        border-radius: 0;
         
         background-color: map-get($global-colors, primary);
         border-bottom: 1px solid map-get($global-colors, font);
@@ -200,10 +199,9 @@ body {
     }
 }
 
-.Navbar-fixed {
+.MyNav-fixed {
     position: fixed !important;
     top: 0 !important;
-    margin: 0;
 }
 
 
@@ -211,18 +209,22 @@ body {
 #Intro {
     position: relative;
 
-    .container {
+    .box {
         width: 50vw;
         height: 20vh;
+        padding: 1vw;
         
 
-        .chevron-container{
-            margin-top: 2.5vh;
+        .chevron-box{
             .down-chevs {
                 margin: 0;
                 width: 2.5vw;
             }
         }
+    }
+
+    #neeko-blomgren {
+        color: map-get($global-colors, font-secondary);
     }
 }
 
@@ -232,7 +234,7 @@ body {
         font-family: $header-font;
     }
 
-    .container-Intro {
+    .box-Intro {
 
     }
 
@@ -241,10 +243,34 @@ body {
 
     // About 
 #About {
-    .container {
-        width: 80vw;   
-        height: 75vh;
-        top: 10vh;
+    .box {
+        top: 5vh;
+    }
+
+    .header {
+        display: inline-block;
+        text-align: center !important;
+    }
+
+    #profile-picture{
+        padding: 1.5vw;
+        float: left;
+
+        img {
+            width: 20vw;
+            border-radius: 50%;
+        }
+        
+        span {
+            float: left;
+            font-size: 0.8em;
+            margin: 0;
+            margin-left: 20%;
+        }
+    }
+
+    #about-content {
+        float: left;
     }
 }
     .Background-About {
@@ -253,32 +279,28 @@ body {
         font-family: $header-font;
     }
 
-    .container-About {
+    .box-About {
         color: map-get($about-colors, font);
     }
 
 // Works
 #Works {
-    .container {
-        width: 80vw;   
-        height: 75vh;
-        top: 10vh;
+    .box {
+        top: 5vh;
     }
 }
     .Background-Works {
         background-color: map-get($works-colors, primary);
         font-family: $header-font;
     }
-    .container-Works {
+    .box-Works {
         color: map-get($works-colors, font);
     }
 
 // Connect 
 #Connect {
-    .container {
-        width: 80vw;   
-        height: 75vh;
-        top: 10vh;
+    .box {
+        top: 5vh;
     }
 }
     .Background-Connect {
@@ -286,6 +308,6 @@ body {
         color: map-get($connect-colors, font);
         font-family: $header-font;
     }
-    .container-Connect {
+    .box-Connect {
 
     }
