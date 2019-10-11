@@ -4,7 +4,6 @@ import $ from 'jquery';
 import profilePic from './../assets/me.JPG';
 
 function About() {
-  debugger;
   const titleMorph = useRef();
 
   useEffect(() => initText(), []);

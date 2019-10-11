@@ -4,6 +4,9 @@ import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes';
 import Context from './../scripts/context';
 import { useContext, useEffect, useState } from 'react';
 
+import downChev from './../assets/chevron-down.svg';
+
+
 /* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
 
     Provides Intro Component with particle/circle animations which bounce around the screen
@@ -35,6 +38,8 @@ function Background() {
     const [radius, setRadius] = useState(2);
     const [speed, setSpeed] = useState(0.10);
 
+    const [controllerToggled, setControllerToggle] = useState(true);
+
     let theme = `Background-${state.section}`;
 
     // State which tracks the interval of consecutive draws. Necessary to unify single interval,
@@ -43,12 +48,6 @@ function Background() {
 
     // Initial side effect change which fires after component mounts and DOM/virtualDOM is ready.
     useEffect(() => init(amount, radius, speed, true), []);
-
-    useEffect(() => { changeBg() }, [state.section])
-
-    const changeBg = () => {
-        
-    }
 
     // init() function fires on pageload from useEffect, and when user re-renders and randomizes.
     // Default (on pageload) argument values as initial state of amount, radius, and speed. 
@@ -110,15 +109,18 @@ function Background() {
 
     // Event handler which re-renders animation based on which button is clicked
     const handleClick = (e) => {
-        // Clears previous interval (native function)
-        clearInterval(intervalObj);
+        
 
         if (e.target.id === "renderer") {
+            // Clears previous interval (native function)
+            clearInterval(intervalObj);
             // Passes new values using current variable states into initialization script
             setIntObj(init(amount,radius,speed));
         }
 
         if (e.target.id === "randomer") {
+            // Clears previous interval (native function)
+            clearInterval(intervalObj);
             // Randomizes amount and radius coefficient
             // Default values chosen to to accomodate for slower computers and browsers
             let newAmt, newRad, newSpd;
@@ -131,6 +133,11 @@ function Background() {
 
             // Setting new state of Input boxes
             setAmount(newAmt); setRadius(newRad); setSpeed(newSpd);    
+        }
+
+        if (e.target.id === "controller-toggle") {
+            debugger;
+            setControllerToggle(!controllerToggled);
         }
     }
 
@@ -149,7 +156,8 @@ function Background() {
         <div className={theme} id="Background">
             <canvas id="myCanvas" width="0px" height="0px"></canvas>
 
-            <div className="animation-controller">
+            <span id='toggle-box'> <img id='controller-toggle'  onClick={handleClick} className={controllerToggled ? 'left-chev' : 'right-chev'} alt='chev' src={downChev} /> </span>
+            <div className={controllerToggled ? "animation-controller" : "animation-controller animation-controller-hidden"}>            
             <span className="header"> Animation Controller </span> 
                     
                     <div> Amount </div>

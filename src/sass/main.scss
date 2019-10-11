@@ -70,6 +70,10 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+    vertical-align: top !important;
+}
+
 // #App {
     
 // }\
@@ -138,6 +142,37 @@ body {
     -o-transition: all 1s linear;
     transition: all 1s linear;
 
+    #toggle-box {
+        position: fixed;
+        height: 5vh;
+        width: 5vh;
+        right: 1vw;
+        bottom: calc(40% - 2.5vh);
+        background-color: map-get($global-colors, primary);
+        border-radius: 10px 10px 10px 10px;
+
+        img {
+            height: 5vh;
+            width: 5vh;
+        }
+
+        .left-chev {
+            cursor: pointer;
+            transition: all 0.3s linear;
+            transform: rotate(-90deg);
+            margin-left: 0.5vw;
+        }
+    
+        .right-chev {
+            cursor: pointer;
+            transition: all 0.3s linear;
+            transform: rotate(90deg);
+            margin-left: -0.5vw;
+        }
+    }
+
+    
+
     .animation-controller {
         z-index: 500 !important;
         font-family: $main-font;
@@ -146,13 +181,14 @@ body {
         color: map-get($global-colors, font);
         background-color: map-get($global-colors, primary);
 
+        transition: all 0.5s linear;
+
         opacity: 0.95;
 
         border-radius: 10px 10px 10px;
         padding: 1.5vh;
-        margin: 5vh;
-        bottom: 0;
-        right: 0;
+        bottom: 1vh;
+        right: 2vw;
         font-size: 0.35rem;
 
         .header {
@@ -169,6 +205,12 @@ body {
         #renderer {
             margin-left: 0.5vw;
         }
+    }
+
+    
+
+    .animation-controller-hidden {
+        right: -24.5vw;
     }
 }
 
@@ -217,7 +259,7 @@ body {
 
         .chevron-box{
             .down-chevs {
-                margin: 0;
+                margin: 15px;
                 width: 2.5vw;
             }
         }
