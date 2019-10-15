@@ -40,7 +40,6 @@ img {
 
 .box {
   text-align: center;
-  opacity: 0.95;
   pointer-events: auto;
   background-color: #1F3039;
   color: #F8F9F9;
@@ -50,6 +49,7 @@ img {
 }
 .box .header {
   font-family: "Montserrat-Regular";
+  color: #ED942C;
   font-size: 0.9rem;
   margin: 0;
 }
@@ -107,7 +107,7 @@ img {
   margin-left: -0.5vw;
 }
 #Background .animation-controller {
-  z-index: 500 !important;
+  z-index: 5000 !important;
   font-family: "Montserrat-Regular";
   position: absolute;
   color: #F8F9F9;
@@ -168,6 +168,9 @@ img {
   height: 20vh;
   padding: 1vw;
 }
+#Intro .box .header {
+  color: #F8F9F9;
+}
 #Intro .box .chevron-box .down-chevs {
   margin: 15px;
   width: 2.5vw;
@@ -189,21 +192,42 @@ img {
   text-align: center !important;
 }
 #About #profile-picture {
-  padding: 1.5vw;
-  float: left;
+  padding: 3.5vw;
 }
 #About #profile-picture img {
-  width: 20vw;
-  border-radius: 50%;
+  width: 90%;
+  margin: 5%;
 }
-#About #profile-picture span {
-  float: left;
-  font-size: 0.8em;
-  margin: 0;
-  margin-left: 20%;
+#About #profile-picture div {
+  font-size: 0.6em;
+  margin: auto;
 }
 #About #about-content {
-  float: left;
+  top: 0;
+  margin: 0;
+}
+#About #about-content p {
+  font-size: 0.5em;
+  width: 80%;
+  margin: auto;
+}
+#About #about-content .content-section {
+  font-size: 0.8em;
+  height: 40%;
+  margin-top: 1vh !important;
+}
+#About #about-content .content-section .emblem {
+  font-size: 0.6em;
+  padding-top: 5vh;
+  background-color: #323A6A;
+  margin-left: 2.5vw;
+}
+#About #about-content .emblem-section {
+  margin-left: 3.5vw !important;
+}
+
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .Background-About {

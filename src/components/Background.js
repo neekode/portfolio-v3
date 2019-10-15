@@ -38,7 +38,7 @@ function Background() {
     const [radius, setRadius] = useState(2);
     const [speed, setSpeed] = useState(0.10);
 
-    const [controllerToggled, setControllerToggle] = useState(true);
+    const [controllerToggled, setControllerToggle] = useState(false);
 
     let theme = `Background-${state.section}`;
 

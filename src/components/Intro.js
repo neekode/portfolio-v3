@@ -33,7 +33,7 @@ function Intro() {
         <div className={state.section === 'Intro' ?  'box-Intro box center' : 'box center'}>
             <h2 id="intro-header" className="header">Welcome! I'm <span id='neeko-blomgren'>Neeko Blomgren</span>,</h2>
             <h3 id="intro-sub-header" className="sub-header" > 
-              I build Web App UIs (in Seattle)
+              A Front-end Web Developer (in Seattle)
             </h3>
 
             <div className='chevron-box' >

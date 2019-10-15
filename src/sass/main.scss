@@ -19,7 +19,7 @@ $intro-colors : (
 $about-colors : (
     primary: #323A6A,
     secondary: #6C6862,
-    border: #72D9D3,
+    bright: #2EB4D5,
 );
 
 $works-colors : (
@@ -92,7 +92,6 @@ img {
 
 .box {
     text-align: center;
-    opacity: 0.95;
     pointer-events: auto;
     background-color: map-get($global-colors, primary);
     color: map-get($global-colors, font);
@@ -105,6 +104,7 @@ img {
 
     .header {
         font-family: $main-font;
+        color: map-get($global-colors, font-secondary);
         font-size: 0.9rem;
         margin:0;
     }
@@ -174,7 +174,7 @@ img {
     
 
     .animation-controller {
-        z-index: 500 !important;
+        z-index: 5000 !important;
         font-family: $main-font;
         position: absolute;
 
@@ -256,6 +256,9 @@ img {
         height: 20vh;
         padding: 1vw;
         
+        .header {
+            color: map-get($global-colors, font)
+        }
 
         .chevron-box{
             .down-chevs {
@@ -295,26 +298,54 @@ img {
     }
 
     #profile-picture{
-        padding: 1.5vw;
-        float: left;
-
+        padding: 3.5vw;
+        
         img {
-            width: 20vw;
-            border-radius: 50%;
+            width: 90%;
+            margin: 5%;
+            //border-radius: 50%;
         }
         
-        span {
-            float: left;
-            font-size: 0.8em;
-            margin: 0;
-            margin-left: 20%;
+        div {
+            font-size: 0.6em;
+            margin: auto;
         }
     }
 
     #about-content {
-        float: left;
+        top: 0;
+        margin: 0;
+
+        p {
+            font-size: 0.5em;
+            width: 80%;
+            margin:auto;
+        }
+        
+        .content-section {
+            font-size: 0.8em;
+            height: 40%;
+            margin-top: 1vh !important;
+
+            .emblem {
+                font-size: 0.6em;
+                padding-top: 5vh;
+                background-color: map-get($about-colors, primary);
+                margin-left: 2.5vw;
+            }
+
+        }
+
+        .emblem-section {
+            margin-left: 3.5vw !important;
+        }
     }
 }
+
+.hexagon {
+    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
     .Background-About {
         background-color: map-get($about-colors, primary);
         
@@ -353,3 +384,7 @@ img {
     .box-Connect {
 
     }
+
+
+
+
