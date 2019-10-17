@@ -27,8 +27,8 @@ function About() {
     <div className="section" id="About">
         <div className="box center">
           <div className="row">
-            <div className="col-md-4"> </div>
-            <h2 id="about-header" className="header row col-md-8">Who, Me?</h2>
+            <h3 className="header col-md-4"> Neeko Blomgren </h3>
+            <h3 id="about-header" className="header col-md-8">Who, Me?</h3>
           </div>
               
               
@@ -45,25 +45,26 @@ function About() {
 
                 <div id='about-content' className="col-md-8">
                     <p>
-                     I'm an enthusiastic guy who loves building things with code, bouldering, and gyros. Currently I'm 
+                     I'm an enthusiastic guy who loves to build things with code, boulder at the local climbing gym, and eat gyros. Currently I'm 
                     in Seattle looking for work, shoot me a message if you'd like to talk UI.
                      </p>
                     <div className='row content-section emblem-section'>
-                        <span className='col-md-3 emblem hexagon'> Writes Composable and Functional Code </span>
-                        <span className='col-md-3 emblem hexagon'> Evolves w/ Modern Technologies & Patterns </span>
-                        <span className='col-md-3 emblem hexagon'> Consistently refactors and rethinks solutions </span>
-                        
+                        <div className='col-md-3 emblem hexagon'> <h5> Composable, Functional, Refactorable Code </h5> </div>
+                        <div className='col-md-3 emblem hexagon'> <h5> Evolves w/ Modern Technologies & Patterns </h5> </div>
+                        <div className='col-md-3 emblem hexagon'> <h5> UX Design Educational Background  </h5> </div>
                     </div>
 
-                    {/* <div id='technologies' className='row content-section' >
-                        <div className='col-md-9'> Front-end Specialist </div>
-                        <div className='col-md-3'> UX Designs </div>
+                    <div className='row content-section emblem-section'> 
+                        <div className='col-md-3 emblem2 hexagon2'> <h5> Modular ES6 JavaScript </h5> </div>
+                        <div className='col-md-3 emblem2 hexagon2'> <h5> Well-Composed React (using Hooks) </h5> </div>
+                        <div className='col-md-3 emblem2 hexagon2'> <h5> Human-centered Design </h5> </div>
                     </div>
 
-                    <div id='other' className='row content-section'>
-                        <div className='col-md-3'> Front-end Specialist </div>
-                        <div className='col-md-9'> Using React Hooks, ES6 </div>
-                    </div> */}
+                    <div className='row content-section emblem-section'> 
+                        <div className='col-md-3 emblem3 hexagon2'> <h5> HTML5 / CSS3 </h5> </div>
+                        <div className='col-md-3 emblem3 hexagon2'> <h5> jQuery & KendoUI </h5> </div>
+                        <div className='col-md-3 emblem3 hexagon2'> <h5> Eye for Precise Aesthethics </h5> </div>
+                    </div>
 
                 </div>
               </div>
