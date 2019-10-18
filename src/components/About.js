@@ -1,10 +1,15 @@
 import React from 'react';
-import {useRef, useEffect} from 'react';
+import {useRef, useEffect, useContext, useState} from 'react';
 import $ from 'jquery';
 import profilePic from './../assets/me.JPG';
 
+import Context from './../scripts/context';
+
+
 function About() {
   const titleMorph = useRef();
+
+  const { state } = useContext( Context );
 
   useEffect(() => initText(), []);
   const initText = () => {
@@ -55,15 +60,15 @@ function About() {
                     </div>
 
                     <div className='row content-section emblem-section'> 
-                        <div className='col-md-3 emblem2 hexagon2'> <h5> Modular ES6 JavaScript </h5> </div>
-                        <div className='col-md-3 emblem2 hexagon2'> <h5> Well-Composed React (using Hooks) </h5> </div>
-                        <div className='col-md-3 emblem2 hexagon2'> <h5> Human-centered Design </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Modular ES6 JavaScript </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Well-Composed React (using Hooks) </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Human-centered Design </h5> </div>
                     </div>
 
                     <div className='row content-section emblem-section'> 
-                        <div className='col-md-3 emblem3 hexagon2'> <h5> HTML5 / CSS3 </h5> </div>
-                        <div className='col-md-3 emblem3 hexagon2'> <h5> jQuery & KendoUI </h5> </div>
-                        <div className='col-md-3 emblem3 hexagon2'> <h5> Eye for Precise Aesthethics </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> SASS / HTML5 / CSS3 </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> jQuery & KendoUI </h5> </div>
+                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> Eye for Precise Aesthethics </h5> </div>
                     </div>
 
                 </div>

@@ -38,7 +38,8 @@ function Content() {
     sectionEls.intro = $('#Intro'); 
     sectionEls.about = $('#About'); 
     sectionEls.works = $('#Works'); 
-    sectionEls.connect = $('#Connect')
+    sectionEls.connect = $('#Connect');
+
   }
 
   const handleScroll = (e) => { 
@@ -67,6 +68,7 @@ function Content() {
         dispatch({ type: 'SWITCH_SECTION', payload :'Connect'} ) 
       };
   }
+
     
   return (
     <div id="Content">

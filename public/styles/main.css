@@ -196,7 +196,7 @@ img {
   text-align: center !important;
 }
 #About #profile-picture img {
-  width: 90%;
+  width: 80%;
   margin: 5%;
 }
 #About #profile-picture div {
@@ -214,7 +214,7 @@ img {
 }
 #About #about-content .content-section {
   font-size: 0.8em;
-  height: 40%;
+  height: 20vh;
   margin-top: 1vh !important;
 }
 #About #about-content .content-section h5 {
@@ -224,34 +224,46 @@ img {
   text-align: center;
 }
 #About #about-content .content-section .emblem {
+  z-index: 5;
   font-size: 0.6em;
-  padding-top: 5vh;
   background-color: #323A6A;
-  margin-left: 2.5vw;
+  margin-left: 3vw;
 }
-#About #about-content .content-section .emblem2 {
+#About #about-content .content-section .subEmblem {
+  z-index: 4;
+  transition: all 1s ease 0s;
   background-color: #323A6A;
-  font-size: 0.6em;
-  margin-left: 2.5vw;
+  margin-left: 3vw;
+  margin-top: 0;
+  top: -20vh;
+  width: 95%;
+}
+#About #about-content .content-section .subEmblem h5 {
+  position: absolute;
+  font-size: 0.5em;
+  top: 10vh;
+  text-align: center;
+}
+#About #about-content .content-section .subEmblem2 {
+  z-index: 4;
+  transition: all 1s ease 0s;
+  background-color: #323A6A;
+  margin-left: 3vw;
+  margin-top: 0;
+  top: -40vh;
+}
+#About #about-content .content-section .subEmblem2 h5 {
+  position: absolute;
+  font-size: 0.5em;
+  top: 10vh;
+  text-align: center;
+}
+#About #about-content .content-section .shown {
   top: -10vh;
 }
-#About #about-content .content-section .emblem2 h5 {
-  top: 12vh;
-}
-#About #about-content .content-section .emblem3 {
-  background-color: #323A6A;
-  font-size: 0.6em;
-  margin-left: 2.5vw;
+#About #about-content .content-section .shown2 {
   top: -20vh;
 }
-#About #about-content .content-section .emblem3 h5 {
-  position: absolute;
-  top: 11.5vh;
-}
-#About #about-content .emblem-section {
-  margin-left: 3.5vw !important;
-}
-
 .hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }

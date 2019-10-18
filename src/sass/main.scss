@@ -305,7 +305,7 @@ img {
     #profile-picture{
         
         img {
-            width: 90%;
+            width: 80%;
             margin: 5%;
             //border-radius: 50%;
         }
@@ -328,7 +328,7 @@ img {
         
         .content-section {
             font-size: 0.8em;
-            height: 40%;
+            height: 20vh;
             margin-top: 1vh !important;
 
             h5 { 
@@ -339,39 +339,57 @@ img {
             }
 
             .emblem {
+                z-index: 5;
                 font-size: 0.6em;
-                padding-top: 5vh;
                 background-color: map-get($about-colors, primary);
-                margin-left: 2.5vw;
+                margin-left: 3vw;
             }
 
-            .emblem2 {
+            .subEmblem {
+                z-index: 4;
+                transition: all 1s ease 0s;
                 background-color: map-get($about-colors, primary);
-                font-size: 0.6em;
-                margin-left: 2.5vw;
-                top: -10vh;
-
-                h5 { 
-                    top: 12vh;
-                }
-            }
-
-            .emblem3 {
-                background-color: map-get($about-colors, primary);
-                font-size: 0.6em;
-                margin-left: 2.5vw;
+                margin-left: 3vw;
+                margin-top: 0;
                 top: -20vh;
+                width: 95%;
 
                 h5 { 
                     position: absolute;
-                    top: 11.5vh; 
+                    font-size: 0.5em;
+                    top: 10vh; 
+                    text-align: center;
                 }
+            }
+
+            .subEmblem2 {
+                z-index: 4;
+                transition: all 1s ease 0s;
+                background-color: map-get($about-colors, primary);
+                margin-left: 3vw;
+                margin-top: 0;
+                top: -40vh;
+
+                h5 { 
+                    position: absolute;
+                    font-size: 0.5em;
+                    top: 10vh; 
+                    text-align: center;
+                }
+            }
+
+            .shown {
+                top: -10vh;
+            }
+
+            .shown2 {
+                top: -20vh;
             }
 
         }
 
         .emblem-section {
-            margin-left: 3.5vw !important;
+            
         }
     }
 }
