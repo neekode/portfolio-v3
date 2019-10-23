@@ -40,7 +40,10 @@ function Content() {
     sectionEls.works = $('#Works'); 
     sectionEls.connect = $('#Connect');
 
-  }
+    if(window.addEventListener) {
+      window.addEventListener('load',handleScroll,false); //W3C
+    }
+  } 
 
   const handleScroll = (e) => { 
       let currentPos = window.scrollY;

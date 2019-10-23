@@ -51,9 +51,9 @@ function MyNav() {
   return (
     <div id="MyNav">
         <div className={state.section !== 'Intro' ? "MyNav-fixed box" : "box"}>
-          <AnchorLink href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span></AnchorLink>
-          <AnchorLink href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
-          <AnchorLink href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
+          <AnchorLink id="about-anchor" href="#About"><span id='about-link' ref={aboutLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> about me </span></AnchorLink>
+          <AnchorLink id="works-anchor" href="#Works"> <span id='works-link' ref={worksLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> works </span></AnchorLink>
+          <AnchorLink id="connect-anchor" href="#Connect"><span id='connect-link' ref={connectLink} className="nav-item" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}> connect </span></AnchorLink>
         </div>
     </div>
   );

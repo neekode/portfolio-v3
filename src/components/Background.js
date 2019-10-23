@@ -3,6 +3,9 @@ import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes';
 
 import Context from './../scripts/context';
 import { useContext, useEffect, useState } from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+
+import $ from 'jquery';
 
 import downChev from './../assets/chevron-down.svg';
 
@@ -136,8 +139,53 @@ function Background() {
         }
 
         if (e.target.id === "controller-toggle") {
-            debugger;
             setControllerToggle(!controllerToggled);
+        }
+
+        if (e.target.id === "to-top") {
+            scrollToTop();
+        }
+
+        if (e.target.id === "lower") {
+            scrollLower();
+        }
+    }
+
+    const scrollToTop = () => {
+        $('#to-top').addClass('animated bounce');
+        setTimeout(() => {
+            $('#to-top').removeClass('animated bounce');
+        }, 1000);
+        
+    }
+
+    const scrollLower = () => {
+        $('#lower').addClass('animated bounce');
+        setTimeout(() => {
+            $('#lower').removeClass('animated bounce');
+        }, 1000);
+
+        debugger;
+        switch (state.section) {
+            
+            case ('Intro') : {
+                $('#about-anchor').get(0).click();
+                break;
+            }
+
+            case ('About') : {
+                $('#works-anchor').get(0).click();
+                break;
+            }
+
+            case ('Works') : {
+                $('#connect-anchor').get(0).click();
+                break;
+            }
+
+            default: {
+                break;
+            }
         }
     }
 
@@ -156,7 +204,12 @@ function Background() {
         <div className={theme} id="Background">
             <canvas id="myCanvas" width="0px" height="0px"></canvas>
 
-            <span id='toggle-box'> <img id='controller-toggle'  onClick={handleClick} className={controllerToggled ? 'left-chev' : 'right-chev'} alt='chev' src={downChev} /> </span>
+            <AnchorLink href="#Intro"><span id='to-top' className='chev-box'> <img id='to-top' onClick={handleClick} className='up-chev' alt='chev' src={downChev} /> </span> </AnchorLink>
+
+            <span id='lower'className='chev-box'> <img id='lower' onClick={handleClick} className='down-chev' alt='chev' src={downChev} /> </span>
+
+            <span className='chev-box'> <img id='controller-toggle'  onClick={handleClick} className={controllerToggled ? 'left-chev' : 'right-chev'} alt='chev' src={downChev} /> </span>
+
             <div className={controllerToggled ? "animation-controller" : "animation-controller animation-controller-hidden"}>            
             <span className="header"> Animation Controller </span> 
                     

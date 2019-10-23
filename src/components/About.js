@@ -27,6 +27,14 @@ function About() {
     }
     return func();
   }
+
+  const handleMouseEnter = (e) => {
+
+  }
+
+  const handleMouseLeave = (e) => {
+    
+  }
     
   return (
     <div className="section" id="About">
@@ -51,24 +59,24 @@ function About() {
                 <div id='about-content' className="col-md-8">
                     <p>
                      I'm an enthusiastic guy who loves to build things with code, boulder at the local climbing gym, and eat gyros. Currently I'm 
-                    in Seattle looking for work, shoot me a message if you'd like to talk UI.
+                    in Seattle looking for work, connect with me if you'd like to talk UI.
                      </p>
                     <div className='row content-section emblem-section'>
-                        <div className='col-md-3 emblem hexagon'> <h5> Composable, Functional, Refactorable Code </h5> </div>
-                        <div className='col-md-3 emblem hexagon'> <h5> Evolves w/ Modern Technologies & Patterns </h5> </div>
-                        <div className='col-md-3 emblem hexagon'> <h5> UX Design Educational Background  </h5> </div>
+                        <div className='col-md-3 emblem hexagon mx-auto'> <div className="inner-emblem-text"> Refined, Functional, Refactorable Code </div> </div>
+                        <div className='col-md-3 emblem hexagon mx-auto'> <div className="inner-emblem-text"> Evolves w/ Modern Technologies & Patterns </div> </div>
+                        <div className='col-md-3 emblem hexagon mx-auto'> <div className="inner-emblem-text"> UX Design Educational Background  </div> </div>
                     </div>
 
                     <div className='row content-section emblem-section'> 
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Modular ES6 JavaScript </h5> </div>
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Well-Composed React (using Hooks) </h5> </div>
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <h5> Human-centered Design </h5> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Modular ES6 JavaScript </div> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Composable React (Hooks) </div> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Human-centered Design </div> </div>
                     </div>
 
                     <div className='row content-section emblem-section'> 
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> SASS / HTML5 / CSS3 </h5> </div>
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> jQuery & KendoUI </h5> </div>
-                        <div className={`col-md-3 hexagon2 ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <h5> Eye for Precise Aesthethics </h5> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> SASS / HTML5 / CSS3 </div> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> jQuery / Webpack / Bootstrap </div> </div>
+                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> Eye for Precise Aesthethics </div> </div>
                     </div>
 
                 </div>
