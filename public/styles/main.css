@@ -1,5 +1,5 @@
 .unshown {
-  display: none;
+  display: none !important;
 }
 
 .center {
@@ -75,6 +75,15 @@ img {
 #intro-link {
   position: absolute;
   width: 10vw;
+}
+
+#allyis-link {
+  text-decoration: none;
+  color: #ED942C;
+}
+
+#allyis-link:hover {
+  opacity: 0.8;
 }
 
 #Background {
@@ -283,6 +292,13 @@ img {
   font-family: "Montserrat-Regular";
 }
 
+#Works #x-icon {
+  position: absolute;
+  width: 1.5vw;
+  z-index: 500;
+  left: 50px;
+  top: 50px;
+}
 #Works .box {
   top: 2.5vh;
   background-color: transparent;
@@ -323,6 +339,7 @@ img {
   height: 70vh;
   margin: 1vw;
   margin-top: 2.5vh;
+  pointer-events: none;
 }
 #Works .box #works-content .content-section .emblem {
   height: 20vh;
@@ -330,7 +347,6 @@ img {
   margin: 1vw;
   background-color: #3D5179;
 }
-
 .Background-Works {
   background-color: #3D5179;
   font-family: "Montserrat-Regular";

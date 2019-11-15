@@ -165,7 +165,6 @@ function Background() {
             $('#lower').removeClass('animated bounce');
         }, 1000);
 
-        debugger;
         switch (state.section) {
             
             case ('Intro') : {
@@ -206,7 +205,7 @@ function Background() {
 
             <AnchorLink href="#Intro"><span id='to-top' className='chev-box'> <img id='to-top' onClick={handleClick} className='up-chev' alt='chev' src={downChev} /> </span> </AnchorLink>
 
-            <span id='lower'className='chev-box'> <img id='lower' onClick={handleClick} className='down-chev' alt='chev' src={downChev} /> </span>
+            <span id='lower' className='chev-box'> <img id='lower' onClick={handleClick} className='down-chev' alt='chev' src={downChev} /> </span>
 
             <span className='chev-box'> <img id='controller-toggle'  onClick={handleClick} className={controllerToggled ? 'left-chev' : 'right-chev'} alt='chev' src={downChev} /> </span>
 

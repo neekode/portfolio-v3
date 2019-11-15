@@ -59,7 +59,7 @@ function About() {
                 <div id='about-content' className="col-md-8">
                     <p>
                      I'm an enthusiastic guy who loves to build things with code, boulder at the local climbing gym, and eat gyros. Currently I'm 
-                    in Seattle looking for work, connect with me if you'd like to talk UI.
+                    in Seattle working with one of Microsoft's Partner Contractors: <a id='allyis-link' href="http://allyis.com/"> Allyis.  </a>
                      </p>
                     <div className='row content-section emblem-section'>
                         <div className='col-md-3 emblem hexagon mx-auto'> <div className="inner-emblem-text"> Refined, Functional, Refactorable Code </div> </div>

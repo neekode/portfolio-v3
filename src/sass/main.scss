@@ -42,8 +42,9 @@ $main-font: "Montserrat-Regular";
 // Useful Properties
 
 .unshown {
-    display: none;
+    display: none !important;
 }
+
     // (works inside "position: absolute" parent elements)
 .center {
     margin: 0;
@@ -135,6 +136,16 @@ img {
     position: absolute;
     width: 10vw;
 }
+
+#allyis-link {
+    text-decoration: none;
+    color: map-get($global-colors, font-secondary);
+}
+
+    #allyis-link:hover {
+        opacity: 0.8;
+    }
+
 
 
 #Background {
@@ -425,6 +436,14 @@ img {
 
 // Works
 #Works {
+    #x-icon {
+        position: absolute;
+        width: 1.5vw;
+        z-index:500;
+        left: 50px;
+        top: 50px;
+    }
+
     .box {
         top: 2.5vh;
         background-color: transparent;
@@ -472,6 +491,7 @@ img {
                 height: 70vh;
                 margin:1vw;
                 margin-top: 2.5vh;
+                pointer-events: none;
 
                 .emblem {
                     height: 20vh;
@@ -480,6 +500,18 @@ img {
                     background-color: map-get($works-colors, primary);
                 }
             }
+        }
+
+        .personal-proj-expanded {
+            
+        }
+
+        .work-exp-expanded {
+            
+        }
+
+        .widgets-features-expanded {
+            
         }
 
     }
