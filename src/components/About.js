@@ -40,7 +40,7 @@ function About() {
     <div className="section" id="About">
         <div className="box center">
           <div className="row">
-            <h3 className="header col-md-4"> Neeko Blomgren </h3>
+            <h3 className="header col-md-4"> Neeko Blomgren! </h3>
             <h3 id="about-header" className="header col-md-8">Who, Me?</h3>
           </div>
               
