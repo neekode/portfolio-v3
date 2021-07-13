@@ -1,0 +1,365 @@
+.unshown {
+  display: none !important;
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  margin-top: 22.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+html {
+  font-size: 2.5vw;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  vertical-align: top !important;
+}
+
+.row {
+  margin: 0 !important;
+  border: 1px solid red;
+}
+
+.section {
+  height: 120vh;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+}
+
+.inner-emblem-text {
+  font-size: 1em;
+  padding-top: 6vh !important;
+}
+
+.box {
+  text-align: center;
+  pointer-events: auto;
+  background-color: #1F3039;
+  color: #F8F9F9;
+  width: 80vw;
+  height: 75vh;
+  border-radius: 10px 10px 10px;
+}
+.box .header {
+  font-family: "Montserrat-Regular";
+  color: pink;
+  font-size: 0.9rem;
+  margin: 0;
+}
+.box .sub-header {
+  font-family: "Montserrat-Regular";
+  font-size: 0.65rem;
+  margin: 0;
+  margin-top: 1vh;
+}
+.box .description {
+  width: 33vw;
+  margin-top: 0;
+  padding: 2.5vw;
+  padding-top: 0;
+  font-size: 0.65rem;
+}
+
+#intro-link {
+  position: absolute;
+  width: 10vw;
+}
+
+#allyis-link {
+  text-decoration: none;
+  color: pink;
+}
+
+#allyis-link:hover {
+  opacity: 0.8;
+}
+
+#Background {
+  height: 100vh;
+  font-family: "Montserrat-Regular";
+  position: fixed;
+  -webkit-transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+}
+#Background .chev-box {
+  position: fixed;
+  height: 5vh;
+  width: 5vh;
+  right: 1vw;
+  bottom: calc(40% - 2.5vh);
+  background-color: #1F3039;
+  border-radius: 10px 10px 10px 10px;
+}
+#Background .chev-box img {
+  height: 5vh;
+  width: 5vh;
+}
+#Background .chev-box .left-chev {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(-90deg);
+  margin-left: 0.5vw;
+}
+#Background .chev-box .right-chev {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(90deg);
+  margin-left: -0.5vw;
+}
+#Background #to-top {
+  bottom: calc(40% + 12.5vh);
+}
+#Background #to-top .up-chev {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+  margin-top: -0.5vh;
+}
+#Background #lower {
+  bottom: calc(40% + 5vh);
+}
+#Background #lower .down-chev {
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin-top: 1vh;
+}
+#Background .animation-controller {
+  z-index: 5000 !important;
+  font-family: "Montserrat-Regular";
+  position: absolute;
+  color: #F8F9F9;
+  background-color: #1F3039;
+  transition: all 0.5s linear;
+  opacity: 0.95;
+  border-radius: 10px 10px 10px;
+  padding: 1.5vh;
+  bottom: 1vh;
+  right: 2vw;
+  font-size: 0.35rem;
+}
+#Background .animation-controller .header {
+  font-family: "Montserrat-Regular";
+  font-size: 0.35rem;
+}
+#Background .animation-controller div {
+  margin-top: 1.5vh;
+  padding-bottom: 0.5vh;
+}
+#Background .animation-controller #renderer {
+  margin-left: 0.5vw;
+}
+#Background .animation-controller-hidden {
+  right: -24.5vw;
+}
+
+#MyNav .box {
+  position: absolute;
+  height: 5vh;
+  width: 100vw;
+  padding-left: 31%;
+  z-index: 50;
+  border-radius: 0;
+  background-color: #1F3039;
+  border-bottom: 1px solid #F8F9F9;
+}
+#MyNav .box .nav-item {
+  color: #F8F9F9;
+  float: left;
+  text-align: center;
+  margin: auto;
+  margin-left: 3.5vw;
+  font-size: 0.75rem;
+  animation-duration: 1s;
+}
+
+.MyNav-fixed {
+  position: fixed !important;
+  top: 0 !important;
+}
+
+#Intro {
+  position: relative;
+}
+#Intro .box {
+  width: 50vw;
+  height: 25vh;
+  padding: 1vw;
+}
+#Intro .box .header {
+  color: #F8F9F9;
+}
+#Intro .box .chevron-box .down-chevs {
+  margin: 30px;
+  width: 3vw;
+}
+#Intro #neeko-blomgren {
+  color: pink;
+}
+
+.Background-Intro {
+  background-color: #31425F;
+  font-family: "Montserrat-Regular";
+}
+
+#About .box {
+  top: 6.5vh;
+  height: 80vh;
+}
+#About .box h3 {
+  padding-top: 2.5vh;
+}
+#About .header {
+  display: inline-block;
+  text-align: center !important;
+}
+#About #profile-picture img {
+  width: 80%;
+  margin: 5%;
+  margin-top: 2vh;
+}
+#About #profile-picture div {
+  font-size: 0.6em;
+  margin: auto;
+}
+#About #about-content p {
+  font-size: 0.5em;
+  width: 80%;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 5vh;
+}
+#About #about-content .content-section {
+  font-size: 0.8em;
+  height: 20vh;
+  margin-top: 1vh !important;
+}
+#About #about-content .content-section .emblem {
+  z-index: 5;
+  background-color: #323A6A;
+  font-size: 0.5em;
+}
+#About #about-content .content-section .subEmblem {
+  z-index: 4;
+  transition: all 1s ease 0s;
+  background-color: #323A6A;
+  top: -20vh;
+  width: 95%;
+  font-size: 0.5em;
+}
+#About #about-content .content-section .subEmblem div {
+  padding-top: 11vh !important;
+}
+#About #about-content .content-section .subEmblem2 {
+  z-index: 4;
+  transition: all 1s ease 0s;
+  background-color: #323A6A;
+  top: -40vh;
+  font-size: 0.5em;
+}
+#About #about-content .content-section .subEmblem2 div {
+  padding-top: 11vh !important;
+}
+#About #about-content .content-section .shown {
+  top: -10vh;
+}
+#About #about-content .content-section .shown2 {
+  top: -20vh;
+}
+.hexagon {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+}
+
+.hexagon2 {
+  clip-path: polygon(50% 50%, 95% 25%, 100% 75%, 50% 100%, 0% 75%, 5% 25%);
+}
+
+.Background-About {
+  background-color: #323A6A;
+  font-family: "Montserrat-Regular";
+}
+
+#Works #x-icon {
+  position: absolute;
+  width: 1.5vw;
+  z-index: 500;
+  left: 50px;
+  top: 50px;
+}
+#Works .box {
+  top: 2.5vh;
+  background-color: transparent;
+}
+#Works .box h2 {
+  position: absolute;
+  margin-top: 4.5vh;
+  z-index: 55;
+}
+#Works .box #works-content {
+  margin-top: 1vh !important;
+  margin: 0;
+}
+#Works .box #works-content .works-section {
+  background-color: #1F3039;
+  transition: all 300ms linear;
+  border-radius: 7px;
+}
+#Works .box #works-content .works-section:hover {
+  z-index: 50;
+  /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+  -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+}
+#Works .box #works-content .works-section:active {
+  z-index: 50;
+  transition: all 50ms linear;
+  /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#Works .box #works-content h3 {
+  margin-top: 7.5vh;
+}
+#Works .box #works-content .content-section {
+  height: 70vh;
+  margin: 1vw;
+  margin-top: 2.5vh;
+  pointer-events: none;
+}
+#Works .box #works-content .content-section .emblem {
+  height: 20vh;
+  font-size: 0.6em;
+  margin: 1vw;
+  background-color: #3D5179;
+}
+.Background-Works {
+  background-color: #3D5179;
+  font-family: "Montserrat-Regular";
+}
+
+#Connect .box {
+  top: 5vh;
+}
+
+.Background-Connect {
+  background-color: #3A7BAB;
+  font-family: "Montserrat-Regular";
+}
+
+/*# sourceMappingURL=main.css.map */
