@@ -29,12 +29,14 @@ img {
 
 .row {
   margin: 0 !important;
+  border: 1px solid magenta;
 }
 
 .section {
   height: 120vh;
   pointer-events: none;
   position: relative;
+  border: 1px solid green !important;
   z-index: 2;
 }
 
@@ -54,7 +56,7 @@ img {
 }
 .box .header {
   font-family: "Montserrat-Regular";
-  color: #ED942C;
+  color: pink;
   font-size: 0.9rem;
   margin: 0;
 }
@@ -79,7 +81,7 @@ img {
 
 #allyis-link {
   text-decoration: none;
-  color: #ED942C;
+  color: pink;
 }
 
 #allyis-link:hover {
@@ -207,7 +209,7 @@ img {
   width: 3vw;
 }
 #Intro #neeko-blomgren {
-  color: #ED942C;
+  color: pink;
 }
 
 .Background-Intro {
