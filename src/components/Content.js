@@ -4,7 +4,7 @@ import Intro from './Intro'
 import About from './About'
 import Works from './Works'
 import Connect from './Connect'
-import MyNav from './MyNav.js';
+import NavBar from './NavBar';
 
 import Background from './Background';
 
@@ -25,10 +25,7 @@ function Content() {
   // useEffect calls with an empty array as the second argument render once before the component mounts, and then once after. 
   // Useful for default or initial values. 
   useEffect(() => init(), []);
-  
-  //useEffect(() => changeBg(), [state.section]);
 
-  
   const init = () => {
     // For some reason, the onScroll event doesn't seem to fire with the conventional listener being put into the "div" element down below,
     // So using useEffect above allows us to attach the handler manually.
@@ -79,7 +76,7 @@ function Content() {
         
         <Intro />
 
-        <MyNav /> 
+        <NavBar />
 
         <About />
         <Works />

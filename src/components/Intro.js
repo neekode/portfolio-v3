@@ -1,32 +1,20 @@
 import React from 'react';
-
-import { useContext, useEffect, useRef } from 'react';
-
-import $ from 'jquery';
+import { useContext, useRef } from 'react';
 import '../scripts/morphext';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-
 import downChevs from './../assets/chevrons-down.svg';
-
-import Context from './../scripts/context'
+import currentSection from './../scripts/context';
+import { addBounceOnHover } from './../scripts/library.js';
 
 function Intro() {
-  // Side Effect which initializes on page load
 
-  const { state } = useContext( Context );
+    // Context controlling the state of the background
+  const { state } = useContext( currentSection );
 
-  // Referencing HTML DOM element inside component 
-  let subHeader = useRef();
-  let exploreMore = useRef();
+  // Referencing HTML DOM element inside component
+  const exploreMore = useRef();
 
-
-  const handleMouseEnter = () => {
-    $(exploreMore.current).addClass('animated bounce')
-  }
-
-  const handleMouseLeave = () => {
-    $(exploreMore.current).removeClass('animated bounce')
-  }
+  addBounceOnHover(exploreMore);
 
   return (
     <div className="section" id="Intro">
@@ -37,7 +25,7 @@ function Intro() {
             </h3>
 
             <div className='chevron-box' >
-              <AnchorLink href="#About"> <img ref={exploreMore} onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
+              <AnchorLink href="#About"> <img ref={exploreMore} className='down-chevs' alt='down chevs' src={downChevs} /> </AnchorLink>
             </div>
         </div>
     </div>
