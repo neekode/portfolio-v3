@@ -2,14 +2,13 @@ import React from 'react';
 import {useRef, useEffect, useContext, useState} from 'react';
 import $ from 'jquery';
 import profilePic from './../assets/me.JPG';
-
-import Context from './../scripts/context';
+import {ThemeContext} from './../scripts/context';
 
 
 function About() {
   const titleMorph = useRef();
 
-  const { state } = useContext( Context );
+    const {section} = useContext(ThemeContext);
 
   useEffect(() => initText(), []);
   const initText = () => {
@@ -28,14 +27,6 @@ function About() {
     return func();
   }
 
-  const handleMouseEnter = (e) => {
-
-  }
-
-  const handleMouseLeave = (e) => {
-    
-  }
-    
   return (
     <div className="section" id="About">
         <div className="box center">
@@ -67,16 +58,34 @@ function About() {
                         <div className='col-md-3 emblem hexagon mx-auto'> <div className="inner-emblem-text"> UX Design Educational Background  </div> </div>
                     </div>
 
-                    <div className='row content-section emblem-section'> 
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Modular ES6 JavaScript </div> </div>
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Composable React (Hooks) </div> </div>
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem shown' : 'subEmblem' }`}> <div className="inner-emblem-text"> Human-centered Design </div> </div>
+                    <div className='row content-section emblem-section'>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem shown' : 'subEmblem'}`}>
+                            <div className="inner-emblem-text"> Modular ES6 JavaScript</div>
+                        </div>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem shown' : 'subEmblem'}`}>
+                            <div className="inner-emblem-text"> Composable React (Hooks)</div>
+                        </div>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem shown' : 'subEmblem'}`}>
+                            <div className="inner-emblem-text"> Human-centered Design</div>
+                        </div>
                     </div>
 
-                    <div className='row content-section emblem-section'> 
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> SASS / HTML5 / CSS3 </div> </div>
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> jQuery / Webpack / Bootstrap </div> </div>
-                        <div className={`col-md-3 hexagon2 mx-auto ${ state.section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2' }`}> <div className="inner-emblem-text"> Eye for Precise Aesthethics </div> </div>
+                    <div className='row content-section emblem-section'>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2'}`}>
+                            <div className="inner-emblem-text"> SASS / HTML5 / CSS3</div>
+                        </div>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2'}`}>
+                            <div className="inner-emblem-text"> jQuery / Webpack / Bootstrap</div>
+                        </div>
+                        <div
+                            className={`col-md-3 hexagon2 mx-auto ${section === 'About' ? 'subEmblem2 shown2' : 'subEmblem2'}`}>
+                            <div className="inner-emblem-text"> Eye for Precise Aesthethics</div>
+                        </div>
                     </div>
 
                 </div>

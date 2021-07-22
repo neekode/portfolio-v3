@@ -1,8 +1,15 @@
-import React from 'react';
+import React, {createContext, useState} from 'react';
 
-const Context = React.createContext({
-    section: ''
-});
+export const ThemeContext = createContext();
 
-export default Context;
+export const ThemeProvider = ({children}) => {
+    const [section, setSection] = useState('Intro');
+    const [scrollY, setScrollY] = useState(0);
+
+    return (
+        <ThemeContext.Provider value={{section, setSection, scrollY, setScrollY}}>
+            {children}
+        </ThemeContext.Provider>
+    )
+}
 

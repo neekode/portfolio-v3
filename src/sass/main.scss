@@ -22,10 +22,10 @@ $about-colors : (
     bright: #2EB4D5,
 );
 
-$works-colors : (
-    primary: #3D5179,
-    secondary: #AB625E,
-    border: #EAC683,
+$experience-colors: (
+        primary: #3D5179,
+        secondary: #AB625E,
+        border: #EAC683,
 );
 
 $connect-colors : (
@@ -45,7 +45,7 @@ $main-font: "Montserrat-Regular";
     display: none !important;
 }
 
-    // (works inside "position: absolute" parent elements)
+    // (experience inside "position: absolute" parent elements)
 .center {
     margin: 0;
     position: absolute;
@@ -424,26 +424,26 @@ img {
 }
 
     .Background-About {
-        background-color: map-get($about-colors, primary);
-        
-        font-family: $header-font;
+      background-color: map-get($about-colors, primary);
+
+      font-family: $header-font;
     }
 
     .box-About {
 
     }
 
-// Works
-#Works {
-    #x-icon {
+    // experience
+    #experience {
+      #x-icon {
         position: absolute;
         width: 1.5vw;
-        z-index:500;
+        z-index: 500;
         left: 50px;
         top: 50px;
-    }
+      }
 
-    .box {
+      .box {
         top: 2.5vh;
         background-color: transparent;
 
@@ -454,33 +454,33 @@ img {
         }
 
 
-        #works-content {
-            margin-top: 1vh !important;
-            margin: 0;
+        #experience-content {
+          margin-top: 1vh !important;
+          margin: 0;
 
-            .works-section {
-                background-color: map-get($global-colors, primary);
-                transition: all 300ms linear;
-                border-radius: 7px;
-            }
+          .experience-section {
+            background-color: map-get($global-colors, primary);
+            transition: all 300ms linear;
+            border-radius: 7px;
+          }
 
-            .works-section:hover {
-                z-index: 50;
+          .experience-section:hover {
+            z-index: 50;
 
-                /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-                -webkit-box-shadow: 0px 11px 17px 12px rgba(0,0,0,0.5);
-                -moz-box-shadow: 0px 11px 17px 12px rgba(0,0,0,0.5);
-                box-shadow: 0px 11px 17px 12px rgba(0,0,0,0.5);
-            }
+            /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+            -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+          }
 
-            .works-section:active {
-                z-index: 50;
-                transition: all 50ms linear;
-                /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-                -webkit-box-shadow: none;
-                -moz-box-shadow: none;
-                box-shadow: none;
-            }
+          .experience-section:active {
+            z-index: 50;
+            transition: all 50ms linear;
+            /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+            -webkit-box-shadow: none;
+            -moz-box-shadow: none;
+            box-shadow: none;
+          }
 
             h3 {
                 margin-top: 7.5vh;
@@ -493,10 +493,10 @@ img {
                 pointer-events: none;
 
                 .emblem {
-                    height: 20vh;
-                    font-size: 0.6em;
-                    margin: 1vw;
-                    background-color: map-get($works-colors, primary);
+                  height: 20vh;
+                  font-size: 0.6em;
+                  margin: 1vw;
+                  background-color: map-get($experience-colors, primary);
                 }
             }
         }
@@ -510,30 +510,32 @@ img {
         }
 
         .widgets-features-expanded {
-            
+
         }
 
+      }
+
+
     }
 
-    
-
-}
-    .Background-Works {
-        background-color: map-get($works-colors, primary);
-        font-family: $header-font;
-    }
-    .box-Works {
-        color: map-get($works-colors, font);
+    .Background-experience {
+      background-color: map-get($experience-colors, primary);
+      font-family: $header-font;
     }
 
-// Connect 
-#Connect {
-    .box {
+    .box-experience {
+      color: map-get($experience-colors, font);
+    }
+
+    // Connect
+    #Connect {
+      .box {
         top: 5vh;
+      }
     }
-}
+
     .Background-Connect {
-        background-color: map-get($connect-colors, primary);
+      background-color: map-get($connect-colors, primary);
         color: map-get($connect-colors, font);
         font-family: $header-font;
     }

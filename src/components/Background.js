@@ -1,8 +1,8 @@
 import React from 'react';
 import { shapesModule, genCircles, circleDrawLoop } from './../scripts/shapes';
 
-import Context from './../scripts/context';
-import { useContext, useEffect, useState } from 'react';
+import {ThemeContext} from './../scripts/context';
+import {useContext, useEffect, useState} from 'react';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
 
 import $ from 'jquery';
@@ -36,14 +36,14 @@ import downChev from './../assets/chevron-down.svg';
 */
 
 function Background() {
-    const { state } = useContext( Context );
+    const {section} = useContext(ThemeContext);
     const [amount, setAmount] = useState(250);
     const [radius, setRadius] = useState(2);
     const [speed, setSpeed] = useState(0.10);
 
     const [controllerToggled, setControllerToggle] = useState(false);
 
-    let theme = `Background-${state.section}`;
+    let theme = `Background-${section}`;
 
     // State which tracks the interval of consecutive draws. Necessary to unify single interval,
     // not creating others.
@@ -165,8 +165,8 @@ function Background() {
             $('#lower').removeClass('animated bounce');
         }, 1000);
 
-        switch (state.section) {
-            
+        switch (section) {
+
             case ('Intro') : {
                 $('#about-anchor').get(0).click();
                 break;

@@ -292,39 +292,39 @@ img {
   font-family: "Montserrat-Regular";
 }
 
-#Works #x-icon {
+#experience #x-icon {
   position: absolute;
   width: 1.5vw;
   z-index: 500;
   left: 50px;
   top: 50px;
 }
-#Works .box {
+#experience .box {
   top: 2.5vh;
   background-color: transparent;
 }
-#Works .box h2 {
+#experience .box h2 {
   position: absolute;
   margin-top: 4.5vh;
   z-index: 55;
 }
-#Works .box #works-content {
+#experience .box #experience-content {
   margin-top: 1vh !important;
   margin: 0;
 }
-#Works .box #works-content .works-section {
+#experience .box #experience-content .experience-section {
   background-color: #1F3039;
   transition: all 300ms linear;
   border-radius: 7px;
 }
-#Works .box #works-content .works-section:hover {
+#experience .box #experience-content .experience-section:hover {
   z-index: 50;
   /* Box shadow generated with https://www.cssmatic.com/box-shadow */
   -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
 }
-#Works .box #works-content .works-section:active {
+#experience .box #experience-content .experience-section:active {
   z-index: 50;
   transition: all 50ms linear;
   /* Box shadow generated with https://www.cssmatic.com/box-shadow */
@@ -332,22 +332,22 @@ img {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-#Works .box #works-content h3 {
+#experience .box #experience-content h3 {
   margin-top: 7.5vh;
 }
-#Works .box #works-content .content-section {
+#experience .box #experience-content .content-section {
   height: 70vh;
   margin: 1vw;
   margin-top: 2.5vh;
   pointer-events: none;
 }
-#Works .box #works-content .content-section .emblem {
+#experience .box #experience-content .content-section .emblem {
   height: 20vh;
   font-size: 0.6em;
   margin: 1vw;
   background-color: #3D5179;
 }
-.Background-Works {
+.Background-experience {
   background-color: #3D5179;
   font-family: "Montserrat-Regular";
 }
