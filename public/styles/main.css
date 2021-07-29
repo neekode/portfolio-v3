@@ -168,21 +168,22 @@ img {
 
 #MyNav .box {
   position: absolute;
-  height: 5vh;
-  width: 100vw;
-  padding-left: 31%;
+  height: 33vh;
+  width: 8vw;
   z-index: 50;
   border-radius: 0;
+  margin-top: 33vh;
   background-color: #1F3039;
   border-bottom: 1px solid #F8F9F9;
+  border-right: 1px solid #F8F9F9;
 }
 #MyNav .box .nav-item {
   color: #F8F9F9;
+  cursor: pointer;
   float: left;
-  text-align: center;
   margin: auto;
-  margin-left: 3.5vw;
-  font-size: 0.75rem;
+  padding: 0.2rem;
+  font-size: 0.6rem;
   animation-duration: 1s;
 }
 
@@ -292,39 +293,39 @@ img {
   font-family: "Montserrat-Regular";
 }
 
-#experience #x-icon {
+#Experience #x-icon {
   position: absolute;
   width: 1.5vw;
   z-index: 500;
   left: 50px;
   top: 50px;
 }
-#experience .box {
+#Experience .box {
   top: 2.5vh;
   background-color: transparent;
 }
-#experience .box h2 {
+#Experience .box h2 {
   position: absolute;
   margin-top: 4.5vh;
   z-index: 55;
 }
-#experience .box #experience-content {
+#Experience .box #experience-content {
   margin-top: 1vh !important;
   margin: 0;
 }
-#experience .box #experience-content .experience-section {
+#Experience .box #experience-content .experience-section {
   background-color: #1F3039;
   transition: all 300ms linear;
   border-radius: 7px;
 }
-#experience .box #experience-content .experience-section:hover {
+#Experience .box #experience-content .experience-section:hover {
   z-index: 50;
   /* Box shadow generated with https://www.cssmatic.com/box-shadow */
   -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
 }
-#experience .box #experience-content .experience-section:active {
+#Experience .box #experience-content .experience-section:active {
   z-index: 50;
   transition: all 50ms linear;
   /* Box shadow generated with https://www.cssmatic.com/box-shadow */
@@ -332,22 +333,22 @@ img {
   -moz-box-shadow: none;
   box-shadow: none;
 }
-#experience .box #experience-content h3 {
+#Experience .box #experience-content h3 {
   margin-top: 7.5vh;
 }
-#experience .box #experience-content .content-section {
+#Experience .box #experience-content .content-section {
   height: 70vh;
   margin: 1vw;
   margin-top: 2.5vh;
   pointer-events: none;
 }
-#experience .box #experience-content .content-section .emblem {
+#Experience .box #experience-content .content-section .emblem {
   height: 20vh;
   font-size: 0.6em;
   margin: 1vw;
   background-color: #3D5179;
 }
-.Background-experience {
+.Background-Experience {
   background-color: #3D5179;
   font-family: "Montserrat-Regular";
 }

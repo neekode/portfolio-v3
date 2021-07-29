@@ -1,12 +1,16 @@
 import React from "react";
 
-import $ from 'jquery';
-import {useContext, useEffect, useState} from 'react';
-import xIcon from './../assets/x-icon.svg';
+import $ from "jquery";
+import {useContext, useEffect, useState, useRef} from "react";
+import xIcon from "./../assets/x-icon.svg";
+import {ThemeContext} from "../scripts/context";
+import {themeChange} from "../scripts/library";
 
-function Works() {
-
+function Experience() {
     const [expanded, setExpanded] = useState(false);
+    const {scrollY, setSection, section} = useContext(ThemeContext);
+    const wrapper = useRef();
+    useEffect(() => themeChange(wrapper, scrollY, setSection), [scrollY]);
 
     const handleClick = (e) => {
         let elId = e.target.id;
@@ -15,37 +19,37 @@ function Works() {
 
         // THIS IS SHITTY. refactor it!!!
         switch (elId) {
-            case 'personal-proj': {
-                $('#personal-proj').removeClass('col-md-4');
-                $('#personal-proj').addClass('col-md-12');
+            case "personal-proj": {
+                $("#personal-proj").removeClass("col-md-4");
+                $("#personal-proj").addClass("col-md-12");
 
-                $('#work-exp').addClass('unshown');
-                $('#widgets-features').addClass('unshown');
+                $("#work-exp").addClass("unshown");
+                $("#widgets-features").addClass("unshown");
                 break;
             }
 
-            case 'work-exp': {
-                $('#work-exp').removeClass('col-md-4');
-                $('#work-exp').addClass('col-md-12');
+            case "work-exp": {
+                $("#work-exp").removeClass("col-md-4");
+                $("#work-exp").addClass("col-md-12");
 
-                $('#personal-proj').addClass('unshown');
-                $('#widgets-features').addClass('unshown');
+                $("#personal-proj").addClass("unshown");
+                $("#widgets-features").addClass("unshown");
                 break;
             }
 
-            case 'widgets-features': {
-                $('#widgets-features').removeClass('col-md-4');
-                $('#widgets-features').addClass('col-md-12');
+            case "widgets-features": {
+                $("#widgets-features").removeClass("col-md-4");
+                $("#widgets-features").addClass("col-md-12");
 
-                $('#personal-proj').addClass('unshown');
-                $('#work-exp').addClass('unshown');
+                $("#personal-proj").addClass("unshown");
+                $("#work-exp").addClass("unshown");
                 break;
             }
 
-            case 'x-icon': {
+            case "x-icon": {
                 setExpanded(false);
-                $('.works-section').removeClass('col-md-12 unshown');
-                $('.works-section').addClass('col-md-4');
+                $(".experience-section").removeClass("col-md-12 unshown");
+                $(".experience-section").addClass("col-md-4");
 
                 break;
             }
@@ -53,26 +57,38 @@ function Works() {
             default:
                 break;
         }
-    }
+    };
 
     return (
-        <div className="section" id="Works">
+        <div className="section" id="Experience" ref={wrapper}>
             <div className="box center">
-                <h2 id="works-header" className="header center">My Work:</h2>
-
-
-                <div id="works-content" className="row">
-                    <img id='x-icon' onClick={handleClick} className={`x-icon ${expanded ? '' : 'unshown'}`}
-                         alt='x-icon' src={xIcon}/>
-                    <div id="personal-proj" className="works-section col-md-4" onClick={handleClick}>
-                        <h3 id="works-sub-header" className="sub-header">
-                            Personal Projects
+                <h2 id="experience-header" className="header center">
+                    Professional Experience:
+                </h2>
+                <div id="experience-content" className="row">
+                    <img
+                        id="x-icon"
+                        onClick={handleClick}
+                        className={`x-icon ${expanded ? "" : "unshown"}`}
+                        alt="x-icon"
+                        src={xIcon}
+                    />
+                    <div
+                        id="personal-proj"
+                        className="experience-section col-md-6"
+                        onClick={handleClick}
+                    >
+                        <h3 id="experience-sub-header" className="sub-header">
+                            Microsoft (1yr 8mon)
                         </h3>
 
                         <div className="content-section">
                             <div className="row">
                                 <div className="col-md-5 mx-auto emblem hexagon">
-                                    <div className="inner-emblem-text"> Portfolio</div>
+                                    <div className="inner-emblem-text">
+                                        {" "}
+                                        CPRS (Costco Contract)
+                                    </div>
                                 </div>
                                 <div className="col-md-5 mx-auto emblem hexagon">
                                     <div className="inner-emblem-text"> Ballpit Animation</div>
@@ -81,13 +97,16 @@ function Works() {
                         </div>
                     </div>
 
-                    <div id="work-exp" className="works-section col-md-4" onClick={handleClick}>
-                        <h3 id="works-sub-header" className="sub-header">
-                            Work Experience
+                    <div
+                        id="work-exp"
+                        className="experience-section col-md-6"
+                        onClick={handleClick}
+                    >
+                        <h3 id="experience-sub-header" className="sub-header">
+                            People Tech Group (8mon)
                         </h3>
 
                         <div className="content-section ">
-
                             <div className="row">
                                 <div className="col-md-5 mx-auto emblem hexagon">
                                     <div className="inner-emblem-text"> Costco</div>
@@ -99,28 +118,12 @@ function Works() {
                             <div className="col-md-5 mx-auto emblem hexagon">
                                 <div className="inner-emblem-text"> Beautiful Hedges</div>
                             </div>
-
-                        </div>
-                    </div>
-
-
-                    <div id="widgets-features" className="works-section col-md-4" onClick={handleClick}>
-                        <h3 id="works-sub-header" className="sub-header">
-                            Widgets & Features
-                        </h3>
-
-                        <div className="content-section">
-                            <div className="col-md-5 mx-auto emblem hexagon">
-                                <div className="inner-emblem-text"> Notifications</div>
-                            </div>
                         </div>
                     </div>
                 </div>
-
-
             </div>
         </div>
     );
 }
 
-export default Works;
+export default Experience;

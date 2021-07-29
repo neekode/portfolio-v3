@@ -11,3 +11,10 @@ export const addBounceOnHover = (el) => {
 
     return el;
 }
+
+export const themeChange = (el, scrollY, setSection) => {
+    const {offsetTop} = el.current
+    if (scrollY > (offsetTop - 50)) {
+        setSection(el.current.id);
+    }
+}

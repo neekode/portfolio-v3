@@ -220,9 +220,7 @@ img {
         background-color: map-get($global-colors, primary);
 
         transition: all 0.5s linear;
-
         opacity: 0.95;
-
         border-radius: 10px 10px 10px;
         padding: 1.5vh;
         bottom: 1vh;
@@ -256,24 +254,23 @@ img {
 #MyNav {
     .box {
         position: absolute;
-        height: 5vh;
-        width: 100vw;
-        padding-left: 31%;
+        height: 33vh;
+        width: 8vw;
         z-index: 50;
         border-radius: 0;
-        
+        margin-top: 33vh;
         background-color: map-get($global-colors, primary);
         border-bottom: 1px solid map-get($global-colors, font);
+        border-right: 1px solid map-get($global-colors, font);
 
         .nav-item {
             color: map-get($global-colors, font);
-
+            cursor: pointer;
             float: left;
-            text-align: center;
-            margin:auto;
-            margin-left: 3.5vw;
-            font-size: 0.75rem; 
-            
+            margin: auto;
+            padding: 0.2rem;
+            font-size: 0.6rem;
+
             animation-duration: 1s;
         }
     }
@@ -434,17 +431,17 @@ img {
     }
 
     // experience
-    #experience {
-      #x-icon {
-        position: absolute;
-        width: 1.5vw;
-        z-index: 500;
-        left: 50px;
-        top: 50px;
-      }
+    #Experience {
+        #x-icon {
+            position: absolute;
+            width: 1.5vw;
+            z-index: 500;
+            left: 50px;
+            top: 50px;
+        }
 
-      .box {
-        top: 2.5vh;
+        .box {
+            top: 2.5vh;
         background-color: transparent;
 
         h2 {
@@ -518,9 +515,9 @@ img {
 
     }
 
-    .Background-experience {
-      background-color: map-get($experience-colors, primary);
-      font-family: $header-font;
+    .Background-Experience {
+        background-color: map-get($experience-colors, primary);
+        font-family: $header-font;
     }
 
     .box-experience {
