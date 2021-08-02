@@ -167,14 +167,12 @@ img {
 }
 
 #MyNav .box {
-  position: absolute;
-  height: 33vh;
+  position: fixed;
+  height: 100vh;
   width: 8vw;
   z-index: 50;
   border-radius: 0;
-  margin-top: 33vh;
   background-color: #1F3039;
-  border-bottom: 1px solid #F8F9F9;
   border-right: 1px solid #F8F9F9;
 }
 #MyNav .box .nav-item {
@@ -182,14 +180,13 @@ img {
   cursor: pointer;
   float: left;
   margin: auto;
-  padding: 0.2rem;
+  padding: 0.15rem;
   font-size: 0.6rem;
-  animation-duration: 1s;
+  height: 20vh;
+  width: 100%;
 }
-
-.MyNav-fixed {
-  position: fixed !important;
-  top: 0 !important;
+#MyNav .box .nav-item-active {
+  border: 1px solid red;
 }
 
 #Intro {

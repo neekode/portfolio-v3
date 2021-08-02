@@ -253,14 +253,12 @@ img {
 
 #MyNav {
     .box {
-        position: absolute;
-        height: 33vh;
+        position: fixed;
+        height: 100vh;
         width: 8vw;
         z-index: 50;
         border-radius: 0;
-        margin-top: 33vh;
         background-color: map-get($global-colors, primary);
-        border-bottom: 1px solid map-get($global-colors, font);
         border-right: 1px solid map-get($global-colors, font);
 
         .nav-item {
@@ -268,28 +266,33 @@ img {
             cursor: pointer;
             float: left;
             margin: auto;
-            padding: 0.2rem;
+            padding: 0.15rem;
             font-size: 0.6rem;
+            height: 20vh;
+            width: 100%;
+        }
 
-            animation-duration: 1s;
+        .nav-item-active {
+            border: 1px solid red;
         }
     }
 }
 
-.MyNav-fixed {
-    position: fixed !important;
-    top: 0 !important;
-}
+    //
+    //.MyNav-fixed {
+    //    position: fixed !important;
+    //    top: 0 !important;
+    //}
 
 
     // Intro
-#Intro {
-    position: relative;
+    #Intro {
+        position: relative;
 
-    .box {
-        width: 50vw;
-        height: 25vh;
-        padding: 1vw;
+        .box {
+            width: 50vw;
+            height: 25vh;
+            padding: 1vw;
         
         .header {
             color: map-get($global-colors, font)

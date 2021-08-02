@@ -2,10 +2,45 @@ import React from "react";
 import {useContext, useRef, useState, useEffect} from "react";
 import {ThemeContext} from "../scripts/context";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import {addBounceOnHover} from "./../scripts/library.js";
+import {addClassOnActive} from "./../scripts/library.js";
 
-function MyNav() {
-  const {scrollY, section} = useContext(ThemeContext);
+const navs = {
+  intro: {
+    href: "#Intro",
+    displayName: "intro",
+  },
+  about: {
+    href: "#About",
+    displayName: "about",
+  },
+  experience: {
+    href: "#Experience",
+    displayName: "experience",
+  },
+  projects: {
+    href: "#Projects",
+    displayName: "projects",
+  },
+  connect: {
+    href: "#Connect",
+    displayName: "connect",
+  },
+};
+
+function NavBarItem(props) {
+  const {ref, navs} = props;
+
+  return (
+      <AnchorLink href="#Intro" id="about-anchor">
+      <span ref={ref} className="nav-item">
+        intro
+      </span>
+      </AnchorLink>
+  );
+}
+
+function NavBar() {
+  const {section} = useContext(ThemeContext);
 
   // Throwing navbar links as refs into an array. TODO: turn into loop + array.map.fill() or something. How?
   const introLink = useRef();
@@ -13,22 +48,20 @@ function MyNav() {
   const experienceLink = useRef();
   const projectsLink = useRef();
   const connectLink = useRef();
-  const navRefs = [
-    introLink,
-    aboutLink,
-    experienceLink,
-    projectsLink,
-    connectLink,
-  ];
+  // const navRefs = Array().fill((el) => {
+  //   el = useRef();
+  //   return el;
+  // });
+  //
+  // navRefs.forEach((el, section) => {
+  //   return addClassOnActive(el, section);
+  // });
 
-  navRefs.forEach((el) => {
-    return addBounceOnHover(el);
-  });
-
+  //section !== "Intro" ? "MyNav-fixed box" :
   return (
       <div id="MyNav">
-        <div className={section !== "Intro" ? "MyNav-fixed box" : "box"}>
-          <AnchorLink href="#Intro" id="about-anchor">
+        <div className="box">
+          <AnchorLink href="#Intro" id="intro-anchor">
           <span ref={introLink} className="nav-item">
             intro
           </span>
@@ -58,4 +91,4 @@ function MyNav() {
   );
 }
 
-export default MyNav;
+export default NavBar;
