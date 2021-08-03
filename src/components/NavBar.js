@@ -5,90 +5,91 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import {addClassOnActive} from "./../scripts/library.js";
 
 const navs = {
-  intro: {
-    href: "#Intro",
-    displayName: "intro",
-  },
-  about: {
-    href: "#About",
-    displayName: "about",
-  },
-  experience: {
-    href: "#Experience",
-    displayName: "experience",
-  },
-  projects: {
-    href: "#Projects",
-    displayName: "projects",
-  },
-  connect: {
-    href: "#Connect",
-    displayName: "connect",
-  },
+    intro: {
+        href: "#Intro",
+        displayName: "intro",
+    },
+    about: {
+        href: "#About",
+        displayName: "about",
+    },
+    experience: {
+        href: "#Experience",
+        displayName: "experience",
+    },
+    projects: {
+        href: "#Projects",
+        displayName: "projects",
+    },
+    connect: {
+        href: "#Connect",
+        displayName: "connect",
+    },
 };
 
 function NavBarItem(props) {
-  const {ref, navs} = props;
+    const {ref, navs} = props;
 
-  return (
-      <AnchorLink href="#Intro" id="about-anchor">
+    return (
+        <AnchorLink href="#Intro" id="about-anchor">
       <span ref={ref} className="nav-item">
         intro
       </span>
-      </AnchorLink>
-  );
+        </AnchorLink>
+    );
 }
 
 function NavBar() {
-  const {section} = useContext(ThemeContext);
+    const {section} = useContext(ThemeContext);
 
-  // Throwing navbar links as refs into an array. TODO: turn into loop + array.map.fill() or something. How?
-  const introLink = useRef();
-  const aboutLink = useRef();
-  const experienceLink = useRef();
-  const projectsLink = useRef();
-  const connectLink = useRef();
-  // const navRefs = Array().fill((el) => {
-  //   el = useRef();
-  //   return el;
-  // });
-  //
-  // navRefs.forEach((el, section) => {
-  //   return addClassOnActive(el, section);
-  // });
+    // Throwing navbar links as refs into an array. TODO: turn into loop + array.map.fill() or something. How?
+    const introLink = useRef();
+    const aboutLink = useRef();
+    const experienceLink = useRef();
+    const projectsLink = useRef();
+    const connectLink = useRef();
+    // const navRefs = Array().fill((el) => {
+    //   el = useRef();
+    //   return el;
+    // });
+    //
+    // navRefs.forEach((el, section) => {
+    //   return addClassOnActive(el, section);
+    // });
+    // test
 
-  //section !== "Intro" ? "MyNav-fixed box" :
-  return (
-      <div id="MyNav">
-        <div className="box">
-          <AnchorLink href="#Intro" id="intro-anchor">
+    //section !== "Intro" ? "MyNav-fixed box" :
+    return (
+        <div id="MyNav">
+            <div className="box">
+                <AnchorLink href="#Intro" id="intro-anchor">
           <span ref={introLink} className="nav-item">
             intro
           </span>
-          </AnchorLink>
-          <AnchorLink href="#About" id="about-anchor">
+                </AnchorLink>
+                <AnchorLink href="#About" id="about-anchor">
           <span ref={aboutLink} className="nav-item">
             about me
           </span>
-          </AnchorLink>
-          <AnchorLink href="#Experience" id="experience-anchor">
+                </AnchorLink>
+                <AnchorLink href="#Experience" id="experience-anchor">
           <span ref={experienceLink} className="nav-item">
             experience
           </span>
-          </AnchorLink>
-          <AnchorLink href="#Projects" id="projects-anchor">
+                </AnchorLink>
+                <AnchorLink href="#Projects" id="projects-anchor">
           <span ref={projectsLink} className="nav-item">
             projects
           </span>
-          </AnchorLink>
-          <AnchorLink href="#Connect" id="connect-anchor">
+                </AnchorLink>
+                <AnchorLink href="#Connect" id="connect-anchor">
           <span ref={connectLink} className="nav-item">
             connect
           </span>
-          </AnchorLink>
+                </AnchorLink>
+            </div>
         </div>
-      </div>
-  );
+    );
 }
 
 export default NavBar;
