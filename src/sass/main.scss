@@ -261,6 +261,7 @@ img {
   .box {
     position: fixed;
     height: 100vh;
+    padding-top: 20vh;
     width: 8vw;
     z-index: 50;
     border-radius: 0;
@@ -272,12 +273,12 @@ img {
       padding: 0.15rem;
       font-size: 0.6rem;
       display: inline-block;
-      line-height: 15vh;
-      height: 20vh;
+      width: 100%;
+      height: 5vh;
     }
 
     .nav-item-active {
-      border: 1px solid red;
+
     }
   }
 }

@@ -4,57 +4,53 @@ import {ThemeContext} from "../scripts/context";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import {addClassOnActive} from "./../scripts/library.js";
 
-const navs = {
-    intro: {
+const navs = [
+    {
         href: "#Intro",
-        displayName: "intro",
+        displayName: "Intro",
     },
-    about: {
+    {
         href: "#About",
-        displayName: "about",
+        displayName: "About",
     },
-    experience: {
+    {
         href: "#Experience",
-        displayName: "experience",
+        displayName: "Experience",
     },
-    projects: {
+    {
         href: "#Projects",
-        displayName: "projects",
+        displayName: "Projects",
     },
-    connect: {
+    {
         href: "#Connect",
-        displayName: "connect",
+        displayName: "Connect",
     },
-};
+];
 
 function NavBarItem(props) {
-    const {ref, href,} = props;
+    const {navObj} = props;
+    const {section} = useContext(ThemeContext);
 
     return (
-        <AnchorLink href="#Intro" id="about-anchor">
-      <span ref={ref} className="nav-item">
-        intro
+        // TODO: Need id?
+        <AnchorLink href={navObj.href} id="">
+      <span ref={navObj.ref} className={section === navObj.displayName ? "nav-item nav-item-active" : "nav-item"}>
+        {navObj.displayName}
       </span>
         </AnchorLink>
     );
 }
 
 function NavBar() {
-    const {section, scrollY} = useContext(ThemeContext);
+    const {scrollY} = useContext(ThemeContext);
 
-    // Throwing navbar links as refs into an array. TODO: turn into loop + array.map.fill() or something. How?
-    const introLink = useRef();
-    const aboutLink = useRef();
-    const experienceLink = useRef();
-    const projectsLink = useRef();
-    const connectLink = useRef();
-    // const navRefs = [introLink, aboutLink, experienceLink, projectsLink, connectLink];
-    // navRefs.forEach((el, section) => {
-    //   return addClassOnActive(el, section);
-    // });
-    // test
+    // TODO: How to simplify this?
+    navs[0].ref = useRef();
+    navs[1].ref = useRef();
+    navs[2].ref = useRef();
+    navs[3].ref = useRef();
+    navs[4].ref = useRef();
 
-    //section !== "Intro" ? "MyNav-fixed box" :
     return (
         <div
             className={
@@ -63,32 +59,9 @@ function NavBar() {
                     : "NavBar"
             }>
             <div className="box">
-
-                <AnchorLink href="#Intro" id="intro-anchor">
-          <span ref={introLink} className="nav-item">
-            intro
-          </span>
-                </AnchorLink>
-                <AnchorLink href="#About" id="about-anchor">
-          <span ref={aboutLink} className="nav-item">
-            about me
-          </span>
-                </AnchorLink>
-                <AnchorLink href="#Experience" id="experience-anchor">
-          <span ref={experienceLink} className="nav-item">
-            experience
-          </span>
-                </AnchorLink>
-                <AnchorLink href="#Projects" id="projects-anchor">
-          <span ref={projectsLink} className="nav-item">
-            projects
-          </span>
-                </AnchorLink>
-                <AnchorLink href="#Connect" id="connect-anchor">
-          <span ref={connectLink} className="nav-item">
-            connect
-          </span>
-                </AnchorLink>
+                {navs.map((navObj, i) => {
+                    return (<NavBarItem navObj={navObj}/>)
+                })}
             </div>
         </div>
     );
