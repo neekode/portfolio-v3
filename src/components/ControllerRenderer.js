@@ -46,7 +46,6 @@ function ControllerRenderer(props) {
             src={downChev}
         />
       </span>
-
             <span className="chev-box">
         <img
             id="controller-toggle"

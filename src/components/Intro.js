@@ -22,7 +22,7 @@ function Intro() {
                 className={section === "Intro" ? "box-Intro box center" : "box center"}
             >
                 <h2 id="intro-header" className="header">
-                    Welcome! I'm <span id="neeko-blomgren">Neeko Blomgrem</span>,
+                    Welcome! I'm <span id="neeko-blomgren">Neeko Blomgren</span>,
                 </h2>
                 <h3 id="intro-sub-header" className="sub-header">
                     A Seattle-based Front-end Web Developer

@@ -11,7 +11,7 @@ function About() {
   const {scrollY, setSection, section} = useContext(ThemeContext);
   const wrapper = useRef();
 
-  useEffect(() => themeChange(wrapper, scrollY, setSection), [scrollY]);
+  useEffect(() => themeChange(wrapper, scrollY, setSection), [scrollY, setSection]);
   useEffect(() => initText(), []);
   const initText = () => {
     const func = () => {
@@ -32,9 +32,9 @@ function About() {
       <div className="section" id="About" ref={wrapper}>
         <div className="box center">
           <div className="row">
-            <h3 className="header col-md-4"> Neeko Blomgren! </h3>
+            <h3 className="header col-md-4"> Neeko Blomgren </h3>
             <h3 id="about-header" className="header col-md-8">
-              Who, Me?
+              Bio
             </h3>
           </div>
 
@@ -137,7 +137,7 @@ function About() {
             </div>
           </div>
         </div>
-    </div>
+      </div>
   );
 }
 

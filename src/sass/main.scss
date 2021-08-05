@@ -1,25 +1,25 @@
-    // Style Variables
+// Style Variables
 
 // Colors
 
-$global-colors : (
-    primary: #1F3039,
-    secondary: #34346C,
-    border: #212121,
-    font: #F8F9F9,
-    font-secondary: #ED942C,
+$global-colors: (
+        primary: #1F3039,
+        secondary: #34346C,
+        border: #212121,
+        font: #F8F9F9,
+        font-secondary: #ED942C,
 );
 
-$intro-colors : (
-    primary: #31425F,
-    secondary: #999AA2,
-    border: #94A1B6,
+$intro-colors: (
+        primary: #31425F,
+        secondary: #999AA2,
+        border: #94A1B6,
 );
 
-$about-colors : (
-    primary: #323A6A,
-    secondary: #6C6862,
-    bright: #2EB4D5,
+$about-colors: (
+        primary: #323A6A,
+        secondary: #6C6862,
+        bright: #2EB4D5,
 );
 
 $experience-colors: (
@@ -28,518 +28,518 @@ $experience-colors: (
         border: #EAC683,
 );
 
-$connect-colors : (
-    primary: #3A7BAB,
-    secondary: #716F82,
-    border: #606072,
+$connect-colors: (
+        primary: #3A7BAB,
+        secondary: #716F82,
+        border: #606072,
 );
 
 // Fonts
 $header-font: "Montserrat-Regular";
 $main-font: "Montserrat-Regular";
 
-        // CSS Properties
+// CSS Properties
 // Useful Properties
 
 .unshown {
-    display: none !important;
+  display: none !important;
 }
 
-    // (experience inside "position: absolute" parent elements)
+// (experience inside "position: absolute" parent elements)
 .center {
-    margin: 0;
-    position: absolute;
-    margin-top: 22.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  margin-top: 22.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 // Cross-Application
 html {
-    // Makes font-sizes based on 'em' and 'rem' responive to the viewport width.
-    font-size: 2.5vw;
+  // Makes font-sizes based on 'em' and 'rem' responive to the viewport width.
+  font-size: 2.5vw;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    //overflow-y: hidden;
-    font-family: $main-font;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  //overflow-y: hidden;
+  font-family: $main-font;
 
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 img {
-    vertical-align: top !important;
+  vertical-align: top !important;
 }
 
 // #App {
-    
+
 // }\
 
 .row {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .section {
-    height:120vh;
-    pointer-events: none;
-    position: relative;
-    z-index: 2;
+  height: 120vh;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
 }
 
 .inner-emblem-text {
-    font-size: 1em;
-    padding-top: 6vh !important;
+  font-size: 1em;
+  padding-top: 6vh !important;
 }
 
 .box {
-    text-align: center;
-    pointer-events: auto;
-    background-color: map-get($global-colors, primary);
-    color: map-get($global-colors, font);
-    width: 80vw;   
-    height: 75vh;
+  text-align: center;
+  pointer-events: auto;
+  background-color: map-get($global-colors, primary);
+  color: map-get($global-colors, font);
+  width: 80vw;
+  height: 75vh;
 
-    border-radius: 10px 10px 10px;
+  border-radius: 10px 10px 10px;
 
-    //border: 1px solid red;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 
-    .header {
-        font-family: $main-font;
-        color: map-get($global-colors, font-secondary);
-        font-size: 0.9rem;
-        margin:0;
-    }
+  //border: 1px solid red;
 
-    .sub-header {
-        font-family: $main-font;
-        font-size: 0.65rem;
-        margin:0;
-        margin-top: 1vh;
-    }
+  .header {
+    font-family: $main-font;
+    color: map-get($global-colors, font-secondary);
+    font-size: 0.9rem;
+    margin: 0;
+  }
 
-    .description {
-        width: 33vw;
-        margin-top: 0;
-        padding: 2.5vw;
-        padding-top: 0;
-        
-        font-size: 0.65rem;
-    }
+  .sub-header {
+    font-family: $main-font;
+    font-size: 0.65rem;
+    margin: 0;
+    margin-top: 1vh;
+  }
+
+  .description {
+    width: 33vw;
+    margin-top: 0;
+    padding: 2.5vw;
+    padding-top: 0;
+
+    font-size: 0.65rem;
+  }
 }
 
 #intro-link {
-    position: absolute;
-    width: 10vw;
+  position: absolute;
+  width: 10vw;
 }
 
 #allyis-link {
-    text-decoration: none;
-    color: map-get($global-colors, font-secondary);
+  text-decoration: none;
+  color: map-get($global-colors, font-secondary);
 }
 
-    #allyis-link:hover {
-        opacity: 0.8;
-    }
-
+#allyis-link:hover {
+  opacity: 0.8;
+}
 
 
 #Background {
-    height: 100vh;
-    font-family: $header-font;
+  height: 100vh;
+  font-family: $header-font;
+  position: fixed;
+
+  -webkit-transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
+
+  .chev-box {
     position: fixed;
+    height: 5vh;
+    width: 5vh;
+    right: 1vw;
+    bottom: calc(40% - 2.5vh);
+    background-color: map-get($global-colors, primary);
+    border-radius: 10px 10px 10px 10px;
 
-    -webkit-transition: background-color 1s linear;
-    -moz-transition: background-color 1s linear;
-    -o-transition: background-color 1s linear;
-    transition: background-color 1s linear;
-
-    .chev-box {
-        position: fixed;
-        height: 5vh;
-        width: 5vh;
-        right: 1vw;
-        bottom: calc(40% - 2.5vh);
-        background-color: map-get($global-colors, primary);
-        border-radius: 10px 10px 10px 10px;
-
-        img {
-            height: 5vh;
-            width: 5vh;
-        }
-
-        .left-chev {
-            cursor: pointer;
-            transition: all 0.3s linear;
-            transform: rotate(-90deg);
-            margin-left: 0.5vw;
-        }
-    
-        .right-chev {
-            cursor: pointer;
-            transition: all 0.3s linear;
-            transform: rotate(90deg);
-            margin-left: -0.5vw;
-        }
-
-        
+    img {
+      height: 5vh;
+      width: 5vh;
     }
 
-    #to-top {
-        bottom: calc(40% + 12.5vh);
-
-        .up-chev {
-            cursor: pointer;
-            transition: all 0.3s linear;
-            transform: rotate(180deg);
-            margin-top: -0.5vh;
-        }
+    .left-chev {
+      cursor: pointer;
+      transition: all 0.3s linear;
+      transform: rotate(-90deg);
+      margin-left: 0.5vw;
     }
 
-    #lower {
-        bottom: calc(40% + 5vh);
-
-        .down-chev {
-            cursor: pointer;
-            transition: all 0.3s linear;
-            margin-top: 1vh;
-        }
-    }
-
-    
-
-    .animation-controller {
-        z-index: 5000 !important;
-        font-family: $main-font;
-        position: absolute;
-
-        color: map-get($global-colors, font);
-        background-color: map-get($global-colors, primary);
-
-        transition: all 0.5s linear;
-        opacity: 0.95;
-        border-radius: 10px 10px 10px;
-        padding: 1.5vh;
-        bottom: 1vh;
-        right: 2vw;
-        font-size: 0.35rem;
-
-        .header {
-            font-family: $header-font;
-            font-size: 0.35rem;
-        }
-
-        div {
-            margin-top: 1.5vh;
-            
-            padding-bottom: 0.5vh;
-        }
-
-        #renderer {
-            margin-left: 0.5vw;
-        }
-    }
-
-    
-
-    .animation-controller-hidden {
-        right: -24.5vw;
-    }
-}
-
-
-#MyNav {
-    .box {
-        position: fixed;
-        height: 100vh;
-        width: 8vw;
-        z-index: 50;
-        border-radius: 0;
-        background-color: map-get($global-colors, primary);
-        border-right: 1px solid map-get($global-colors, font);
-
-        .nav-item {
-            color: map-get($global-colors, font);
-            cursor: pointer;
-            float: left;
-            margin: auto;
-            padding: 0.15rem;
-            font-size: 0.6rem;
-            height: 20vh;
-            width: 100%;
-        }
-
-        .nav-item-active {
-            border: 1px solid red;
-        }
-    }
-}
-
-    //
-    //.MyNav-fixed {
-    //    position: fixed !important;
-    //    top: 0 !important;
-    //}
-
-
-    // Intro
-    #Intro {
-        position: relative;
-
-        .box {
-            width: 50vw;
-            height: 25vh;
-            padding: 1vw;
-        
-        .header {
-            color: map-get($global-colors, font)
-        }
-
-        .chevron-box{
-            .down-chevs {
-                margin: 30px;
-                width: 3vw;
-            }
-        }
-    }
-
-    #neeko-blomgren {
-        color: map-get($global-colors, font-secondary);
-    }
-}
-
-    .Background-Intro {
-        background-color: map-get($intro-colors, primary);
-        color: map-get($intro-colors, font);
-        font-family: $header-font;
-    }
-
-    .box-Intro {
-
+    .right-chev {
+      cursor: pointer;
+      transition: all 0.3s linear;
+      transform: rotate(90deg);
+      margin-left: -0.5vw;
     }
 
 
+  }
 
+  #to-top {
+    bottom: calc(40% + 12.5vh);
 
-    // About 
-#About {
-    .box {
-        top:6.5vh;
-        height: 80vh;
-
-        h3 {
-            padding-top: 2.5vh;
-        }
+    .up-chev {
+      cursor: pointer;
+      transition: all 0.3s linear;
+      transform: rotate(180deg);
+      margin-top: -0.5vh;
     }
+  }
+
+  #lower {
+    bottom: calc(40% + 5vh);
+
+    .down-chev {
+      cursor: pointer;
+      transition: all 0.3s linear;
+      margin-top: 1vh;
+    }
+  }
+
+
+  .animation-controller {
+    z-index: 5000 !important;
+    font-family: $main-font;
+    position: absolute;
+
+    color: map-get($global-colors, font);
+    background-color: map-get($global-colors, primary);
+
+    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+
+    transition: all 0.75s linear;
+    opacity: 0.95;
+    border-radius: 10px 10px 10px;
+    padding: 1.5vh;
+    bottom: 1vh;
+    right: 2vw;
+    font-size: 0.35rem;
 
     .header {
-        display: inline-block;
-        text-align: center !important;
+      font-family: $header-font;
+      font-size: 0.35rem;
     }
 
-    #profile-picture{
-        img {
-            width: 80%;
-            margin: 5%;
-            margin-top: 2vh;
-        }
-        
+    div {
+      margin-top: 1.5vh;
+
+      padding-bottom: 0.5vh;
+    }
+
+    #renderer {
+      margin-left: 0.5vw;
+    }
+  }
+
+  .animation-controller-hidden {
+    right: -24.5vw;
+  }
+}
+
+
+.NavBar {
+  transition: all 0.5s linear;
+
+  .box {
+    position: fixed;
+    height: 100vh;
+    width: 8vw;
+    z-index: 50;
+    border-radius: 0;
+    background-color: map-get($global-colors, primary);
+
+    .nav-item {
+      color: map-get($global-colors, font);
+      cursor: pointer;
+      padding: 0.15rem;
+      font-size: 0.6rem;
+      display: inline-block;
+      line-height: 15vh;
+      height: 20vh;
+    }
+
+    .nav-item-active {
+      border: 1px solid red;
+    }
+  }
+}
+
+.NavBar-hidden {
+  margin-left: -8vw;
+}
+
+// Intro
+#Intro {
+  position: relative;
+
+  .box {
+    width: 50vw;
+    height: 25vh;
+    padding: 1vw;
+
+    .header {
+      color: map-get($global-colors, font)
+    }
+
+    .chevron-box {
+      .down-chevs {
+        margin: 30px;
+        width: 3vw;
+      }
+    }
+  }
+
+  #neeko-blomgren {
+    color: map-get($global-colors, font-secondary);
+  }
+}
+
+.Background-Intro {
+  background-color: map-get($intro-colors, primary);
+  color: map-get($intro-colors, font);
+  font-family: $header-font;
+}
+
+.box-Intro {
+
+}
+
+
+// About
+#About {
+  .box {
+    top: 6.5vh;
+    height: 80vh;
+
+    h3 {
+      padding-top: 2.5vh;
+    }
+  }
+
+  .header {
+    display: inline-block;
+    text-align: center !important;
+  }
+
+  #profile-picture {
+    img {
+      width: 80%;
+      margin: 5%;
+      margin-top: 2vh;
+    }
+
+    div {
+      font-size: 0.6em;
+      margin: auto;
+    }
+  }
+
+  #about-content {
+
+    p {
+      font-size: 0.5em;
+      width: 80%;
+      margin: auto;
+      margin-top: 2vh;
+      margin-bottom: 5vh;
+    }
+
+    .content-section {
+      font-size: 0.8em;
+      height: 20vh;
+      margin-top: 1vh !important;
+
+      .emblem {
+        z-index: 5;
+        background-color: map-get($about-colors, primary);
+        font-size: 0.5em;
+      }
+
+      .subEmblem {
+        z-index: 4;
+        transition: all 1s ease 0s;
+        background-color: map-get($about-colors, primary);
+        top: -20vh;
+        width: 95%;
+        font-size: 0.5em;
+
         div {
-            font-size: 0.6em;
-            margin: auto;
+          padding-top: 11vh !important;
         }
+      }
+
+      .subEmblem2 {
+        z-index: 4;
+        transition: all 1s ease 0s;
+        background-color: map-get($about-colors, primary);
+        top: -40vh;
+        font-size: 0.5em;
+
+        div {
+          padding-top: 11vh !important;
+        }
+      }
+
+      .shown {
+        top: -10vh;
+      }
+
+      .shown2 {
+        top: -20vh;
+      }
+
     }
 
-    #about-content {
+    .emblem-section {
 
-        p {
-            font-size: 0.5em;
-            width: 80%;
-            margin:auto;
-            margin-top: 2vh;
-            margin-bottom: 5vh;
-        }
-        
-        .content-section {
-            font-size: 0.8em;
-            height: 20vh;
-            margin-top: 1vh !important;
-
-            .emblem {
-                z-index: 5;
-                background-color: map-get($about-colors, primary);
-                font-size: 0.5em;
-            }
-
-            .subEmblem {
-                z-index: 4;
-                transition: all 1s ease 0s;
-                background-color: map-get($about-colors, primary);
-                top: -20vh;
-                width: 95%;
-                font-size: 0.5em;
-
-                div {
-                    padding-top: 11vh !important;
-                }
-            }
-
-            .subEmblem2 {
-                z-index: 4;
-                transition: all 1s ease 0s;
-                background-color: map-get($about-colors, primary);
-                top: -40vh;
-                font-size: 0.5em;
-
-                div {
-                    padding-top: 11vh !important;
-                }
-            }
-
-            .shown {
-                top: -10vh;
-            }
-
-            .shown2 {
-                top: -20vh;
-            }
-
-        }
-
-        .emblem-section {
-            
-        }
     }
+  }
 }
 
 .hexagon {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .hexagon2 {
-    clip-path: polygon(50% 50%, 95% 25%, 100% 75%, 50% 100%, 0% 75%, 5% 25%);
+  clip-path: polygon(50% 50%, 95% 25%, 100% 75%, 50% 100%, 0% 75%, 5% 25%);
 }
 
-    .Background-About {
-      background-color: map-get($about-colors, primary);
+.Background-About {
+  background-color: map-get($about-colors, primary);
 
-      font-family: $header-font;
+  font-family: $header-font;
+}
+
+.box-About {
+
+}
+
+// experience
+#Experience {
+  #x-icon {
+    position: absolute;
+    width: 1.5vw;
+    z-index: 500;
+    left: 50px;
+    top: 50px;
+  }
+
+  .box {
+    top: 2.5vh;
+    background-color: transparent;
+
+    h2 {
+      position: absolute;
+      margin-top: 4.5vh;
+      z-index: 55;
     }
 
-    .box-About {
 
-    }
+    #experience-content {
+      margin-top: 1vh !important;
+      margin: 0;
 
-    // experience
-    #Experience {
-        #x-icon {
-            position: absolute;
-            width: 1.5vw;
-            z-index: 500;
-            left: 50px;
-            top: 50px;
-        }
-
-        .box {
-            top: 2.5vh;
-        background-color: transparent;
-
-        h2 {
-            position: absolute;
-            margin-top: 4.5vh;
-            z-index: 55;
-        }
-
-
-        #experience-content {
-          margin-top: 1vh !important;
-          margin: 0;
-
-          .experience-section {
-            background-color: map-get($global-colors, primary);
-            transition: all 300ms linear;
-            border-radius: 7px;
-          }
-
-          .experience-section:hover {
-            z-index: 50;
-
-            /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-            -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-            -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-            box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-          }
-
-          .experience-section:active {
-            z-index: 50;
-            transition: all 50ms linear;
-            /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-            -webkit-box-shadow: none;
-            -moz-box-shadow: none;
-            box-shadow: none;
-          }
-
-            h3 {
-                margin-top: 7.5vh;
-            }
-            
-            .content-section { 
-                height: 70vh;
-                margin:1vw;
-                margin-top: 2.5vh;
-                pointer-events: none;
-
-                .emblem {
-                  height: 20vh;
-                  font-size: 0.6em;
-                  margin: 1vw;
-                  background-color: map-get($experience-colors, primary);
-                }
-            }
-        }
-
-        .personal-proj-expanded {
-            
-        }
-
-        .work-exp-expanded {
-            
-        }
-
-        .widgets-features-expanded {
-
-        }
-
+      .experience-section {
+        background-color: map-get($global-colors, primary);
+        transition: all 300ms linear;
+        border-radius: 7px;
       }
 
+      .experience-section:hover {
+        z-index: 50;
 
-    }
+        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+        -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+      }
 
-    .Background-Experience {
-        background-color: map-get($experience-colors, primary);
-        font-family: $header-font;
-    }
+      .experience-section:active {
+        z-index: 50;
+        transition: all 50ms linear;
+        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+      }
 
-    .box-experience {
-      color: map-get($experience-colors, font);
-    }
+      h3 {
+        margin-top: 7.5vh;
+      }
 
-    // Connect
-    #Connect {
-      .box {
-        top: 5vh;
+      .content-section {
+        height: 70vh;
+        margin: 1vw;
+        margin-top: 2.5vh;
+        pointer-events: none;
+
+        .emblem {
+          height: 20vh;
+          font-size: 0.6em;
+          margin: 1vw;
+          background-color: map-get($experience-colors, primary);
+        }
       }
     }
 
-    .Background-Connect {
-      background-color: map-get($connect-colors, primary);
-        color: map-get($connect-colors, font);
-        font-family: $header-font;
-    }
-    .box-Connect {
+    .personal-proj-expanded {
 
     }
+
+    .work-exp-expanded {
+
+    }
+
+    .widgets-features-expanded {
+
+    }
+
+  }
+
+
+}
+
+.Background-Experience {
+  background-color: map-get($experience-colors, primary);
+  font-family: $header-font;
+}
+
+.box-experience {
+  color: map-get($experience-colors, font);
+}
+
+// Connect
+#Connect {
+  .box {
+    top: 5vh;
+  }
+}
+
+.Background-Connect {
+  background-color: map-get($connect-colors, primary);
+  color: map-get($connect-colors, font);
+  font-family: $header-font;
+}
+
+.box-Connect {
+
+}
 

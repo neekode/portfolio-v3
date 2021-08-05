@@ -28,7 +28,7 @@ const navs = {
 };
 
 function NavBarItem(props) {
-    const {ref, navs} = props;
+    const {ref, href,} = props;
 
     return (
         <AnchorLink href="#Intro" id="about-anchor">
@@ -40,7 +40,7 @@ function NavBarItem(props) {
 }
 
 function NavBar() {
-    const {section} = useContext(ThemeContext);
+    const {section, scrollY} = useContext(ThemeContext);
 
     // Throwing navbar links as refs into an array. TODO: turn into loop + array.map.fill() or something. How?
     const introLink = useRef();
@@ -48,11 +48,7 @@ function NavBar() {
     const experienceLink = useRef();
     const projectsLink = useRef();
     const connectLink = useRef();
-    // const navRefs = Array().fill((el) => {
-    //   el = useRef();
-    //   return el;
-    // });
-    //
+    // const navRefs = [introLink, aboutLink, experienceLink, projectsLink, connectLink];
     // navRefs.forEach((el, section) => {
     //   return addClassOnActive(el, section);
     // });
@@ -60,8 +56,14 @@ function NavBar() {
 
     //section !== "Intro" ? "MyNav-fixed box" :
     return (
-        <div id="MyNav">
+        <div
+            className={
+                scrollY < 50
+                    ? "NavBar NavBar-hidden"
+                    : "NavBar"
+            }>
             <div className="box">
+
                 <AnchorLink href="#Intro" id="intro-anchor">
           <span ref={introLink} className="nav-item">
             intro

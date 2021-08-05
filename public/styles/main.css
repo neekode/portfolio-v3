@@ -51,6 +51,9 @@ img {
   width: 80vw;
   height: 75vh;
   border-radius: 10px 10px 10px;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
 .box .header {
   font-family: "Montserrat-Regular";
@@ -143,7 +146,10 @@ img {
   position: absolute;
   color: #F8F9F9;
   background-color: #1F3039;
-  transition: all 0.5s linear;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  transition: all 0.75s linear;
   opacity: 0.95;
   border-radius: 10px 10px 10px;
   padding: 1.5vh;
@@ -159,44 +165,56 @@ img {
   margin-top: 1.5vh;
   padding-bottom: 0.5vh;
 }
+
 #Background .animation-controller #renderer {
   margin-left: 0.5vw;
 }
+
 #Background .animation-controller-hidden {
   right: -24.5vw;
 }
 
-#MyNav .box {
+.NavBar {
+  transition: all 0.5s linear;
+}
+
+.NavBar .box {
   position: fixed;
   height: 100vh;
   width: 8vw;
   z-index: 50;
   border-radius: 0;
   background-color: #1F3039;
-  border-right: 1px solid #F8F9F9;
 }
-#MyNav .box .nav-item {
+
+.NavBar .box .nav-item {
   color: #F8F9F9;
   cursor: pointer;
-  float: left;
-  margin: auto;
   padding: 0.15rem;
   font-size: 0.6rem;
+  display: inline-block;
+  line-height: 15vh;
   height: 20vh;
-  width: 100%;
 }
-#MyNav .box .nav-item-active {
+
+.NavBar .box .nav-item-active {
   border: 1px solid red;
+}
+
+.NavBar-hidden {
+  margin-left: -8vw;
 }
 
 #Intro {
   position: relative;
 }
+
 #Intro .box {
   width: 50vw;
   height: 25vh;
   padding: 1vw;
 }
+
 #Intro .box .header {
   color: #F8F9F9;
 }
