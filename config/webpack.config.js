@@ -360,7 +360,6 @@ module.exports = function (webpackEnv) {
                                 ),
 
                                 plugins: [
-                                    "@babel/plugin-proposal-nullish-coalescing-operator",
                                     [
                                         require.resolve('babel-plugin-named-asset-import'),
                                         {
