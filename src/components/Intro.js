@@ -8,7 +8,7 @@ import {addBounceOnHover, themeChange} from "./../scripts/library.js";
 
 function Intro() {
     // Context controlling the state of the background
-    const {scrollY, setSection, section} = useContext(ThemeContext);
+    const {scrollY, setSection, isMobile} = useContext(ThemeContext);
     const wrapper = useRef();
     useEffect(() => themeChange(wrapper, scrollY, setSection), [scrollY, setSection]);
 
@@ -17,9 +17,9 @@ function Intro() {
     addBounceOnHover(exploreMore);
 
     return (
-        <div className="section" id="Intro" ref={wrapper}>
+        <div className={"section Intro"} id="Intro" ref={wrapper}>
             <div
-                className={section === "Intro" ? "box-Intro box center" : "box center"}
+                className={`box center ${isMobile ? 'boxWide' : ''}`}
             >
                 <h2 id="intro-header" className="header">
                     Welcome! I'm <span id="neeko-blomgren">Neeko Blomgren</span>,

@@ -11,17 +11,23 @@ import {useContext, useEffect} from "react";
 
 // Big Wrapper
 function Content() {
-    const {setScrollY} = useContext(ThemeContext);
+    const {setScrollY, setIsMobile} = useContext(ThemeContext);
     const handleScroll = (e) => setScrollY(window.scrollY);
-
+    const handleResize = (e) => {
+        if (window.outerWidth > 600) {
+            setIsMobile(false)
+        } else {
+            setIsMobile(true)
+        }
+    }
     // Attach scroll handler on Init
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-
+        window.addEventListener("resize", handleResize)
         if (window.addEventListener) {
             window.addEventListener("load", handleScroll, false); //W3C
         }
-    }, []);
+    }, [handleResize, handleScroll]);
 
     return (
         <div id="Content">

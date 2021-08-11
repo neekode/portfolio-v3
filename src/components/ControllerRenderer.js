@@ -25,27 +25,27 @@ function ControllerRenderer(props) {
 
     return (
         <div id="Controller">
-            <AnchorLink href="#Intro">
-        <span id="to-top" className="chev-box">
-          <img
-              id="to-top"
-              onClick={handleRandomize}
-              className="up-chev"
-              alt="chev"
-              src={downChev}
-          />
-        </span>
-            </AnchorLink>
+            {/*    //TODO: Fix? do we want these?  <AnchorLink href="#Intro">*/}
+            {/*  <span id="to-top" className="chev-box">*/}
+            {/*    <img*/}
+            {/*        id="to-top"*/}
+            {/*        onClick={handleRandomize}*/}
+            {/*        className="up-chev"*/}
+            {/*        alt="chev"*/}
+            {/*        src={downChev}*/}
+            {/*    />*/}
+            {/*  </span>*/}
+            {/*      </AnchorLink>*/}
 
-            <span id="lower" className="chev-box">
-        <img
-            id="lower"
-            onClick={handleRandomize}
-            className="down-chev"
-            alt="chev"
-            src={downChev}
-        />
-      </span>
+            {/*      <span id="lower" className="chev-box">*/}
+            {/*  <img*/}
+            {/*      id="lower"*/}
+            {/*      onClick={handleRandomize}*/}
+            {/*      className="down-chev"*/}
+            {/*      alt="chev"*/}
+            {/*      src={downChev}*/}
+            {/*  />*/}
+            {/*</span>*/}
             <span className="chev-box">
         <img
             id="controller-toggle"

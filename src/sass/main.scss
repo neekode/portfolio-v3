@@ -75,10 +75,6 @@ img {
   vertical-align: top !important;
 }
 
-// #App {
-
-// }\
-
 .row {
   margin: 0 !important;
 }
@@ -133,6 +129,12 @@ img {
 
     font-size: 0.65rem;
   }
+}
+
+.boxWide {
+  //height: 100vh !important;
+  width: 80vw !important;
+  border: 1px solid red;
 }
 
 #intro-link {
@@ -278,7 +280,7 @@ img {
     }
 
     .nav-item-active {
-
+      border-right: 1px solid white;
     }
   }
 }
@@ -288,7 +290,7 @@ img {
 }
 
 // Intro
-#Intro {
+.Intro {
   position: relative;
 
   .box {
@@ -308,6 +310,7 @@ img {
     }
   }
 
+
   #neeko-blomgren {
     color: map-get($global-colors, font-secondary);
   }
@@ -317,10 +320,6 @@ img {
   background-color: map-get($intro-colors, primary);
   color: map-get($intro-colors, font);
   font-family: $header-font;
-}
-
-.box-Intro {
-
 }
 
 
