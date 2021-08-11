@@ -8,7 +8,7 @@ import {themeChange} from "./../scripts/library.js";
 function About() {
     const titleMorph = useRef();
 
-    const {scrollY, setSection, section} = useContext(ThemeContext);
+    const {scrollY, setSection, section, isMobile} = useContext(ThemeContext);
     const wrapper = useRef();
 
     useEffect(() => themeChange(wrapper, scrollY, setSection), [scrollY, setSection]);
@@ -29,17 +29,17 @@ function About() {
     };
 
     return (
-        <div className="section" id="About" ref={wrapper}>
+        <div className={`section ${isMobile ? 'boxMobile' : ''}`} id="About" ref={wrapper}>
             <div className="box center">
                 <div className="row">
-                    <h3 className="header col-md-4"> Neeko Blomgren </h3>
+                    <h3 className={`${isMobile ? 'unshown' : ''} header col-md-4`}> Neeko Blomgren </h3>
                     <h3 id="about-header" className="header col-md-8">
                         Bio
                     </h3>
                 </div>
 
                 <div className="row">
-                    <div id="profile-picture" className="col-md-4">
+                    <div id="profile-picture" className={`col-md-4 ${isMobile ? 'unshown' : ''}`}>
                         <img className=" hexagon" alt="down chevs" src={profilePic}/>
                         <div className="sub-header" ref={titleMorph}>
                             Front-End Specialist / with a UX background / who loves to build
@@ -49,13 +49,14 @@ function About() {
 
                     <div id="about-content" className="col-md-8">
                         <p>
-                            I'm an enthusiastic guy who loves to build things with code,
-                            boulder at the local climbing gym, and eat gyros. Currently I'm in
-                            Seattle working with one of Microsoft's Partner Contractors:{" "}
+                            I'm an enthusiastic guy who loves code, bouldering at SBP, and gyros. Currently I'm in
+                            between
+                            positions and working on personal projects. Most recently I was in a contract with
+                            Microsoft thru:
                             <a id="allyis-link" href="http://allyis.com/">
-                                {" "}
                                 Allyis.{" "}
                             </a>
+                            Here's some of my skillset:
                         </p>
                         <div className="row content-section emblem-section">
                             <div className="col-md-3 emblem hexagon mx-auto">

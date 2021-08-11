@@ -14,7 +14,7 @@ function Content() {
     const {setScrollY, setIsMobile} = useContext(ThemeContext);
     const handleScroll = (e) => setScrollY(window.scrollY);
     const handleResize = (e) => {
-        if (window.outerWidth > 600) {
+        if (window.outerWidth > 700) {
             setIsMobile(false)
         } else {
             setIsMobile(true)
@@ -23,9 +23,10 @@ function Content() {
     // Attach scroll handler on Init
     useEffect(() => {
         window.addEventListener("scroll", handleScroll);
-        window.addEventListener("resize", handleResize)
+        window.addEventListener("resize", handleResize);
         if (window.addEventListener) {
             window.addEventListener("load", handleScroll, false); //W3C
+            window.addEventListener("load", handleResize, false);
         }
     }, [handleResize, handleScroll]);
 
