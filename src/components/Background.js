@@ -31,146 +31,153 @@ import $ from "jquery";
 */
 
 function Background() {
-  const {section} = useContext(ThemeContext);
-  const [ballpitVars, setBallpitVars] = useState({
-    amount: 250,
-    radius: 2,
-    speed: 0.1,
-  });
-
-  let theme = `Background-${section}`;
-
-  // State which tracks the interval of consecutive draws. Necessary to unify single interval,
-  // not creating others.
-  const [intervalObj, setIntObj] = useState();
-
-  // Initial side effect change which fires after component mounts and DOM/virtualDOM is ready.
-  useEffect(
-      () => init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed, true),
-      []
-  );
-
-  // init() function fires on pageload from useEffect, and when user re-renders and randomizes.
-  // Default (on pageload) argument values as initial state of amount, radius, and speed.
-  const init = (amt, rad, spd, onPageLoad = false) => {
-    // Canvas, Context
-    const theCanvas = document.getElementById("myCanvas");
-    const theContext = theCanvas.getContext("2d");
-
-    // Resize to Window Viewport on pageload
-    resizeCanvas(theCanvas);
-
-    // Placing Context and Canvas into shapes modules to encapsulate it for usage
-    // with shapes instance and draw functions
-    let shapes = shapesModule(theContext, theCanvas);
-
-    // Generates Circle Objects
-    let circles = genCircles(amt, rad, spd, shapes, theCanvas);
-
-    // Animate function sets recursive draw() calls using setInterval, which also returns an interval object
-    // which is then stored in the 'intervalObj' state. This also determines the fps of the animation. (default = 5ms)
-    const animate = () => {
-      setIntObj(setInterval(draw, 5));
-    };
-
-    // After clearing previous draw of 'circles'
-    // calls CircleDrawLoop where implementation of bouncing circles is defined
-    const draw = () => {
-      clear(theContext, theCanvas);
-      circleDrawLoop(circles, theCanvas);
-    };
-
-    // Begins animation
-    // Fires animate if user on initial pageload
-    if (onPageLoad) {
-      animate();
-    }
-    return animate;
-  };
-
-  const handleRandomize = () => {
-    // Clears previous interval
-    clearInterval(intervalObj);
-    // Randomizes amount and radius coefficient
-    // Default values chosen to to accomodate for slower computers and browsers
-    const newAmt = (Math.random() * 500).toFixed(3);
-    const newRad = (Math.random() * 15).toFixed(3);
-    const newSpd = (Math.random() * 0.15).toFixed(3);
-
-    setIntObj(init(newAmt, newRad, newSpd));
-
-    setBallpitVars({
-      ...ballpitVars,
-      amount: newAmt,
-      speed: newRad,
-      radius: newSpd,
+    const {section} = useContext(ThemeContext);
+    const [ballpitVars, setBallpitVars] = useState({
+        amount: 250,
+        radius: 2,
+        speed: 0.1,
     });
-  };
 
-  const handleRender = () => {
-    // Clears previous interval (native function)
-    clearInterval(intervalObj);
-    // Passes new values using current variable states into initialization script
-    setIntObj(init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed));
-  };
-
-  const scrollToTop = () => {
-    $("#to-top").addClass("animated bounce");
-    setTimeout(() => {
-      $("#to-top").removeClass("animated bounce");
-    }, 1000);
-  };
-
-  const scrollLower = () => {
-    $("#lower").addClass("animated bounce");
-    setTimeout(() => {
-      $("#lower").removeClass("animated bounce");
-    }, 1000);
-
-    switch (section) {
-      case "Intro": {
-        $("#about-anchor").get(0).click();
-        break;
-      }
-
-      case "About": {
-        $("#experience-anchor").get(0).click();
-        break;
-      }
-
-      case "Works": {
-        $("#connect-anchor").get(0).click();
-        break;
-      }
-
-      default: {
-        break;
-      }
+    const handleResize = () => {
+        clearInterval(intervalObj);
+        init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed, true);
     }
-  };
 
-  // Resizes canvas to current window viewport
-  const resizeCanvas = (c) => {
-    c.width = window.innerWidth;
-    c.height = window.innerHeight;
-  };
+    let theme = `Background-${section}`;
 
-  // Clear Canvas
-  const clear = (ctx, c) => {
-    ctx.clearRect(0, 0, c.width, c.height);
-  };
+    // State which tracks the interval of consecutive draws. Necessary to unify single interval,
+    // not creating others.
+    const [intervalObj, setIntObj] = useState();
 
-  return (
-      <div className={theme} id="Background">
-        <canvas id="myCanvas" width="0px" height="0px"></canvas>
-        <ControllerRenderer
-            setBallpitVars={setBallpitVars}
-            ballpitVars={ballpitVars}
-            handleRender={handleRender}
-            handleRandomize={handleRandomize}
-        />
-      </div>
-  );
+    // Initial side effect change which fires after component mounts and DOM/virtualDOM is ready.
+    useEffect(
+        () => {
+            init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed, true);
+        },
+        []
+    );
+
+    // init() function fires on pageload from useEffect, and when user re-renders and randomizes.
+    // Default (on pageload) argument values as initial state of amount, radius, and speed.
+    const init = (amt, rad, spd, onPageLoad = false) => {
+        // Canvas, Context
+        const theCanvas = document.getElementById("myCanvas");
+        const theContext = theCanvas.getContext("2d");
+
+        // Resize to Window Viewport on pageload
+        resizeCanvas(theCanvas);
+
+        // Placing Context and Canvas into shapes modules to encapsulate it for usage
+        // with shapes instance and draw functions
+        let shapes = shapesModule(theContext, theCanvas);
+
+        // Generates Circle Objects
+        let circles = genCircles(amt, rad, spd, shapes, theCanvas);
+
+        // Animate function sets recursive draw() calls using setInterval, which also returns an interval object
+        // which is then stored in the 'intervalObj' state. This also determines the fps of the animation. (default = 5ms)
+        const animate = () => {
+            setIntObj(setInterval(draw, 5));
+        };
+
+        // After clearing previous draw of 'circles'
+        // calls CircleDrawLoop where implementation of bouncing circles is defined
+        const draw = () => {
+            clear(theContext, theCanvas);
+            circleDrawLoop(circles, theCanvas);
+        };
+
+        // Begins animation
+        // Fires animate if user on initial pageload
+        if (onPageLoad) {
+            animate();
+        }
+        return animate;
+    };
+
+    const handleRandomize = () => {
+        // Clears previous interval
+        clearInterval(intervalObj);
+        // Randomizes amount and radius coefficient
+        // Default values chosen to to accomodate for slower computers and browsers
+        const newAmt = (Math.random() * 500).toFixed(3);
+        const newRad = (Math.random() * 15).toFixed(3);
+        const newSpd = (Math.random() * 0.15).toFixed(3);
+
+        setIntObj(init(newAmt, newRad, newSpd));
+
+        setBallpitVars({
+            ...ballpitVars,
+            amount: newAmt,
+            speed: newRad,
+            radius: newSpd,
+        });
+    };
+
+    const handleRender = () => {
+        // Clears previous interval (native function)
+        clearInterval(intervalObj);
+        // Passes new values using current variable states into initialization script
+        setIntObj(init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed));
+    };
+
+    const scrollToTop = () => {
+        $("#to-top").addClass("animated bounce");
+        setTimeout(() => {
+            $("#to-top").removeClass("animated bounce");
+        }, 1000);
+    };
+
+    const scrollLower = () => {
+        $("#lower").addClass("animated bounce");
+        setTimeout(() => {
+            $("#lower").removeClass("animated bounce");
+        }, 1000);
+
+        switch (section) {
+            case "Intro": {
+                $("#about-anchor").get(0).click();
+                break;
+            }
+
+            case "About": {
+                $("#experience-anchor").get(0).click();
+                break;
+            }
+
+            case "Works": {
+                $("#connect-anchor").get(0).click();
+                break;
+            }
+
+            default: {
+                break;
+            }
+        }
+    };
+
+    // Resizes canvas to current window viewport
+    const resizeCanvas = (c) => {
+        c.width = window.innerWidth;
+        c.height = window.innerHeight;
+    };
+
+    // Clear Canvas
+    const clear = (ctx, c) => {
+        ctx.clearRect(0, 0, c.width, c.height);
+    };
+
+    return (
+        <div className={theme} id="Background">
+            <canvas id="myCanvas" width="0px" height="0px"></canvas>
+            <ControllerRenderer
+                setBallpitVars={setBallpitVars}
+                ballpitVars={ballpitVars}
+                handleRender={handleRender}
+                handleRandomize={handleRandomize}
+            />
+        </div>
+    );
 }
 
 export default Background;

@@ -42,7 +42,7 @@ function NavBarItem(props) {
 }
 
 function NavBar() {
-    const {scrollY} = useContext(ThemeContext);
+    const {scrollY, isMobile} = useContext(ThemeContext);
 
     // TODO: How to simplify this?
     navs[0].ref = useRef();
@@ -53,11 +53,7 @@ function NavBar() {
 
     return (
         <div
-            className={
-                scrollY < 50
-                    ? "NavBar NavBar-hidden"
-                    : "NavBar"
-            }>
+            className={`NavBar ${scrollY < 50 && !isMobile ? 'NavBar-hidden' : ''} ${isMobile ? 'NavBar-mobile' : ''}`}>
             <div className="box">
                 {navs.map((navObj, i) => {
                     return (<NavBarItem navObj={navObj}/>)
