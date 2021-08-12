@@ -86,11 +86,6 @@ img {
   z-index: 2;
 }
 
-.inner-emblem-text {
-  font-size: 1em;
-  padding-top: 6vh !important;
-}
-
 .box {
   text-align: center;
   pointer-events: auto;
@@ -409,7 +404,6 @@ img {
   }
 
   #about-content {
-
     p {
       font-size: 0.5em;
       width: 80%;
@@ -418,54 +412,37 @@ img {
       margin-bottom: 5vh;
     }
 
-    .content-section {
-      font-size: 0.8em;
-      height: 20vh;
-      margin-top: 1vh !important;
+    .inner-emblem-text {
+      font-size: 1em;
+      padding-top: 8vh !important;
+      width: 15vw;
+      line-height: 1.2;
+    }
 
+    .content-section {
       .emblem {
         z-index: 5;
+        height: 10vw;
+        font-size: 0.8rem;
         background-color: map-get($about-colors, primary);
-        font-size: 0.5em;
       }
 
       .subEmblem {
         z-index: 4;
+        height: 10vw;
         transition: all 1s ease 0s;
+        margin-top: -21vh;
+        font-size: 0.4rem;
         background-color: map-get($about-colors, primary);
-        top: -20vh;
-        width: 95%;
-        font-size: 0.5em;
 
         div {
-          padding-top: 11vh !important;
-        }
-      }
-
-      .subEmblem2 {
-        z-index: 4;
-        transition: all 1s ease 0s;
-        background-color: map-get($about-colors, primary);
-        top: -40vh;
-        font-size: 0.5em;
-
-        div {
-          padding-top: 11vh !important;
+          padding-top: 10.5vh !important;
         }
       }
 
       .shown {
-        top: -10vh;
+        margin-top: -9vh !important;
       }
-
-      .shown2 {
-        top: -20vh;
-      }
-
-    }
-
-    .emblem-section {
-
     }
   }
 }

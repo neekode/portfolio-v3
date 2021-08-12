@@ -38,11 +38,6 @@ img {
   z-index: 2;
 }
 
-.inner-emblem-text {
-  font-size: 1em;
-  padding-top: 6vh !important;
-}
-
 .box {
   text-align: center;
   pointer-events: auto;
@@ -299,43 +294,35 @@ img {
   margin-top: 2vh;
   margin-bottom: 5vh;
 }
-#About #about-content .content-section {
-  font-size: 0.8em;
-  height: 20vh;
-  margin-top: 1vh !important;
+
+#About #about-content .inner-emblem-text {
+  font-size: 1em;
+  padding-top: 8vh !important;
+  width: 15vw;
+  line-height: 1.2;
 }
+
 #About #about-content .content-section .emblem {
   z-index: 5;
+  height: 10vw;
+  font-size: 0.8rem;
   background-color: #323A6A;
-  font-size: 0.5em;
 }
 #About #about-content .content-section .subEmblem {
   z-index: 4;
+  height: 10vw;
   transition: all 1s ease 0s;
+  margin-top: -21vh;
+  font-size: 0.4rem;
   background-color: #323A6A;
-  top: -20vh;
-  width: 95%;
-  font-size: 0.5em;
 }
 #About #about-content .content-section .subEmblem div {
-  padding-top: 11vh !important;
-}
-#About #about-content .content-section .subEmblem2 {
-  z-index: 4;
-  transition: all 1s ease 0s;
-  background-color: #323A6A;
-  top: -40vh;
-  font-size: 0.5em;
-}
-#About #about-content .content-section .subEmblem2 div {
-  padding-top: 11vh !important;
+  padding-top: 10.5vh !important;
 }
 #About #about-content .content-section .shown {
-  top: -10vh;
+  margin-top: -9vh !important;
 }
-#About #about-content .content-section .shown2 {
-  top: -20vh;
-}
+
 .hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }

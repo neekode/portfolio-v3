@@ -2,8 +2,27 @@ import React from "react";
 import {useRef, useEffect, useContext} from "react";
 import $ from "jquery";
 import profilePic from "./../assets/me.JPG";
+import Emblem from "./Emblem"
 import {ThemeContext} from "./../scripts/context";
 import {themeChange} from "./../scripts/library.js";
+
+const emblems = [
+    {
+        title: "Technologies",
+        list1: "React Hooks, ES6, TypeScript, AngularJS",
+        list2: "GraphQL, SASS, Git, Jasmine, Jest"
+    },
+    {
+        title: "Methodology",
+        list1: "Modular, Refined, Well-Composed, Functional Code",
+        list2: "Independent, great, and stuff"
+    },
+    {
+        title: "Practices",
+        list1: "Always Refactoring, something, something",
+        list2: "Filler while i think of something else"
+    }
+]
 
 function About() {
     const titleMorph = useRef();
@@ -58,81 +77,16 @@ function About() {
                             </a>
                             Here's some of my skillset:
                         </p>
-                        <div className="row content-section emblem-section">
-                            <div className="col-md-3 emblem hexagon mx-auto">
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    Refined, Functional, Refactorable Code
-                                </div>
-                            </div>
-                            <div className="col-md-3 emblem hexagon mx-auto">
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    Evolves w/ Modern Technologies & Patterns
-                                </div>
-                            </div>
-                            <div className="col-md-3 emblem hexagon mx-auto">
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    UX Design Educational Background
-                                </div>
-                            </div>
-                        </div>
 
-                        <div className="row content-section emblem-section">
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem shown" : "subEmblem"
-                                }`}
-                            >
-                                <div className="inner-emblem-text"> Modular ES6 JavaScript</div>
+                        <div className="row">
+                            <div className="col-md-4 emblem-box">
+                                <Emblem emblem={emblems[0]}/>
                             </div>
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem shown" : "subEmblem"
-                                }`}
-                            >
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    Composable React (Hooks)
-                                </div>
+                            <div className="col-md-4 emblem-box">
+                                <Emblem emblem={emblems[1]}/>
                             </div>
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem shown" : "subEmblem"
-                                }`}
-                            >
-                                <div className="inner-emblem-text"> Human-centered Design</div>
-                            </div>
-                        </div>
-
-                        <div className="row content-section emblem-section">
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem2 shown2" : "subEmblem2"
-                                }`}
-                            >
-                                <div className="inner-emblem-text"> SASS / HTML5 / CSS3</div>
-                            </div>
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem2 shown2" : "subEmblem2"
-                                }`}
-                            >
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    jQuery / Webpack / Bootstrap
-                                </div>
-                            </div>
-                            <div
-                                className={`col-md-3 hexagon2 mx-auto ${
-                                    section === "About" ? "subEmblem2 shown2" : "subEmblem2"
-                                }`}
-                            >
-                                <div className="inner-emblem-text">
-                                    {" "}
-                                    Eye for Precise Aesthethics
-                                </div>
+                            <div className="col-md-4 emblem-box">
+                                <Emblem emblem={emblems[2]}/>
                             </div>
                         </div>
                     </div>
