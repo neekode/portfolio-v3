@@ -25,12 +25,16 @@ function Intro() {
                 <div id="profile-picture" className={`col-md-4 ${isMobile ? '' : 'unshown'}`}>
                     <img className=" hexagon" alt="down chevs" src={profilePic}/>
                 </div>
-                <h2 id="intro-header" className="header">
+                <h2 className="header">
                     Welcome! I'm <span id="neeko-blomgren">Neeko Blomgren</span>,
                 </h2>
-                <h3 id="intro-sub-header" className="sub-header">
-                    A Seattle-based Front-end Web Developer
-                </h3>
+                <h2 className="sub-header">
+                    A Seattle-based Front-end Web Developer.
+                </h2>
+                <h2 className="sub-header2">
+                    I built this nifty background animation! Play around with it! <a href=""> Or use it in your own
+                    project!</a>
+                </h2>
 
                 <div className={`chevron-box ${isMobile ? 'chevron-box-mobile' : ''}`}>
                     <AnchorLink href="#About">

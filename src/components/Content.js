@@ -14,7 +14,7 @@ function Content() {
     const {setScrollY, setIsMobile} = useContext(ThemeContext);
     const handleScroll = (e) => setScrollY(window.scrollY);
     const handleResize = (e) => {
-        if (window.outerWidth > 700) {
+        if (window.outerWidth > 800) {
             setIsMobile(false)
         } else {
             setIsMobile(true)

@@ -111,7 +111,14 @@ img {
 
   .sub-header {
     font-family: $main-font;
-    font-size: 0.65rem;
+    font-size: 0.7rem;
+    margin: 0;
+    margin-top: 1vh;
+  }
+
+  .sub-header2 {
+    font-family: $main-font;
+    font-size: 0.5rem;
     margin: 0;
     margin-top: 1vh;
   }
@@ -127,9 +134,15 @@ img {
 }
 
 .introBoxMobile {
-  height: 90vw !important;
+  height: 95vw !important;
   width: 80vw !important;
-  top: 35vw;
+  top: 40vw !important;
+
+  @media screen and (min-width: 340px) {
+    height: 85vw !important;
+    top: 30vw !important;
+
+  }
 }
 
 .boxMobile {
@@ -142,7 +155,11 @@ img {
   }
 
   .sub-header {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+  }
+
+  .sub-header2 {
+    font-size: 1.25rem;
   }
 
   p {
@@ -235,6 +252,7 @@ img {
     z-index: 5000 !important;
     font-family: $main-font;
     position: absolute;
+    width: 15vw;
 
     color: map-get($global-colors, font);
     background-color: map-get($global-colors, primary);
@@ -267,8 +285,29 @@ img {
     }
   }
 
+  .animation-controller-mobile {
+    width: 50vw !important;
+    bottom: -15vw;
+    margin-left: 50%;
+    transform: translate(-50%, -50%);
+
+    .header {
+      font-size: 1.2rem;
+    }
+
+    div {
+      font-size: 1rem;
+    }
+
+    input {
+      width: 75%;
+      font-size: 1rem;
+    }
+  }
+
   .animation-controller-hidden {
-    right: -24.5vw;
+    right: -80vw;
+    //right: calc(100% -)
   }
 }
 
@@ -312,7 +351,7 @@ img {
   .nav-item {
     width: 20% !important;
     float: left;
-    font-size: 1rem !important;
+    font-size: 1.4rem !important;
   }
 }
 
@@ -325,12 +364,13 @@ img {
   position: relative;
 
   .box {
-    width: 50vw;
-    height: 25vh;
-    padding: 1vw;
+    width: 60vw;
+    height: 17.5vw;
+    padding: 2.5vw;
 
     .header {
-      color: map-get($global-colors, font)
+      color: map-get($global-colors, font);
+      font-size: 1.2rem;
     }
 
     .chevron-box {

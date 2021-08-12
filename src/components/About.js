@@ -10,17 +10,17 @@ const emblems = [
     {
         title: "Technologies",
         list1: "React Hooks, ES6, TypeScript, AngularJS",
-        list2: "GraphQL, SASS, Git, Jasmine, Jest"
+        list2: "GraphQL, SASS, Git, Jest"
     },
     {
         title: "Methodology",
         list1: "Modular, Refined, Well-Composed, Functional Code",
-        list2: "Independent, great, and stuff"
+        list2: "Independent, Cooperative, Attentive, UX-Educated"
     },
     {
         title: "Practices",
-        list1: "Always Refactoring, something, something",
-        list2: "Filler while i think of something else"
+        list1: "Always Refactoring, Researching, Maintaining Architecture",
+        list2: "Studying and Striving to Understand Codebase"
     }
 ]
 
@@ -70,10 +70,11 @@ function About() {
                         <p>
                             I'm an enthusiastic guy who loves code, bouldering at SBP, and gyros. Currently I'm in
                             between
-                            positions and working on personal projects. Most recently I was in a contract with
-                            Microsoft thru:
+                            positions and working on personal projects, like this portfolio. Most recently I was in a
+                            contract with
+                            Microsoft thru:{" "}
                             <a id="allyis-link" href="http://allyis.com/">
-                                Allyis.{" "}
+                                Allyis Inc.{" "}
                             </a>
                             Here's some of my skillset:
                         </p>

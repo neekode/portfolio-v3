@@ -6,7 +6,7 @@ import downChev from "../assets/chevron-down.svg";
 import {ThemeContext} from "../scripts/context";
 
 function ControllerRenderer(props) {
-    const {scrollY} = useContext(ThemeContext);
+    const {scrollY, isMobile} = useContext(ThemeContext);
     const {setBallpitVars, ballpitVars, handleRandomize, handleRender} = props;
     const [ballpitControllerVisible, setBallpitControllerVisible] =
         useState(false);
@@ -24,7 +24,7 @@ function ControllerRenderer(props) {
     };
 
     return (
-        <div id="Controller">
+        <div id="Controller" className={``}>
             {/*    //TODO: Fix? do we want these?  <AnchorLink href="#Intro">*/}
             {/*  <span id="to-top" className="chev-box">*/}
             {/*    <img*/}
@@ -61,11 +61,7 @@ function ControllerRenderer(props) {
       </span>
 
             <div
-                className={
-                    scrollY < 50 || ballpitControllerVisible
-                        ? "animation-controller"
-                        : "animation-controller animation-controller-hidden"
-                }
+                className={`animation-controller ${scrollY < 50 || ballpitControllerVisible ? '' : 'animation-controller-hidden'} ${isMobile ? 'animation-controller-mobile' : ''}`}
             >
                 <span className="header"> Animation Controller</span>
                 <div> Amount</div>
