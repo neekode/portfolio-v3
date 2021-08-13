@@ -62,8 +62,8 @@ function About() {
                     <div id="profile-picture" className={`col-md-4 ${isMobile ? 'unshown' : ''}`}>
                         <img className="hexagon" alt="profile" src={profilePic}/>
                         <div className="icon-list">
-                            <a href='./../assets/resume.pdf' download><img className="" alt="profile"
-                                                                           src={resume}/></a>
+                            <a href='resume.pdf' download><img className="" alt="profile"
+                                                               src={resume}/></a>
                             <a href='https://www.linkedin.com/in/neeko-blomgren-4192aa111/'><img className=""
                                                                                                  alt="profile"
                                                                                                  src={linked}/></a>
