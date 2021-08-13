@@ -72,8 +72,8 @@ function About() {
                             between
                             positions and working on personal projects, like this portfolio. Most recently I was in a
                             contract with
-                            Microsoft thru:{" "}
-                            <a id="allyis-link" href="http://allyis.com/">
+                            Microsoft thru {" "}
+                            <a className='link' href="http://allyis.com/">
                                 Allyis Inc.{" "}
                             </a>
                             Here's some of my skillset:
