@@ -26,14 +26,18 @@ function Intro() {
                     <img className=" hexagon" alt="down chevs" src={profilePic}/>
                 </div>
                 <h2 className="header">
-                    Welcome! I'm <span id="neeko-blomgren">Neeko Blomgren</span>,
+                    Welcome! I'm <span id="neeko-blomgren"><a
+                    className='link'
+                    href='https://github.com/Neekode'>Neeko Blomgren</a></span>,
                 </h2>
                 <h2 className="sub-header">
-                    A Seattle-based Front-end Web Developer.
+                    A Front-End Web Developer.
                 </h2>
                 <h2 className="sub-header2">
-                    I built this nifty background animation! Play around with it! <a href=""> Or use it in your own
-                    project!</a>
+                    I built this background animation from scratch, feel free to play around with it! <div><a
+                    href="https://github.com/Neekode/ballpit-background-animation" className='link'> Or use it in your
+                    own
+                    project!</a></div>
                 </h2>
 
                 <div className={`chevron-box ${isMobile ? 'chevron-box-mobile' : ''}`}>
