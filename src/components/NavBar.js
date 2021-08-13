@@ -2,7 +2,6 @@ import React from "react";
 import {useContext, useRef, useState, useEffect} from "react";
 import {ThemeContext} from "../scripts/context";
 import AnchorLink from "react-anchor-link-smooth-scroll";
-import {addClassOnActive} from "./../scripts/library.js";
 
 const navs = [
     {
@@ -20,11 +19,7 @@ const navs = [
     {
         href: "#Projects",
         displayName: "Projects",
-    },
-    {
-        href: "#Connect",
-        displayName: "Connect",
-    },
+    }
 ];
 
 function NavBarItem(props) {
@@ -49,7 +44,6 @@ function NavBar() {
     navs[1].ref = useRef();
     navs[2].ref = useRef();
     navs[3].ref = useRef();
-    navs[4].ref = useRef();
 
     return (
         <div

@@ -1,15 +1,13 @@
 import React from "react";
 import {useState, useContext} from "react";
-import xIcon from "./../assets/x-icon.svg";
-import AnchorLink from "react-anchor-link-smooth-scroll";
 import downChev from "../assets/chevron-down.svg";
 import {ThemeContext} from "../scripts/context";
 
 function ControllerRenderer(props) {
     const {scrollY, isMobile} = useContext(ThemeContext);
     const {setBallpitVars, ballpitVars, handleRandomize, handleRender} = props;
-    const [ballpitControllerVisible, setBallpitControllerVisible] =
-        useState(false);
+    // const [ballpitControllerVisible, setBallpitControllerVisible] =
+    //     useState(true);
 
     const handleAmtChange = (e) => {
         setBallpitVars({...ballpitVars, amount: e.target.value});
@@ -25,43 +23,22 @@ function ControllerRenderer(props) {
 
     return (
         <div id="Controller" className={``}>
-            {/*    //TODO: Fix? do we want these?  <AnchorLink href="#Intro">*/}
-            {/*  <span id="to-top" className="chev-box">*/}
-            {/*    <img*/}
-            {/*        id="to-top"*/}
-            {/*        onClick={handleRandomize}*/}
-            {/*        className="up-chev"*/}
-            {/*        alt="chev"*/}
-            {/*        src={downChev}*/}
-            {/*    />*/}
-            {/*  </span>*/}
-            {/*      </AnchorLink>*/}
-
-            {/*      <span id="lower" className="chev-box">*/}
+            {/*      <span className="chev-box">*/}
             {/*  <img*/}
-            {/*      id="lower"*/}
-            {/*      onClick={handleRandomize}*/}
-            {/*      className="down-chev"*/}
+            {/*      id="controller-toggle"*/}
+            {/*      onClick={() => setBallpitControllerVisible(!ballpitControllerVisible)}*/}
+            {/*      className={*/}
+            {/*          scrollY < 50 && ballpitControllerVisible*/}
+            {/*              ? "left-chev"*/}
+            {/*              : "right-chev"*/}
+            {/*      }*/}
             {/*      alt="chev"*/}
             {/*      src={downChev}*/}
             {/*  />*/}
             {/*</span>*/}
-            <span className="chev-box">
-        <img
-            id="controller-toggle"
-            onClick={() => setBallpitControllerVisible(!ballpitControllerVisible)}
-            className={
-                scrollY < 50 || ballpitControllerVisible
-                    ? "left-chev"
-                    : "right-chev"
-            }
-            alt="chev"
-            src={downChev}
-        />
-      </span>
 
             <div
-                className={`animation-controller ${scrollY < 50 || ballpitControllerVisible ? '' : 'animation-controller-hidden'} ${isMobile ? 'animation-controller-mobile' : ''}`}
+                className={`animation-controller ${scrollY < 100 ? '' : 'animation-controller-hidden'} ${isMobile ? 'animation-controller-mobile' : ''}`}
             >
                 <span className="header"> Animation Controller</span>
                 <div> Amount</div>

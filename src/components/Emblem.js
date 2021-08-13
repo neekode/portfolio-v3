@@ -1,5 +1,6 @@
 import React, {useContext} from "react";
 import {ThemeContext} from "./../scripts/context";
+import Topic from "./Topic";
 
 function Emblem(props) {
     const {emblem} = props;
@@ -8,23 +9,19 @@ function Emblem(props) {
     return (
         <div className="row content-section emblem-section">
             <div className="emblem hexagon mx-auto">
-                <div className="inner-emblem-text">
+                <div className="inner-emblem">
                     {emblem.title}
                 </div>
             </div>
             <div
-                className={`hexagon2 mx-auto subEmblem ${
+                className={`mx-auto subEmblem ${
                     section === "About" ? "shown" : ""
                 }`}
             >
-                <div className="inner-emblem-text">{emblem.list1}</div>
-            </div>
-            <div
-                className={`hexagon2 mx-auto subEmblem ${
-                    section === "About" ? "shown" : ""
-                }`}
-            >
-                <div className="inner-emblem-text">{emblem.list2}</div>
+                <div className="inner-emblem inner-emblem-list">
+                    {emblem.topicList.map((listItem, i) => {
+                        return <Topic topic={listItem}/>
+                    })}</div>
             </div>
         </div>
     );

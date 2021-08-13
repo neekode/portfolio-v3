@@ -106,7 +106,7 @@ img {
   .header {
     font-family: $main-font;
     color: map-get($global-colors, font-secondary);
-    font-size: 0.9rem;
+    font-size: 0.75rem;
     margin: 0;
   }
 
@@ -291,7 +291,6 @@ img {
   .animation-controller-mobile {
     width: 50vw !important;
     bottom: -17.5vw;
-    margin-left: 50%;
     transform: translate(-50%, -50%);
 
     .header {
@@ -309,8 +308,11 @@ img {
   }
 
   .animation-controller-hidden {
-    right: -80vw;
-    //right: calc(100% -)
+    right: -20vw;
+
+    @media screen and (min-width: 250px) and (max-width: 750px) {
+      right: -80vw;
+    }
   }
 }
 
@@ -321,7 +323,7 @@ img {
   .box {
     position: fixed;
     height: 100vh;
-    padding-top: 20vh;
+    padding-top: 33vh;
     width: 8vw;
     z-index: 50;
     border-radius: 0;
@@ -355,6 +357,9 @@ img {
     width: 20% !important;
     float: left;
     font-size: 1.4rem !important;
+    @media screen and (min-width: 340px) and (max-width: 400px) {
+      font-size: 1.7rem !important;
+    }
   }
 }
 
@@ -432,6 +437,14 @@ img {
     text-align: center !important;
   }
 
+  .icon-list {
+
+    img {
+      width: 2.5vw !important;
+      margin: 5px !important;
+    }
+  }
+
   #profile-picture {
     img {
       width: 80%;
@@ -447,39 +460,36 @@ img {
 
   #about-content {
     p {
-      font-size: 0.6rem;
-      width: 80%;
+      font-size: 0.55rem;
+      width: 85%;
       margin: auto;
       margin-top: 2vh;
-      margin-bottom: 5vh;
+      margin-bottom: 2vh;
     }
 
-    .inner-emblem-text {
-      font-size: 1em;
-      padding-top: 8vh !important;
-      width: 15vw;
+    .inner-emblem {
+      padding-top: 4vh;
+      width: 16vw;
       line-height: 1.2;
+    }
+
+    .inner-emblem-list {
+      line-height: 0.85;
+      //padding-top: 10vh !important;
     }
 
     .content-section {
       .emblem {
         z-index: 5;
-        height: 10vw;
-        font-size: 0.8rem;
+        height: 6vw;
+        font-size: .65rem;
         background-color: map-get($about-colors, primary);
       }
 
       .subEmblem {
         z-index: 4;
-        height: 10vw;
         transition: all 1s ease 0s;
         margin-top: -21vh;
-        font-size: 0.4rem;
-        background-color: map-get($about-colors, primary);
-
-        div {
-          padding-top: 10.5vh !important;
-        }
       }
 
       .shown {
@@ -487,6 +497,16 @@ img {
       }
     }
   }
+}
+
+.topic {
+  font-size: 0.4rem;
+  display: inline-block;
+  margin: 0.2vw;
+  padding: 1vw;
+  width: 7vw;
+  background-color: map-get($about-colors, primary);
+  //border: 1px solid map-get($global-colors, primary);
 }
 
 .hexagon {
@@ -508,89 +528,89 @@ img {
 }
 
 // experience
-#Experience {
-  #x-icon {
-    position: absolute;
-    width: 1.5vw;
-    z-index: 500;
-    left: 50px;
-    top: 50px;
-  }
-
-  .box {
-    top: 2.5vh;
-    background-color: transparent;
-
-    h2 {
-      position: absolute;
-      margin-top: 4.5vh;
-      z-index: 55;
-    }
-
-
-    #experience-content {
-      margin-top: 1vh !important;
-      margin: 0;
-
-      .experience-section {
-        background-color: map-get($global-colors, primary);
-        transition: all 300ms linear;
-        border-radius: 7px;
-      }
-
-      .experience-section:hover {
-        z-index: 50;
-
-        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-        -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-        -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-        box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-      }
-
-      .experience-section:active {
-        z-index: 50;
-        transition: all 50ms linear;
-        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-        -webkit-box-shadow: none;
-        -moz-box-shadow: none;
-        box-shadow: none;
-      }
-
-      h3 {
-        margin-top: 7.5vh;
-      }
-
-      .content-section {
-        height: 70vh;
-        margin: 1vw;
-        margin-top: 2.5vh;
-        pointer-events: none;
-
-        .emblem {
-          height: 20vh;
-          font-size: 0.6em;
-          margin: 1vw;
-          background-color: map-get($experience-colors, primary);
-        }
-      }
-    }
-
-    .personal-proj-expanded {
-
-    }
-
-    .work-exp-expanded {
-
-    }
-
-    .widgets-features-expanded {
-
-    }
-
-  }
-
-
-}
+//#Experience {
+//  #x-icon {
+//    position: absolute;
+//    width: 1.5vw;
+//    z-index: 500;
+//    left: 50px;
+//    top: 50px;
+//  }
+//
+//  .box {
+//    top: 2.5vh;
+//    background-color: transparent;
+//
+//    h2 {
+//      position: absolute;
+//      margin-top: 4.5vh;
+//      z-index: 55;
+//    }
+//
+//
+//    #experience-content {
+//      margin-top: 1vh !important;
+//      margin: 0;
+//
+//      .experience-section {
+//        background-color: map-get($global-colors, primary);
+//        transition: all 300ms linear;
+//        border-radius: 7px;
+//      }
+//
+//      .experience-section:hover {
+//        z-index: 50;
+//
+//        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+//        -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+//        -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+//        box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
+//      }
+//
+//      .experience-section:active {
+//        z-index: 50;
+//        transition: all 50ms linear;
+//        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
+//        -webkit-box-shadow: none;
+//        -moz-box-shadow: none;
+//        box-shadow: none;
+//      }
+//
+//      h3 {
+//        margin-top: 7.5vh;
+//      }
+//
+//      .content-section {
+//        height: 70vh;
+//        margin: 1vw;
+//        margin-top: 2.5vh;
+//        pointer-events: none;
+//
+//        .emblem {
+//          height: 5vw;
+//          font-size: 0.6em;
+//          margin: 1vw;
+//          background-color: map-get($experience-colors, primary);
+//        }
+//      }
+//    }
+//
+//    .personal-proj-expanded {
+//
+//    }
+//
+//    .work-exp-expanded {
+//
+//    }
+//
+//    .widgets-features-expanded {
+//
+//    }
+//
+//  }
+//
+//
+//}
 
 .Background-Experience {
   background-color: map-get($experience-colors, primary);
