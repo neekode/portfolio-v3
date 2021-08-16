@@ -19,8 +19,25 @@ function Emblem(props) {
                 }`}
             >
                 <div className="inner-emblem inner-emblem-list">
+                    {/* TODO: add classe programmatically for each topic row.*/}
                     {emblem.topicList.map((listItem, i) => {
-                        return <Topic topic={listItem}/>
+                        let className;
+
+                        switch (true) {
+                            case i < 2:
+                                className = 'topic-row1'
+                                break;
+                            case i >= 2 && i < 4:
+                                className = 'topic-row2'
+                                break;
+                            case i >= 4 && i < 6:
+                                className = 'topic-row3'
+                                break;
+                            case i >= 6:
+                                className = 'topic-row4'
+                                break;
+                        }
+                        return <Topic topic={listItem} className={className}/>
                     })}</div>
             </div>
         </div>

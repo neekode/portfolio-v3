@@ -437,24 +437,35 @@ img {
     text-align: center !important;
   }
 
-  .icon-list {
-
-    img {
-      width: 2.5vw !important;
-      margin: 5px !important;
-    }
-  }
-
   #profile-picture {
     img {
-      width: 80%;
+      width: 90%;
       margin: 5%;
-      margin-top: 2vh;
+      margin-top: 5vh;
     }
 
     div {
       font-size: 0.6em;
       margin: auto;
+    }
+
+    .icon-list {
+      margin-top: 1vw;
+
+      a {
+        margin: 0.25vw;
+      }
+
+      img {
+        width: 3.5vw !important;
+        margin: 5px !important;
+      }
+
+      img:hover {
+        -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      }
     }
   }
 
@@ -488,26 +499,46 @@ img {
 
       .subEmblem {
         z-index: 4;
-        transition: all 1s ease 0s;
-        margin-top: -21vh;
-      }
-
-      .shown {
-        margin-top: -9vh !important;
+        margin-top: -12vh;
       }
     }
   }
 }
 
 .topic {
-  font-size: 0.4rem;
+  font-size: 0.45rem;
+  position: absolute;
   display: inline-block;
   margin: 0.2vw;
+  margin-top: -1vh;
   padding: 1vw;
-  width: 7vw;
+  line-height: 0.9;
+  width: 7.5vw;
+  top: 2vw;
   background-color: map-get($about-colors, primary);
-  //border: 1px solid map-get($global-colors, primary);
+  transition: all 1s ease 0s;
 }
+
+.topic:nth-child(2n-1) {
+  right: 8vw;
+}
+
+.topic-row1-shown {
+  top: 6vw;
+}
+
+.topic-row2-shown {
+  top: 10.5vw;
+}
+
+.topic-row3-shown {
+  top: 13.5vw;
+}
+
+.topic-row4-shown {
+  top: 16.5vw;
+}
+
 
 .hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);

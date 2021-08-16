@@ -13,11 +13,11 @@ import {themeChange} from "./../scripts/library.js";
 const emblems = [
     {
         title: "Technologies",
-        topicList: ["React Hooks", "ES6 JavaScript", "TypeScript", "AngularJS", "GraphQL", "SASS", "Git", "Jest"]
+        topicList: ["React Hooks", "ES6 JavaScript", "TypeScript", "AngularJS", "GraphQL", "SASS", "Git", "Jest"],
     },
     {
         title: "Code Contribution",
-        topicList: ["Modular", "Efficiently Written", "Well-Composed", "Functional", "Refactored", "Adheres to Architecture"]
+        topicList: ["Well-Composed", "Pure, Functional", "Modular", "Efficient", "Refined, Refactored", "Adheres to Architecture"]
     },
     {
         title: "Methodology",

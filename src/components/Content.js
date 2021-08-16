@@ -2,7 +2,6 @@ import React from "react";
 import Intro from "./Intro";
 import About from "./About";
 import Experience from "./Experience";
-import Connect from "./Connect";
 import NavBar from "./NavBar";
 import Background from "./Background";
 import Projects from "./Projects";
@@ -38,7 +37,6 @@ function Content() {
             <About/>
             <Experience/>
             <Projects/>
-            <Connect/>
         </div>
     );
 }
