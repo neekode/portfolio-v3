@@ -17,7 +17,7 @@ const emblems = [
     },
     {
         title: "Code Contribution",
-        topicList: ["Well-Composed", "Pure, Functional", "Modular", "Efficient", "Refined, Refactored", "Adheres to Architecture"]
+        topicList: ["Well-Composed", "Pure, Functional", "Modular", "Efficient", "Refined, Refactored", "Follows Paradigm"]
     },
     {
         title: "Methodology",
@@ -74,7 +74,7 @@ function About() {
                         </div>
                     </div>
 
-                    <div id="about-content" className="col-md-8">
+                    <div id="about-content" className={`${!isMobile ? 'col-md-8' : ''}`}>
                         <p>
                             I'm an enthusiastic guy who loves code, bouldering at SBP, and gyros. Currently I'm in
                             between
@@ -89,8 +89,9 @@ function About() {
                         </p>
 
                         <div className="row">
-                            {emblems.map((emblem, i) => <div className="col-md-4 emblem-box"><Emblem
-                                emblem={emblems[i]}/></div>)}
+                            {emblems.map((emblem, i) => <div className={`${!isMobile ? 'col-md-4' : ''} emblem-box`}>
+                                <Emblem
+                                    emblem={emblems[i]}/></div>)}
                         </div>
                     </div>
                 </div>

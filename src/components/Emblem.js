@@ -4,10 +4,10 @@ import Topic from "./Topic";
 
 function Emblem(props) {
     const {emblem} = props;
-    const {section} = useContext(ThemeContext);
+    const {section, isMobile} = useContext(ThemeContext);
 
     return (
-        <div className="row content-section emblem-section">
+        <div className={`${!isMobile ? 'row' : ''} content-section emblem-section`}>
             <div className="emblem hexagon mx-auto">
                 <div className="inner-emblem">
                     {emblem.title}
@@ -19,10 +19,9 @@ function Emblem(props) {
                 }`}
             >
                 <div className="inner-emblem inner-emblem-list">
-                    {/* TODO: add classe programmatically for each topic row.*/}
+                    {/* TODO: add classes programmatically for each topic row.*/}
                     {emblem.topicList.map((listItem, i) => {
                         let className;
-
                         switch (true) {
                             case i < 2:
                                 className = 'topic-row1'

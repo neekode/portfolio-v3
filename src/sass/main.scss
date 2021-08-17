@@ -354,7 +354,7 @@ img {
   }
 
   .nav-item {
-    width: 20% !important;
+    width: 25% !important;
     float: left;
     font-size: 1.4rem !important;
     @media screen and (min-width: 340px) and (max-width: 400px) {
@@ -489,6 +489,38 @@ img {
       //padding-top: 10vh !important;
     }
 
+    .emblem-box {
+      @media screen and (min-width: 250px) and (max-width: 750px) {
+        width: 100%;
+        .emblem-section {
+          width: 90%;
+          margin: auto;
+        }
+        .emblem {
+          width: 50%;
+          font-size: 1.2rem !important;
+          height: 7vw !important;
+        }
+        .topic {
+          width: 23.5vw;
+          top: -0.2vw;
+          position: relative;
+          font-size: 0.85rem !important;
+        }
+        .topic:nth-child(2n-1) {
+          right: 0;
+        }
+        .inner-emblem {
+          padding-top: 1.5vw;
+          padding-bottom: 2.5vw;
+          width: auto !important;;
+        }
+        .subEmblem {
+          margin-top: 0 !important;
+        }
+      }
+    }
+
     .content-section {
       .emblem {
         z-index: 5;
@@ -510,10 +542,11 @@ img {
   position: absolute;
   display: inline-block;
   margin: 0.2vw;
-  margin-top: -1vh;
+  margin-top: -2vh;
   padding: 1vw;
   line-height: 0.9;
   width: 7.5vw;
+  height: 4vw;
   top: 2vw;
   background-color: map-get($about-colors, primary);
   transition: all 1s ease 0s;
@@ -524,19 +557,19 @@ img {
 }
 
 .topic-row1-shown {
-  top: 6vw;
+  top: 7vw;
 }
 
 .topic-row2-shown {
-  top: 10.5vw;
+  top: 11vw;
 }
 
 .topic-row3-shown {
-  top: 13.5vw;
+  top: 15vw;
 }
 
 .topic-row4-shown {
-  top: 16.5vw;
+  top: 19vw;
 }
 
 
