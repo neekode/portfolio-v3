@@ -60,7 +60,7 @@ function About() {
 
                 <div className="row">
                     <div id="profile-picture" className={`col-md-4 ${isMobile ? 'unshown' : ''}`}>
-                        <img className="hexagon" alt="profile" src={profilePic}/>
+                        <img className="hexagon-shape" alt="profile" src={profilePic}/>
                         <div className="icon-list">
                             <a href='resume.pdf' download><img className="" alt="profile"
                                                                src={resume}/></a>

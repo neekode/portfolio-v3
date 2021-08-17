@@ -93,7 +93,7 @@ img {
   background-color: map-get($global-colors, primary);
   color: map-get($global-colors, font);
   width: 80vw;
-  height: 75vh;
+  height: 80vh;
 
   border-radius: 10px 10px 10px;
 
@@ -469,7 +469,33 @@ img {
     }
   }
 
+
   #about-content {
+    .hexagon {
+      position: absolute;
+      transition: all 1s ease 0s;
+    }
+
+    .hexagon:nth-child(2n-1) {
+      right: 8vw;
+    }
+
+    .expandable-row1-shown {
+      top: 7vw;
+    }
+
+    .expandable-row2-shown {
+      top: 11vw;
+    }
+
+    .expandable-row3-shown {
+      top: 15vw;
+    }
+
+    .expandable-row4-shown {
+      top: 19vw;
+    }
+
     p {
       font-size: 0.55rem;
       width: 85%;
@@ -501,19 +527,19 @@ img {
           font-size: 1.2rem !important;
           height: 7vw !important;
         }
-        .topic {
+        .hexagon {
           width: 23.5vw;
           top: -0.2vw;
           position: relative;
           font-size: 0.85rem !important;
         }
-        .topic:nth-child(2n-1) {
+        .hexagon:nth-child(2n-1) {
           right: 0;
         }
         .inner-emblem {
           padding-top: 1.5vw;
           padding-bottom: 2.5vw;
-          width: auto !important;;
+          width: auto !important;
         }
         .subEmblem {
           margin-top: 0 !important;
@@ -537,9 +563,8 @@ img {
   }
 }
 
-.topic {
+.hexagon {
   font-size: 0.45rem;
-  position: absolute;
   display: inline-block;
   margin: 0.2vw;
   margin-top: -2vh;
@@ -549,36 +574,11 @@ img {
   height: 4vw;
   top: 2vw;
   background-color: map-get($about-colors, primary);
-  transition: all 1s ease 0s;
-}
-
-.topic:nth-child(2n-1) {
-  right: 8vw;
-}
-
-.topic-row1-shown {
-  top: 7vw;
-}
-
-.topic-row2-shown {
-  top: 11vw;
-}
-
-.topic-row3-shown {
-  top: 15vw;
-}
-
-.topic-row4-shown {
-  top: 19vw;
-}
-
-
-.hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-.hexagon2 {
-  clip-path: polygon(50% 50%, 95% 25%, 100% 75%, 50% 100%, 0% 75%, 5% 25%);
+.hexagon-shape {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .Background-About {
@@ -592,89 +592,46 @@ img {
 }
 
 // experience
-//#Experience {
-//  #x-icon {
-//    position: absolute;
-//    width: 1.5vw;
-//    z-index: 500;
-//    left: 50px;
-//    top: 50px;
-//  }
-//
-//  .box {
-//    top: 2.5vh;
-//    background-color: transparent;
-//
-//    h2 {
-//      position: absolute;
-//      margin-top: 4.5vh;
-//      z-index: 55;
-//    }
-//
-//
-//    #experience-content {
-//      margin-top: 1vh !important;
-//      margin: 0;
-//
-//      .experience-section {
-//        background-color: map-get($global-colors, primary);
-//        transition: all 300ms linear;
-//        border-radius: 7px;
-//      }
-//
-//      .experience-section:hover {
-//        z-index: 50;
-//
-//        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-//        -webkit-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-//        -moz-box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-//        box-shadow: 0px 11px 17px 12px rgba(0, 0, 0, 0.5);
-//      }
-//
-//      .experience-section:active {
-//        z-index: 50;
-//        transition: all 50ms linear;
-//        /* Box shadow generated with https://www.cssmatic.com/box-shadow */
-//        -webkit-box-shadow: none;
-//        -moz-box-shadow: none;
-//        box-shadow: none;
-//      }
-//
-//      h3 {
-//        margin-top: 7.5vh;
-//      }
-//
-//      .content-section {
-//        height: 70vh;
-//        margin: 1vw;
-//        margin-top: 2.5vh;
-//        pointer-events: none;
-//
-//        .emblem {
-//          height: 5vw;
-//          font-size: 0.6em;
-//          margin: 1vw;
-//          background-color: map-get($experience-colors, primary);
-//        }
-//      }
-//    }
-//
-//    .personal-proj-expanded {
-//
-//    }
-//
-//    .work-exp-expanded {
-//
-//    }
-//
-//    .widgets-features-expanded {
-//
-//    }
-//
-//  }
-//
-//
-//}
+#Experience {
+  .banner {
+    .sub-header {
+      margin-bottom: 1vw;
+    }
+
+    &:hover {
+      -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+    }
+
+    font-size: 0.6rem !important;
+    overflow-y: hidden;
+    height: 33%;
+    transition: all 0.6s linear;
+  }
+
+  .banner-expanded {
+    height: 66%;
+  }
+
+  .hexagon {
+    margin-top: 0;
+    height: auto;
+    top: 0;
+  }
+
+  .innerHex {
+
+    z-index: 5000;
+
+    .expandable {
+      top: 0;
+      position: absolute;
+      width: 20vw;
+
+    }
+  }
+}
 
 .Background-Experience {
   background-color: map-get($experience-colors, primary);

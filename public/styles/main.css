@@ -44,7 +44,7 @@ img {
   background-color: #1F3039;
   color: #F8F9F9;
   width: 80vw;
-  height: 75vh;
+  height: 80vh;
   border-radius: 10px 10px 10px;
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
@@ -82,7 +82,6 @@ img {
   width: 80vw !important;
   top: 46vw !important;
 }
-
 @media screen and (min-width: 340px) {
   .introBoxMobile {
     height: 88vw !important;
@@ -222,7 +221,6 @@ img {
 #Background .animation-controller-hidden {
   right: -20vw;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #Background .animation-controller-hidden {
     right: -80vw;
@@ -265,7 +263,6 @@ img {
   float: left;
   font-size: 1.4rem !important;
 }
-
 @media screen and (min-width: 340px) and (max-width: 400px) {
   .NavBar-mobile .nav-item {
     font-size: 1.7rem !important;
@@ -341,15 +338,43 @@ img {
 #About #profile-picture .icon-list a {
   margin: 0.25vw;
 }
+
 #About #profile-picture .icon-list img {
   width: 3.5vw !important;
   margin: 5px !important;
 }
+
 #About #profile-picture .icon-list img:hover {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
+
+#About #about-content .hexagon {
+  position: absolute;
+  transition: all 1s ease 0s;
+}
+
+#About #about-content .hexagon:nth-child(2n-1) {
+  right: 8vw;
+}
+
+#About #about-content .expandable-row1-shown {
+  top: 7vw;
+}
+
+#About #about-content .expandable-row2-shown {
+  top: 11vw;
+}
+
+#About #about-content .expandable-row3-shown {
+  top: 15vw;
+}
+
+#About #about-content .expandable-row4-shown {
+  top: 19vw;
+}
+
 #About #about-content p {
   font-size: 0.55rem;
   width: 85%;
@@ -357,6 +382,7 @@ img {
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
+
 #About #about-content .inner-emblem {
   padding-top: 4vh;
   width: 16vw;
@@ -365,12 +391,10 @@ img {
 #About #about-content .inner-emblem-list {
   line-height: 0.85;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #About #about-content .emblem-box {
     width: 100%;
   }
-
   #About #about-content .emblem-box .emblem-section {
     width: 90%;
     margin: auto;
@@ -382,14 +406,14 @@ img {
     height: 7vw !important;
   }
 
-  #About #about-content .emblem-box .topic {
+  #About #about-content .emblem-box .hexagon {
     width: 23.5vw;
     top: -0.2vw;
     position: relative;
     font-size: 0.85rem !important;
   }
 
-  #About #about-content .emblem-box .topic:nth-child(2n-1) {
+  #About #about-content .emblem-box .hexagon:nth-child(2n-1) {
     right: 0;
   }
 
@@ -398,7 +422,6 @@ img {
     padding-bottom: 2.5vw;
     width: auto !important;
   }
-
   #About #about-content .emblem-box .subEmblem {
     margin-top: 0 !important;
   }
@@ -414,9 +437,8 @@ img {
   margin-top: -12vh;
 }
 
-.topic {
+.hexagon {
   font-size: 0.45rem;
-  position: absolute;
   display: inline-block;
   margin: 0.2vw;
   margin-top: -2vh;
@@ -426,40 +448,53 @@ img {
   height: 4vw;
   top: 2vw;
   background-color: #323A6A;
-  transition: all 1s ease 0s;
-}
-
-.topic:nth-child(2n-1) {
-  right: 8vw;
-}
-
-.topic-row1-shown {
-  top: 7vw;
-}
-
-.topic-row2-shown {
-  top: 11vw;
-}
-
-.topic-row3-shown {
-  top: 15vw;
-}
-
-.topic-row4-shown {
-  top: 19vw;
-}
-
-.hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-.hexagon2 {
-  clip-path: polygon(50% 50%, 95% 25%, 100% 75%, 50% 100%, 0% 75%, 5% 25%);
+.hexagon-shape {
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .Background-About {
   background-color: #323A6A;
   font-family: "Montserrat-Regular";
+}
+
+#Experience .banner {
+  font-size: 0.6rem !important;
+  overflow-y: hidden;
+  height: 33%;
+  transition: all 0.6s linear;
+}
+
+#Experience .banner .sub-header {
+  margin-bottom: 1vw;
+}
+
+#Experience .banner:hover {
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+}
+
+#Experience .banner-expanded {
+  height: 66%;
+}
+
+#Experience .hexagon {
+  margin-top: 0;
+  height: auto;
+  top: 0;
+}
+
+#Experience .innerHex {
+  z-index: 5000;
+}
+
+#Experience .innerHex .expandable {
+  top: 0;
+  position: absolute;
+  width: 20vw;
 }
 
 .Background-Experience {

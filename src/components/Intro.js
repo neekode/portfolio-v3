@@ -23,7 +23,7 @@ function Intro() {
                 className={`box center ${isMobile ? 'introBoxMobile boxMobile' : ''}`}
             >
                 <div id="profile-picture" className={`col-md-4 ${isMobile ? '' : 'unshown'}`}>
-                    <img className=" hexagon" alt="down chevs" src={profilePic}/>
+                    <img className="hexagon-shape" alt="down chevs" src={profilePic}/>
                 </div>
                 <h2 className="header">
                     Welcome! I'm <span id="neeko-blomgren"><a
