@@ -1,9 +1,9 @@
 import React from "react";
 import Intro from "./Intro";
 import About from "./About";
-import Experience from "./Experience";
 import NavBar from "./NavBar";
 import Background from "./Background";
+import Experience from "./Experience";
 import Projects from "./Projects";
 import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect} from "react";

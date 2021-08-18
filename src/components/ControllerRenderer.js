@@ -38,7 +38,7 @@ function ControllerRenderer(props) {
             {/*</span>*/}
 
             <div
-                className={`animation-controller ${scrollY < 100 ? '' : 'animation-controller-hidden'} ${isMobile ? 'animation-controller-mobile' : ''}`}
+                className={`animation-controller ${scrollY > 100 && !isMobile ? 'animation-controller-hidden' : ''} ${isMobile ? 'animation-controller-mobile' : ''}`}
             >
                 <span className="header"> Animation Controller</span>
                 <div> Amount</div>

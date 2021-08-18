@@ -11,9 +11,12 @@ const jobs = [
         description: "Worked on Microsoft Teams Rooms, MS's smart conference room solution. Developed UI for the meeting room console and was a major contributor in its migration from AngularJS to React. Occasionally Floated to the Desktop client",
         contributions: [{
             name: "Layout Switcher UI",
-            expanded: "Added GraphQL Config, Connected two repos thru CDL,"
+            expanded: "Built in AngularJS, "
         }, {
             name: "PTZ Camera Control UI",
+            expanded: "Work in both AngularJS and React Repos. Added GraphQL Config (Mutation, Connected two repos thru CDL,"
+        }, {
+            name: "Background Image Effect",
             expanded: ""
         }, {
             name: "",
@@ -63,6 +66,7 @@ function Experience() {
     return (
         <div className="section" id="Experience" ref={wrapper}>
             <div className="box center">
+                <h2 className='header'>Professional Experience</h2>
                 {jobsState.map((job, i) => {
                     return <Banner jobsState={jobsState} setJobsState={setJobsState} index={i}/>
                 })}

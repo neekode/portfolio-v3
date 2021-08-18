@@ -1,13 +1,18 @@
-import React from 'react';
+import React, {useRef, useEffect, useContext} from 'react';
+import {themeChange} from "../scripts/library";
+import {ThemeContext} from "../scripts/context";
 
 function Projects() {
+    const {scrollY, setSection} = useContext(ThemeContext);
+    const wrapper = useRef();
+    useEffect(() => {
+        themeChange(wrapper, scrollY, setSection)
+    }, [scrollY, setSection]);
 
     return (
-        <div className="section" id="Projects">
+        <div ref={wrapper} className="section" id="Projects">
             <div className="box center">
-                <h2 id="connect-header" className="header">Projects:</h2>
-                <h3 id="connect-sub-header" className="sub-header">
-                    projects </h3>
+                <h2 className="header">Projects:</h2>
             </div>
         </div>
     );

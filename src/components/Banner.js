@@ -1,6 +1,7 @@
 import React, {useContext, useEffect, useState, useRef} from "react";
 import {ThemeContext} from "../scripts/context";
 import Hexagon from "./Hexagon";
+import HexDescription from "./HexDescription";
 
 function Banner(props) {
     const {setJobsState, jobsState, index} = props;
@@ -38,7 +39,7 @@ function Banner(props) {
     }, [section]);
 
     return (
-        <div onClick={setExpanded}
+        <div onClick={!jobsState[index].isElExpanded ? setExpanded : null}
              className={`${jobsState[index].isElExpanded ? 'banner-expanded' : ''} banner`}>
             <div className='sub-header'>
                 {jobsState[index].title}
@@ -50,7 +51,9 @@ function Banner(props) {
                         return <Hexagon content={contribution} className={"stuff"} isFromBanner={true}/>
                     })
                 }</div>
-                <div className='col-md-4'> stuff</div>
+                <div className='col-md-4'>
+                    <HexDescription/>
+                </div>
             </div>
         </div>
     );

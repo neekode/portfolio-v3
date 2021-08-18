@@ -29,7 +29,7 @@ $experience-colors: (
         border: #EAC683,
 );
 
-$connect-colors: (
+$projects-colors: (
         primary: #3A7BAB,
         secondary: #716F82,
         border: #606072,
@@ -85,6 +85,10 @@ img {
   pointer-events: none;
   position: relative;
   z-index: 2;
+
+  @media screen and (min-width: 250px) and (max-width: 750px) {
+    height: 150vh;
+  }
 }
 
 .box {
@@ -106,7 +110,7 @@ img {
   .header {
     font-family: $main-font;
     color: map-get($global-colors, font-secondary);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     margin: 0;
   }
 
@@ -143,7 +147,6 @@ img {
   @media screen and (min-width: 340px) {
     height: 88vw !important;
     top: 38vw !important;
-
   }
 }
 
@@ -309,10 +312,6 @@ img {
 
   .animation-controller-hidden {
     right: -20vw;
-
-    @media screen and (min-width: 250px) and (max-width: 750px) {
-      right: -80vw;
-    }
   }
 }
 
@@ -333,10 +332,23 @@ img {
       color: map-get($global-colors, font);
       cursor: pointer;
       padding: 0.15rem;
+      padding-top: 0.33vw;
+      padding-bottom: 0.33vw;
       font-size: 0.6rem;
       display: inline-block;
+      border-radius: 6px 6px 6px;
       width: 100%;
-      height: 5vh;
+
+      &:hover {
+        -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      }
+
+      &:active {
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+      }
     }
 
     .nav-item-active {
@@ -459,12 +471,18 @@ img {
       img {
         width: 3.5vw !important;
         margin: 5px !important;
-      }
 
-      img:hover {
-        -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-        -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-        box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        &:hover {
+          -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+          -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+          box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        }
+
+        &:active {
+          -webkit-box-shadow: none !important;
+          -moz-box-shadow: none !important;
+          box-shadow: none !important;
+        }
       }
     }
   }
@@ -593,10 +611,17 @@ img {
 
 // experience
 #Experience {
+  .header {
+    height: 10% !important;
+    padding-top: 1vw;
+  }
+
   .banner {
     border: 1px solid white;
+    border-radius: 10px 10px 10px;
 
     .sub-header {
+      font-size: 0.6rem;
       margin-bottom: 1vw;
     }
 
@@ -606,14 +631,27 @@ img {
       box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
     }
 
+    &:active {
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+    }
+
+    .hexagon-shape {
+      background-color: map-get($about-colors, primary);
+      width: 90%;
+      height: 90%;
+      padding: 1vw;
+    }
+
     font-size: 0.6rem !important;
     overflow-y: hidden;
     height: 10%;
-    transition: all 0.7s linear;
+    transition: height 0.7s linear;
   }
 
   .banner-expanded {
-    height: 80%;
+    height: 70%;
     border: none;
     z-index: 5000;
     -webkit-box-shadow: none !important;
@@ -625,17 +663,34 @@ img {
     margin-top: 0;
     height: auto;
     top: 0;
+    display: inline-flex;
   }
 
   .innerHex {
-    z-index: 5000;
+    z-index: 500;
+    transition: all 1s linear;
+
+    &:hover {
+      -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+    }
+
+    &:active {
+      -webkit-box-shadow: none !important;
+      -moz-box-shadow: none !important;
+      box-shadow: none !important;
+    }
 
     .expandable {
       top: 0;
       position: absolute;
-      width: 20vw;
-
+      width: 100%;
     }
+  }
+
+  .hex-description {
+
   }
 }
 
@@ -648,20 +703,16 @@ img {
   color: map-get($experience-colors, font);
 }
 
-// Connect
-#Connect {
+// Projects
+#Projects {
   .box {
     top: 5vh;
   }
 }
 
-.Background-Connect {
-  background-color: map-get($connect-colors, primary);
-  color: map-get($connect-colors, font);
+.Background-Projects {
+  background-color: map-get($projects-colors, primary);
+  color: map-get($projects-colors, font);
   font-family: $header-font;
-}
-
-.box-Connect {
-
 }
 
