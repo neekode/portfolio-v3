@@ -594,6 +594,8 @@ img {
 // experience
 #Experience {
   .banner {
+    border: 1px solid white;
+
     .sub-header {
       margin-bottom: 1vw;
     }
@@ -606,12 +608,17 @@ img {
 
     font-size: 0.6rem !important;
     overflow-y: hidden;
-    height: 33%;
-    transition: all 0.6s linear;
+    height: 10%;
+    transition: all 0.7s linear;
   }
 
   .banner-expanded {
-    height: 66%;
+    height: 80%;
+    border: none;
+    z-index: 5000;
+    -webkit-box-shadow: none !important;
+    -moz-box-shadow: none !important;
+    box-shadow: none !important;
   }
 
   .hexagon {
@@ -621,7 +628,6 @@ img {
   }
 
   .innerHex {
-
     z-index: 5000;
 
     .expandable {

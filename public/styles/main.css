@@ -338,43 +338,34 @@ img {
 #About #profile-picture .icon-list a {
   margin: 0.25vw;
 }
-
 #About #profile-picture .icon-list img {
   width: 3.5vw !important;
   margin: 5px !important;
 }
-
 #About #profile-picture .icon-list img:hover {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 #About #about-content .hexagon {
   position: absolute;
   transition: all 1s ease 0s;
 }
-
 #About #about-content .hexagon:nth-child(2n-1) {
   right: 8vw;
 }
-
 #About #about-content .expandable-row1-shown {
   top: 7vw;
 }
-
 #About #about-content .expandable-row2-shown {
   top: 11vw;
 }
-
 #About #about-content .expandable-row3-shown {
   top: 15vw;
 }
-
 #About #about-content .expandable-row4-shown {
   top: 19vw;
 }
-
 #About #about-content p {
   font-size: 0.55rem;
   width: 85%;
@@ -382,7 +373,6 @@ img {
   margin-top: 2vh;
   margin-bottom: 2vh;
 }
-
 #About #about-content .inner-emblem {
   padding-top: 4vh;
   width: 16vw;
@@ -399,24 +389,20 @@ img {
     width: 90%;
     margin: auto;
   }
-
   #About #about-content .emblem-box .emblem {
     width: 50%;
     font-size: 1.2rem !important;
     height: 7vw !important;
   }
-
   #About #about-content .emblem-box .hexagon {
     width: 23.5vw;
     top: -0.2vw;
     position: relative;
     font-size: 0.85rem !important;
   }
-
   #About #about-content .emblem-box .hexagon:nth-child(2n-1) {
     right: 0;
   }
-
   #About #about-content .emblem-box .inner-emblem {
     padding-top: 1.5vw;
     padding-bottom: 2.5vw;
@@ -461,36 +447,36 @@ img {
 }
 
 #Experience .banner {
+  border: 1px solid white;
   font-size: 0.6rem !important;
   overflow-y: hidden;
-  height: 33%;
-  transition: all 0.6s linear;
+  height: 10%;
+  transition: all 0.7s linear;
 }
-
 #Experience .banner .sub-header {
   margin-bottom: 1vw;
 }
-
 #Experience .banner:hover {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 #Experience .banner-expanded {
-  height: 66%;
+  height: 80%;
+  border: none;
+  z-index: 5000;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 #Experience .hexagon {
   margin-top: 0;
   height: auto;
   top: 0;
 }
-
 #Experience .innerHex {
   z-index: 5000;
 }
-
 #Experience .innerHex .expandable {
   top: 0;
   position: absolute;
