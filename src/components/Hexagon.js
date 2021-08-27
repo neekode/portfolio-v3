@@ -1,24 +1,22 @@
 import React, {useContext, useState} from "react";
-import {ThemeContext} from "../scripts/context";
+import {HexDescriptionContext, ThemeContext} from "../scripts/context";
 
 function InnerHexagon(props) {
-    const [expanded, setExpanded] = useState(false);
     const {innerContent} = props;
+    const {setInnerText} = useContext(HexDescriptionContext);
 
     const handleClick = () => {
-        setExpanded(true);
+        setInnerText(innerContent.expanded);
     }
 
-    return (<div onClick={handleClick} className={'innerHex'}>
-        <div>{innerContent.name}</div>
-        <div className={`${expanded ? '' : 'unshown'} expandable`}>{innerContent.expanded}</div>
-    </div>)
+    return (<div onClick={handleClick} className={'innerHex'}>{innerContent.name}</div>)
 
 }
 
 function Hexagon(props) {
     const {content, className, isFromBanner} = props;
     const {section} = useContext(ThemeContext);
+
     let hexContent;
 
     if (isFromBanner) {

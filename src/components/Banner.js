@@ -44,15 +44,23 @@ function Banner(props) {
             <div className='sub-header'>
                 {jobsState[index].title}
             </div>
-            <div className='row'>
-                <div className='col-md-4'>{jobsState[index].description}</div>
-                <div className='col-md-4'>{
-                    jobsState[index].contributions.map((contribution, i) => {
-                        return <Hexagon content={contribution} className={"stuff"} isFromBanner={true}/>
-                    })
-                }</div>
-                <div className='col-md-4'>
-                    <HexDescription/>
+            <div className={`${!jobsState[index].isElExpanded ? 'unshown' : ''}`}>
+                <div className='row'>
+                    <div className='col-md-4 job-description'>
+                        <h2 className={'sub-header2'}>Synopsis</h2>
+                        {jobsState[index].description}
+                    </div>
+                    <div className='col-md-4'>
+                        <h2 className={'sub-header2'}>Major Contributions</h2>
+                        {
+                            jobsState[index].contributions.map((contribution, i) => {
+                                return <Hexagon content={contribution} className={"stuff"} isFromBanner={true}/>
+                            })
+                        }</div>
+                    <div className='col-md-4'>
+                        <h2 className={'sub-header2'}>Details</h2>
+                        <HexDescription/>
+                    </div>
                 </div>
             </div>
         </div>
