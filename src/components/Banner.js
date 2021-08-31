@@ -51,7 +51,7 @@ function Banner(props) {
                         {jobsState[index].description}
                     </div>
                     <div className='col-md-4'>
-                        <h2 className={'sub-header2'}>Major Contributions</h2>
+                        <h2 className={'sub-header2 contributions'}>Major Contributions</h2>
                         {
                             jobsState[index].contributions.map((contribution, i) => {
                                 return <Hexagon content={contribution} className={"stuff"} isFromBanner={true}/>

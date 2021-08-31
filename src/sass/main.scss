@@ -586,8 +586,8 @@ img {
   display: inline-block;
   margin: 0.2vw;
   margin-top: -2vh;
-  padding: 1vw;
-  line-height: 0.9;
+  padding: 0.8vw;
+  line-height: 1;
   width: 7.5vw;
   height: 4vw;
   top: 2vw;
@@ -626,6 +626,10 @@ img {
       margin-bottom: 1vw;
     }
 
+    .contributions {
+      margin-bottom: 2.5vw !important;
+    }
+
     .job-description {
       font-size: 0.5rem;
     }
@@ -645,7 +649,6 @@ img {
     .hexagon-shape {
       background-color: map-get($about-colors, primary);
       width: 90%;
-      height: 90%;
       padding: 1vw;
     }
 
@@ -668,13 +671,13 @@ img {
   .hexagon {
     margin-top: 0;
     height: auto;
+    font-size: 0.45rem;
     cursor: pointer;
   }
 
   .innerHex {
     z-index: 500;
     padding: 0.7vw;
-    margin: -3px !important;
 
     &:hover {
       -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
@@ -683,20 +686,57 @@ img {
       //border: 2px solid white;
       border-radius: 5rem;
     }
-
-    &:active {
-      -webkit-box-shadow: none !important;
-      -moz-box-shadow: none !important;
-      box-shadow: none !important;
-    }
   }
 
   .hex-description {
+    height: 5vw;
+    transition: all 0.5s linear;
+    margin-top: 8vw;
+    padding: 1.5vw !important;
+    font-size: 0.525rem !important;
+  }
+
+  .hex-description-expanded {
     margin-top: 10vw;
+    padding-top: 4vw !important;
     height: 20vw !important;
-    padding: 2vw !important;
-    padding-top: 5vw !important;
-    font-size: 0.45rem !important;
+  }
+
+  @media screen and (min-width: 250px) and (max-width: 750px) {
+    .header {
+      height: 5% !important;
+    }
+
+    .banner-expanded {
+      height: 75% !important;
+    }
+
+    .sub-header {
+      font-size: 1.4rem !important;
+    }
+
+    .job-description {
+      font-size: 1.1rem !important;
+    }
+
+    .hexagon {
+      width: 11vw;
+
+      .innerHex {
+        font-size: 0.9rem !important;
+      }
+    }
+
+    .hex-description {
+      font-size: 1rem !important;
+      height: 10vw;
+    }
+
+    .hex-description-expanded {
+      font-size: 1rem !important;
+      padding-top: 6.5vw !important;
+      height: 25vw !important;
+    }
   }
 }
 

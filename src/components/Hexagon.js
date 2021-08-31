@@ -5,11 +5,11 @@ function InnerHexagon(props) {
     const {innerContent} = props;
     const {setInnerText} = useContext(HexDescriptionContext);
 
-    const handleClick = () => {
+    const handleMouseOver = () => {
         setInnerText(innerContent.expanded);
     }
 
-    return (<div onClick={handleClick} className={'innerHex'}>{innerContent.name}</div>)
+    return (<div onMouseOver={handleMouseOver} className={'innerHex'}>{innerContent.name}</div>)
 
 }
 

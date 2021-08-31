@@ -16,7 +16,7 @@ export const ThemeProvider = ({children}) => {
 
 export const HexDescriptionContext = createContext();
 export const HexDescriptionProvider = ({children}) => {
-    const [innerText, setInnerText] = useState('default');
+    const [innerText, setInnerText] = useState();
 
     return (
         <HexDescriptionContext.Provider value={{innerText, setInnerText}}>
