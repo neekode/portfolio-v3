@@ -1,16 +1,13 @@
 import React from "react";
-import Intro from "./Intro";
-import About from "./About";
-import NavBar from "./NavBar";
 import Background from "./Background";
-import Experience from "./Experience";
-import Projects from "./Projects";
+import Sandbox from "./Sandbox";
+import InnerContent from "./InnerContent";
 import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect} from "react";
 
 // Big Wrapper
 function Content() {
-    const {setScrollY, setIsMobile} = useContext(ThemeContext);
+    const {setScrollY, setIsMobile, isSandbox} = useContext(ThemeContext);
     const handleScroll = (e) => setScrollY(window.scrollY);
     const handleResize = (e) => {
         if (window.outerWidth > 800) {
@@ -30,13 +27,9 @@ function Content() {
     }, [handleResize, handleScroll]);
 
     return (
-        <div id="Content">
+        <div id="Content" className={`${isSandbox ? 'content-sandbox' : ''}`}>
             <Background/>
-            <NavBar/>
-            <Intro/>
-            <About/>
-            <Experience/>
-            <Projects/>
+            {isSandbox ? <Sandbox/> : <InnerContent/>}
         </div>
     );
 }

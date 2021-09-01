@@ -3,7 +3,7 @@ import {shapesModule, genCircles, circleDrawLoop} from "./../scripts/shapes";
 import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect, useState} from "react";
 import ControllerRenderer from "./ControllerRenderer";
-import $ from "jquery";
+import SandboxButton from "./SandboxButton";
 
 /* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
 
@@ -121,40 +121,6 @@ function Background() {
         setIntObj(init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed));
     };
 
-    const scrollToTop = () => {
-        $("#to-top").addClass("animated bounce");
-        setTimeout(() => {
-            $("#to-top").removeClass("animated bounce");
-        }, 1000);
-    };
-
-    const scrollLower = () => {
-        $("#lower").addClass("animated bounce");
-        setTimeout(() => {
-            $("#lower").removeClass("animated bounce");
-        }, 1000);
-
-        switch (section) {
-            case "Intro": {
-                $("#about-anchor").get(0).click();
-                break;
-            }
-
-            case "About": {
-                $("#experience-anchor").get(0).click();
-                break;
-            }
-
-            case "Works": {
-                $("#connect-anchor").get(0).click();
-                break;
-            }
-
-            default: {
-                break;
-            }
-        }
-    };
 
     // Resizes canvas to current window viewport
     const resizeCanvas = (c) => {
@@ -170,6 +136,7 @@ function Background() {
     return (
         <div className={theme} id="Background">
             <canvas id="myCanvas" width="0px" height="0px"></canvas>
+            <SandboxButton/>
             <ControllerRenderer
                 setBallpitVars={setBallpitVars}
                 ballpitVars={ballpitVars}

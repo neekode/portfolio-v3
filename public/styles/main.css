@@ -104,13 +104,43 @@ img {
 .boxMobile .sub-header {
   font-size: 1.4rem;
 }
+
 .boxMobile .sub-header2 {
   font-size: 1.25rem;
 }
+
 .boxMobile p {
   font-size: 1.2rem !important;
   margin: 0 !important;
   margin: auto !important;
+}
+
+.sandbox-button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3vw !important;
+  height: 3vw !important;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  padding: 0.3vw;
+  font-size: 0.4rem;
+  color: white;
+  cursor: pointer !important;
+  transition: margin-right 0.6s linear;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+}
+
+.sandbox-button-hidden {
+  margin-right: -5vw !important;
+}
+
+.content-sandbox {
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden;
 }
 
 #intro-link {
@@ -475,16 +505,13 @@ img {
   height: 10%;
   transition: height 0.6s linear;
 }
-
 #Experience .banner .sub-header {
   font-size: 0.6rem;
   margin-bottom: 1vw;
 }
-
 #Experience .banner .contributions {
   margin-bottom: 2.5vw !important;
 }
-
 #Experience .banner .job-description {
   font-size: 0.5rem;
 }
@@ -520,7 +547,7 @@ img {
 }
 #Experience .innerHex {
   z-index: 500;
-  padding: 0.7vw;
+  padding: 0.35vw;
 }
 #Experience .innerHex:hover {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
@@ -528,7 +555,6 @@ img {
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   border-radius: 5rem;
 }
-
 #Experience .hex-description {
   height: 5vw;
   transition: all 0.5s linear;
@@ -536,43 +562,34 @@ img {
   padding: 1.5vw !important;
   font-size: 0.525rem !important;
 }
-
 #Experience .hex-description-expanded {
   margin-top: 10vw;
   padding-top: 4vw !important;
   height: 20vw !important;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #Experience .header {
     height: 5% !important;
   }
-
   #Experience .banner-expanded {
     height: 75% !important;
   }
-
   #Experience .sub-header {
     font-size: 1.4rem !important;
   }
-
   #Experience .job-description {
     font-size: 1.1rem !important;
   }
-
   #Experience .hexagon {
     width: 11vw;
   }
-
   #Experience .hexagon .innerHex {
     font-size: 0.9rem !important;
   }
-
   #Experience .hex-description {
     font-size: 1rem !important;
     height: 10vw;
   }
-
   #Experience .hex-description-expanded {
     font-size: 1rem !important;
     padding-top: 6.5vw !important;

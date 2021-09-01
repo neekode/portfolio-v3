@@ -34,7 +34,7 @@ export const jobs = [
             name: "Layout Switcher UI",
             expanded: "Built in AngularJS. Utilized modal framework to build out a button handler than when pressed render's dialog component which prompts user to change front-of-room screen's layout."
         }, {
-            name: "PTZ Work, Angular",
+            name: "PTZ Camera, Angular",
             expanded: "Built a button handler on center console which enables/disables remote camera control. Works with a service which sends metadata to desktop client meetings and checks for meeting's PTZ capability"
         }, {
             name: "PTZ Camera, React",
@@ -55,7 +55,13 @@ export const jobs = [
             name: "Push Notification System",
             expanded: "Researched different packages and implemented a notifier which launches alerts notifying the user when a claim is created, added, deleted, edited, etc. and when feedback from the HTTP request was received."
         }, {
-            name: "",
+            name: "Add/Edit Claim Component",
+            expanded: ""
+        }, {
+            name: "Working with Interns",
+            expanded: ""
+        }, {
+            name: "Working with Interns",
             expanded: ""
         }]
     },

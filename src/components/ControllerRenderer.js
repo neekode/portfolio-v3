@@ -1,10 +1,9 @@
 import React from "react";
-import {useState, useContext} from "react";
-import downChev from "../assets/chevron-down.svg";
+import {useContext} from "react";
 import {ThemeContext} from "../scripts/context";
 
 function ControllerRenderer(props) {
-    const {scrollY, isMobile} = useContext(ThemeContext);
+    const {scrollY, isMobile, isSandbox} = useContext(ThemeContext);
     const {setBallpitVars, ballpitVars, handleRandomize, handleRender} = props;
     // const [ballpitControllerVisible, setBallpitControllerVisible] =
     //     useState(true);
@@ -22,21 +21,7 @@ function ControllerRenderer(props) {
     };
 
     return (
-        <div id="Controller" className={``}>
-            {/*      <span className="chev-box">*/}
-            {/*  <img*/}
-            {/*      id="controller-toggle"*/}
-            {/*      onClick={() => setBallpitControllerVisible(!ballpitControllerVisible)}*/}
-            {/*      className={*/}
-            {/*          scrollY < 50 && ballpitControllerVisible*/}
-            {/*              ? "left-chev"*/}
-            {/*              : "right-chev"*/}
-            {/*      }*/}
-            {/*      alt="chev"*/}
-            {/*      src={downChev}*/}
-            {/*  />*/}
-            {/*</span>*/}
-
+        <div id="Controller" className={`${isSandbox ? 'unshown' : ''}`}>
             <div
                 className={`animation-controller ${scrollY > 100 && !isMobile ? 'animation-controller-hidden' : ''} ${isMobile ? 'animation-controller-mobile' : ''}`}
             >
