@@ -104,11 +104,9 @@ img {
 .boxMobile .sub-header {
   font-size: 1.4rem;
 }
-
 .boxMobile .sub-header2 {
   font-size: 1.25rem;
 }
-
 .boxMobile p {
   font-size: 1.2rem !important;
   margin: 0 !important;
@@ -141,6 +139,8 @@ img {
   height: 100vh !important;
   width: 100vw !important;
   overflow: hidden;
+  font-size: 0.5rem;
+  margin: auto;
 }
 
 #intro-link {
@@ -609,6 +609,38 @@ img {
 .Background-Projects {
   background-color: #3A7BAB;
   font-family: "Montserrat-Regular";
+}
+
+.princess-wrapper {
+  position: absolute;
+  background: white;
+}
+
+.princess-wrapper .princess-box {
+  width: 31%;
+  float: left;
+  margin: 1%;
+  border: 1px solid grey;
+}
+
+.princess-wrapper .princess-box img {
+  width: 100% !important;
+}
+
+.princess-wrapper .princess-box .text-box {
+  text-align: left;
+  padding: 5%;
+}
+
+.princess-wrapper .princess-box .text-box h6 {
+  font-size: 0.65rem;
+  color: dodgerblue;
+}
+
+.princess-wrapper .princess-box .text-box span {
+  font-size: 0.45rem;
+  color: black;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

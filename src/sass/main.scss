@@ -201,6 +201,9 @@ img {
   height: 100vh !important;
   width: 100vw !important;
   overflow: hidden;
+
+  font-size: 0.5rem;
+  margin: auto;
 }
 
 #intro-link {
@@ -788,5 +791,38 @@ img {
   background-color: map-get($projects-colors, primary);
   color: map-get($projects-colors, font);
   font-family: $header-font;
+}
+
+
+.princess-wrapper {
+  position: absolute;
+  background: white;
+
+  .princess-box {
+    width: 31%;
+    float: left;
+    margin: 1%;
+    border: 1px solid grey;
+
+    img {
+      width: 100% !important;
+    }
+
+    .text-box {
+      text-align: left;
+      padding: 5%;
+
+      h6 {
+        font-size: 0.65rem;
+        color: dodgerblue;
+      }
+
+      span {
+        font-size: 0.45rem;
+        color: black;
+        font-weight: 500;
+      }
+    }
+  }
 }
 

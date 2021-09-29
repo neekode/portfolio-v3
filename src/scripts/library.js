@@ -40,7 +40,7 @@ export const jobs = [
             name: "PTZ Camera, React",
             expanded: "Worked with service and sent data thru CDL to React-side GraphQL subscription to render info when PTZ was active. Re-implemented button handler and built new GQL Mutation sending data back to Angular repo"
         }, {
-            name: "BG Image Effect",
+            name: "Background Image Effect",
             expanded: "Floated to desktop client team to work on video background image effect. Fixed a couple bugs and added buttons which switch out user's background image. Also added telemetry."
         }]
     },
@@ -55,8 +55,8 @@ export const jobs = [
             name: "Push Notification System",
             expanded: "Researched different packages and implemented a notifier which launches alerts notifying the user when a claim is created, added, deleted, edited, etc. and when feedback from the HTTP request was received."
         }, {
-            name: "Add/Edit Claim Component",
-            expanded: ""
+            name: "Add/Edit Claim Module",
+            expanded: "Worked on a form component which, based on user action either creating or editing a claim, rendered and allowed them to utilize our RESTful api and communicate with our backend thru HTTP requests."
         }, {
             name: "Working with Interns",
             expanded: ""
