@@ -72,6 +72,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+body::-webkit-scrollbar {
+  display: none;
+}
+
 img {
   vertical-align: top !important;
 }

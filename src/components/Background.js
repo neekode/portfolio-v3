@@ -40,7 +40,7 @@ function Background() {
 
     const handleResize = () => {
         clearInterval(intervalObj);
-        init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed, true);
+        init(ballpitVars.amount, ballpitVars.radius, ballpitVars.speed);
     }
 
     let theme = `Background-${section}`;
@@ -102,16 +102,15 @@ function Background() {
         // Default values chosen to to accomodate for slower computers and browsers
         const newAmt = (Math.random() * 500).toFixed(3);
         const newRad = (Math.random() * 15).toFixed(3);
-        const newSpd = (Math.random() * 0.15).toFixed(3);
+        const newSpd = (Math.random() * 0.5).toFixed(3);
+        setBallpitVars({
+            amount: newAmt,
+            speed: newSpd,
+            radius: newRad,
+        });
 
         setIntObj(init(newAmt, newRad, newSpd));
 
-        setBallpitVars({
-            ...ballpitVars,
-            amount: newAmt,
-            speed: newRad,
-            radius: newSpd,
-        });
     };
 
     const handleRender = () => {

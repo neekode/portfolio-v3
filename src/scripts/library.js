@@ -23,7 +23,7 @@ export const jobs = [
     {
         title: "Microsoft (Allyis Contract) : Nov. 2019 - July 2021",
         isElExpanded: false,
-        description: "Worked on Microsoft Teams Rooms, MS's smart conference room. Developed UI for the meeting room console and front-of-room screens, and was a major contributor in the app's migration from AngularJS to React Hooks. Wrote SCSS, Jest and Jasmine test suites, met accessibility standards, matched rigid architecture, and met high-level PR reviews. \n Reference: Naved Rangwala (naved.rangwala@something.com)",
+        description: "Worked on Microsoft Teams Rooms, MS's smart conference room. Developed UI for the meeting room console and front-of-room screens, and was a major contributor in the app's migration from AngularJS to React Hooks. Wrote SCSS, Jest and Jasmine test suites, met accessibility standards, matched rigid architecture, and met high-level PR reviews. Reference: Naved Rangwala naved.rangwala@microsoft.com",
         contributions: [{
             name: "Meeting Info, Clock",
             expanded: "Helped build a React meeting info module which used app-wide global context imports and GraphQL queries to pull info into component such as meeting name and duration. Also solo-developed the clock display."
@@ -47,7 +47,7 @@ export const jobs = [
     {
         title: "People Tech Group : Nov. 2018 – Aug. 2019",
         isElExpanded: false,
-        description: "First professional software job; was 1 out of 15 interns chosen for a junior-level position. Worked on CPRS, a business-facing app contracted from Costco and other companies designed for auditors to process claims. I researched and developed features for it in React, helped integrate TypeScript into the architecture, and modified SQL datatables for testing. I also helped vet interns for future positions and played a pseudo mentorship role. ",
+        description: "First professional software job; was 1 out of 15 interns chosen for a junior-level position. Worked on CPRS, a business-facing app contracted from Costco and other companies designed for auditors to process claims. I researched and developed features for it in React, helped integrate TypeScript into the architecture, and modified SQL datatables for testing. I was also a part of the UX-design conversation.",
         contributions: [{
             name: "Condition Based Rendering",
             expanded: "Developed logic which pulls privilege and role from currently logged in user object and conditionally renders certain features/pieces of the application based on that. "
@@ -58,26 +58,26 @@ export const jobs = [
             name: "Add/Edit Claim Module",
             expanded: "Worked on a form component which, based on user action either creating or editing a claim, rendered and allowed them to utilize our RESTful api and communicate with our backend thru HTTP requests."
         }, {
-            name: "Working with Interns",
-            expanded: ""
+            name: "Testing w/ SQL Database",
+            expanded: "Had access to the SQL database in order to test features under given certain scenarios/credentials. I would edit certain user's credentials in order to test whether or not the conditional rendering was working properly.."
         }, {
             name: "Working with Interns",
-            expanded: ""
+            expanded: "Guided new interns in order to vet them for incoming positions. Crafted and gave assignments, such as calling the Spotify API to build custom playlists. Assigned presentations and contributed feedback for hiring."
         }]
     },
     {
         title: "Freelance",
         isElExpanded: false,
-        description: "",
+        description: "Developing for my personal projects. I've also been commissioned for a couple small business websites, but the owners decided to let the domains expire.",
         contributions: [{
-            name: "",
+            name: "More",
             expanded: ""
         }, {
-            name: "",
+            name: "Coming",
             expanded: ""
         },
             {
-                name: "",
+                name: "Soon!",
                 expanded: ""
             }]
     }

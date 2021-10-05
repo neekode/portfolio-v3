@@ -23,7 +23,7 @@ const princessObjects = [
     ]
 ;
 
-function Projects() {
+function Sandbox() {
 
     return (
         <div className="section" id="Sandbox">
@@ -39,4 +39,4 @@ function Projects() {
     );
 }
 
-export default Projects;
+export default Sandbox;
