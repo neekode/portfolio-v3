@@ -6,7 +6,9 @@ export const ThemeProvider = ({children}) => {
     const [section, setSection] = useState('Intro');
     const [scrollY, setScrollY] = useState(0);
     const [isMobile, setIsMobile] = useState(false)
-    const [isSandbox, setIsSandbox] = useState(false)
+
+    // This is hacky. I'd like to use useLocation here which is a hook that react router provides, but i've got dependency issues and the router needs a higher version React.
+    const [isSandbox, setIsSandbox] = useState(window.location === "http://localhost:3000/sandbox" || window.location === "http://neekode.com/sandbox")
 
     return (
         <ThemeContext.Provider

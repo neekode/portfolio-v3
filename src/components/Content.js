@@ -4,6 +4,12 @@ import Sandbox from "./Sandbox";
 import InnerContent from "./InnerContent";
 import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect} from "react";
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    Link
+} from "react-router-dom";
 
 // Big Wrapper
 function Content() {
@@ -28,8 +34,15 @@ function Content() {
 
     return (
         <div id="Content" className={`${isSandbox ? 'content-sandbox' : ''}`}>
-            <Background/>
-            {isSandbox ? <Sandbox/> : <InnerContent/>}
+            <Router>
+                <Background/>
+                <Route path="/sandbox">
+                    <Sandbox/>
+                </Route>
+                <Route path="/">
+                    <InnerContent/>
+                </Route>
+            </Router>
         </div>
     );
 }

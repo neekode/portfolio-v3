@@ -1,4 +1,4 @@
-import React, {} from 'react';
+import React, {useEffect, useState} from 'react';
 import ezair from "./../assets/ezair.png";
 import incentive from "./../assets/incentive.png";
 import reservations from "./../assets/reservations.png";
@@ -24,6 +24,18 @@ const princessObjects = [
 ;
 
 function Sandbox() {
+    const [solution, setSolution] = useState("Solution Here!")
+    /** Current Problem:
+     * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
+     * The relative order of the elements should be kept the same.
+     Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums.
+     More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result.
+     It does not matter what you leave beyond the first k elements.
+     */
+    const removeDupes = () => {
+        // setSolution("Solution Here")
+    }
+    useEffect(removeDupes, []);
 
     return (
         <div className="section" id="Sandbox">
@@ -33,6 +45,10 @@ function Sandbox() {
 
                 <div className='princess-wrapper'>
                     {princessObjects.map(obj => (<PrincessBox princessObject={obj}/>))}
+                </div>
+
+                <div className={'center tests'}>
+                    {solution}
                 </div>
             </div>
         </div>

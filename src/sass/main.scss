@@ -208,6 +208,32 @@ img {
 
   font-size: 0.5rem;
   margin: auto;
+
+  .box {
+    margin-top: 20vh !important;
+    width: 85vw !important;
+    height: 85vh !important;
+
+    @media screen and (min-width: 500px) {
+      margin-top: 50vh !important;
+    }
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+      font-size: 0.8rem;
+    }
+  }
+
+  .tests {
+    border: 1px solid grey;
+    height: 5vh;
+    width: 25vw;
+    font-size: 0.7rem;
+    z-index: 10000;
+    margin-top: 65vh;
+
+    @media screen and (min-width: 500px) and (max-width: 800px) {
+      font-size: 1rem;
+    }
+  }
 }
 
 #intro-link {
@@ -801,6 +827,8 @@ img {
 .princess-wrapper {
   position: absolute;
   background: white;
+  margin: 2.5vw;
+  margin-top: 1vw;
 
   .princess-box {
     width: 31%;

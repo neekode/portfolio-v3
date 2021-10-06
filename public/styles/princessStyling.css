@@ -1,33 +1,33 @@
 .princess-wrapper {
-  position: absolute;
-  background: white;
+    position: absolute;
+    background: white;
 }
 
 .princess-wrapper .princess-box {
-  width: 31%;
-  float: left;
-  margin: 1%;
-  border: 1px solid grey;
+    width: 31%;
+    float: left;
+    margin: 1%;
+    border: 1px solid grey;
 }
 
 .princess-wrapper .princess-box img {
-  width: 100% !important;
+    width: 100% !important;
 }
 
 .princess-wrapper .princess-box .text-box {
-  text-align: left;
-  padding: 5%;
+    text-align: left;
+    padding: 5%;
 }
 
 .princess-wrapper .princess-box .text-box h6 {
-  font-size: 0.65rem;
-  color: dodgerblue;
+    font-size: 0.65rem;
+    color: dodgerblue;
 }
 
 .princess-wrapper .princess-box .text-box span {
-  font-size: 0.45rem;
-  color: black;
-  font-weight: 500;
+    font-size: 0.45rem;
+    color: black;
+    font-weight: 500;
 }
 
 /*# sourceMappingURL=princessStyling.css.map */

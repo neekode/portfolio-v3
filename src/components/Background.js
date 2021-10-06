@@ -4,6 +4,10 @@ import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect, useState} from "react";
 import ControllerRenderer from "./ControllerRenderer";
 import SandboxButton from "./SandboxButton";
+import {
+    Link,
+    BrowserRouter as Router
+} from "react-router-dom";
 
 /* Hook Component Implementation of interactive canvas animation on Intro Screen - 8/15/2019
 
@@ -31,7 +35,7 @@ import SandboxButton from "./SandboxButton";
 */
 
 function Background() {
-    const {section} = useContext(ThemeContext);
+    const {section, isSandbox} = useContext(ThemeContext);
     const [ballpitVars, setBallpitVars] = useState({
         amount: 250,
         radius: 2,
@@ -135,7 +139,7 @@ function Background() {
     return (
         <div className={theme} id="Background">
             <canvas id="myCanvas" width="0px" height="0px"></canvas>
-            <SandboxButton/>
+            <Link to={!isSandbox ? "/sandbox" : "/"}><SandboxButton/></Link>
             <ControllerRenderer
                 setBallpitVars={setBallpitVars}
                 ballpitVars={ballpitVars}
