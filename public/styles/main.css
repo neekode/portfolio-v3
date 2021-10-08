@@ -1,774 +1,709 @@
 .unshown {
-    display: none !important;
+  display: none !important;
 }
 
 .center {
-    margin: 0;
-    position: absolute;
-    margin-top: 22.5%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+  margin: 0;
+  position: absolute;
+  margin-top: 22.5%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 html {
-    font-size: 2.5vw;
+  font-size: 2.5vw;
 }
 
 body {
-    margin: 0;
-    padding: 0;
-    overflow-x: hidden;
-    font-family: "Montserrat-Regular";
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: "Montserrat-Regular";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 img {
-    vertical-align: top !important;
+  vertical-align: top !important;
 }
 
 .row {
-    margin: 0 !important;
+  margin: 0 !important;
 }
 
 .section {
-    height: 120vh;
-    pointer-events: none;
-    position: relative;
-    z-index: 2;
+  height: 120vh;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
 }
 
 @media screen and (min-width: 250px) and (max-width: 750px) {
-    .section {
-        height: 150vh;
-    }
+  .section {
+    height: 150vh;
+  }
 }
 
 .box {
-    text-align: center;
-    pointer-events: auto;
-    background-color: #1F3039;
-    color: #F8F9F9;
-    width: 80vw;
-    height: 80vh;
-    border-radius: 10px 10px 10px;
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  text-align: center;
+  pointer-events: auto;
+  background-color: #1F3039;
+  color: #F8F9F9;
+  width: 80vw;
+  height: 80vh;
+  border-radius: 10px 10px 10px;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 .box .header {
-    font-family: "Montserrat-Regular";
-    color: #ED942C;
-    font-size: 0.8rem;
-    margin: 0;
+  font-family: "Montserrat-Regular";
+  color: #ED942C;
+  font-size: 0.8rem;
+  margin: 0;
 }
-
 .box .sub-header {
-    font-family: "Montserrat-Regular";
-    font-size: 0.7rem;
-    margin: 0;
-    margin-top: 1vh;
+  font-family: "Montserrat-Regular";
+  font-size: 0.7rem;
+  margin: 0;
+  margin-top: 1vh;
 }
-
 .box .sub-header2 {
-    color: #ED942C;
-    font-family: "Montserrat-Regular";
-    font-size: 0.5rem;
-    margin: 0;
-    margin-bottom: 2vh !important;
-    line-height: 1.3;
+  color: #ED942C;
+  font-family: "Montserrat-Regular";
+  font-size: 0.5rem;
+  margin: 0;
+  margin-bottom: 2vh !important;
+  line-height: 1.3;
 }
-
 .box .description {
-    width: 33vw;
-    margin-top: 0;
-    padding: 2.5vw;
-    padding-top: 0;
-    font-size: 0.651rem;
+  width: 33vw;
+  margin-top: 0;
+  padding: 2.5vw;
+  padding-top: 0;
+  font-size: 0.651rem;
 }
 
 .introBoxMobile {
-    height: 95vw !important;
-    width: 80vw !important;
-    top: 46vw !important;
+  height: 95vw !important;
+  width: 80vw !important;
+  top: 46vw !important;
 }
 
 @media screen and (min-width: 340px) {
-    .introBoxMobile {
-        height: 88vw !important;
-        top: 38vw !important;
-    }
+  .introBoxMobile {
+    height: 88vw !important;
+    top: 38vw !important;
+  }
 }
 
 .boxMobile .header {
-    font-size: 1.7rem !important;
+  font-size: 1.7rem !important;
 }
-
 .boxMobile .header .span {
-    line-height: 1rem;
+  line-height: 1rem;
 }
-
 .boxMobile .sub-header {
-    font-size: 1.4rem;
+  font-size: 1.4rem;
 }
-
 .boxMobile .sub-header2 {
-    font-size: 1.25rem;
+  font-size: 1.25rem;
 }
-
 .boxMobile p {
-    font-size: 1.2rem !important;
-    margin: 0 !important;
-    margin: auto !important;
+  font-size: 1.2rem !important;
+  margin: 0 !important;
+  margin: auto !important;
 }
 
 .sandbox-button {
-    position: absolute;
-    right: 0;
-    top: 0;
-    width: 3vw !important;
-    height: 3vw !important;
-    margin-right: 1vw;
-    margin-top: 1vw;
-    padding: 0.3vw;
-    font-size: 0.4rem;
-    color: white;
-    cursor: pointer !important;
-    transition: margin-right 0.6s linear;
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 3vw !important;
+  height: 3vw !important;
+  margin-right: 1vw;
+  margin-top: 1vw;
+  padding: 0.3vw;
+  font-size: 0.4rem;
+  color: white;
+  cursor: pointer !important;
+  transition: margin-right 0.6s linear;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+}
+
+@media screen and (min-width: 500px) and (max-width: 800px) {
+  .sandbox-button {
+    width: 5vw !important;
+    height: 5vw !important;
+    margin-top: 7.5vw;
+  }
+
+  .sandbox-button img {
+    width: 4.5vw !important;
+    height: 4.5vw !important;
+  }
 }
 
 .sandbox-button-hidden {
-    margin-right: -5vw !important;
+  margin-right: -5vw !important;
 }
 
 .content-sandbox {
-    height: 100vh !important;
-    width: 100vw !important;
-    overflow: hidden;
-    font-size: 0.5rem;
-    margin: auto;
+  height: 100vh !important;
+  width: 100vw !important;
+  overflow: hidden;
+  font-size: 0.5rem;
+  margin: auto;
 }
-
 .content-sandbox .box {
-    margin-top: 20vh !important;
-    width: 85vw !important;
-    height: 85vh !important;
+  margin-top: 20vh !important;
+  width: 85vw !important;
+  height: 85vh !important;
 }
 
 @media screen and (min-width: 500px) {
-    .content-sandbox .box {
-        margin-top: 50vh !important;
-    }
+  .content-sandbox .box {
+    margin-top: 50vh !important;
+  }
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
-    .content-sandbox .box {
-        font-size: 0.8rem;
-    }
+  .content-sandbox .box {
+    font-size: 0.8rem;
+  }
 }
-
 .content-sandbox .tests {
-    border: 1px solid grey;
-    height: 5vh;
-    width: 25vw;
-    font-size: 0.7rem;
-    z-index: 10000;
-    margin-top: 65vh;
+  border: 1px solid grey;
+  height: auto;
+  width: 25vw;
+  font-size: 0.7rem;
+  z-index: 10000;
+  margin-top: 65vh;
 }
 
 @media screen and (min-width: 500px) and (max-width: 800px) {
-    .content-sandbox .tests {
-        font-size: 1rem;
-    }
+  .content-sandbox .tests {
+    font-size: 1rem;
+  }
 }
 
 #intro-link {
-    position: absolute;
-    width: 10vw;
+  position: absolute;
+  width: 10vw;
 }
 
 .link {
-    font-weight: 600;
-    color: #ED942C;
+  font-weight: 600;
+  color: #ED942C;
 }
 
 .link:hover {
-    opacity: 0.8 !important;
-    color: #ED942C;
+  opacity: 0.8 !important;
+  color: #ED942C;
 }
 
 #Background {
-    height: 100vh;
-    font-family: "Montserrat-Regular";
-    position: fixed;
-    width: 100%;
-    -webkit-transition: background-color 1s linear;
-    -moz-transition: background-color 1s linear;
-    -o-transition: background-color 1s linear;
-    transition: background-color 1s linear;
+  height: 100vh;
+  font-family: "Montserrat-Regular";
+  position: fixed;
+  width: 100%;
+  -webkit-transition: background-color 1s linear;
+  -moz-transition: background-color 1s linear;
+  -o-transition: background-color 1s linear;
+  transition: background-color 1s linear;
 }
-
 #Background .chev-box {
-    position: fixed;
-    height: 5vh;
-    width: 5vh;
-    right: 1vw;
-    bottom: calc(40% - 2.5vh);
-    background-color: #1F3039;
-    border-radius: 10px 10px 10px 10px;
+  position: fixed;
+  height: 5vh;
+  width: 5vh;
+  right: 1vw;
+  bottom: calc(40% - 2.5vh);
+  background-color: #1F3039;
+  border-radius: 10px 10px 10px 10px;
 }
-
 #Background .chev-box img {
-    height: 5vh;
-    width: 5vh;
+  height: 5vh;
+  width: 5vh;
 }
-
 #Background .chev-box .left-chev {
-    cursor: pointer;
-    transition: all 0.3s linear;
-    transform: rotate(-90deg);
-    margin-left: 0.5vw;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(-90deg);
+  margin-left: 0.5vw;
 }
-
 #Background .chev-box .right-chev {
-    cursor: pointer;
-    transition: all 0.3s linear;
-    transform: rotate(90deg);
-    margin-left: -0.5vw;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(90deg);
+  margin-left: -0.5vw;
 }
-
 #Background #to-top {
-    bottom: calc(40% + 12.5vh);
+  bottom: calc(40% + 12.5vh);
 }
-
 #Background #to-top .up-chev {
-    cursor: pointer;
-    transition: all 0.3s linear;
-    transform: rotate(180deg);
-    margin-top: -0.5vh;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  transform: rotate(180deg);
+  margin-top: -0.5vh;
 }
-
 #Background #lower {
-    bottom: calc(40% + 5vh);
+  bottom: calc(40% + 5vh);
 }
-
 #Background #lower .down-chev {
-    cursor: pointer;
-    transition: all 0.3s linear;
-    margin-top: 1vh;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  margin-top: 1vh;
 }
-
 #Background .animation-controller {
-    z-index: 5000 !important;
-    font-family: "Montserrat-Regular";
-    position: absolute;
-    width: 15vw;
-    color: #F8F9F9;
-    background-color: #1F3039;
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    transition: right 0.75s linear;
-    opacity: 0.95;
-    border-radius: 10px 10px 10px;
-    padding: 1.5vh;
-    bottom: 1vh;
-    right: 2vw;
-    font-size: 0.35rem;
+  z-index: 5000 !important;
+  font-family: "Montserrat-Regular";
+  position: absolute;
+  width: 15vw;
+  color: #F8F9F9;
+  background-color: #1F3039;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  transition: right 0.75s linear;
+  opacity: 0.95;
+  border-radius: 10px 10px 10px;
+  padding: 1.5vh;
+  bottom: 1vh;
+  right: 2vw;
+  font-size: 0.35rem;
 }
-
 #Background .animation-controller .header {
-    font-family: "Montserrat-Regular";
-    font-size: 0.35rem;
+  font-family: "Montserrat-Regular";
+  font-size: 0.35rem;
 }
-
 #Background .animation-controller div {
-    margin-top: 1.5vh;
-    padding-bottom: 0.5vh;
+  margin-top: 1.5vh;
+  padding-bottom: 0.5vh;
 }
-
 #Background .animation-controller #renderer {
-    margin-left: 0.5vw;
+  margin-left: 0.5vw;
 }
-
 #Background .animation-controller-mobile {
-    width: 50vw !important;
-    bottom: -17.5vw;
-    transform: translate(-50%, -50%);
+  width: 50vw !important;
+  bottom: -17.5vw;
+  transform: translate(-50%, -50%);
 }
-
 #Background .animation-controller-mobile .header {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
 }
-
 #Background .animation-controller-mobile div {
-    font-size: 1rem;
+  font-size: 1rem;
 }
-
 #Background .animation-controller-mobile input {
-    width: 75%;
-    font-size: 1rem;
+  width: 75%;
+  font-size: 1rem;
 }
-
 #Background .animation-controller-hidden {
-    right: -20vw;
+  right: -20vw;
 }
 
 .NavBar {
-    transition: all 0.5s linear;
+  transition: all 0.5s linear;
 }
-
 .NavBar .box {
-    position: fixed;
-    height: 100vh;
-    padding-top: 33vh;
-    width: 8vw;
-    z-index: 50;
-    border-radius: 0;
-    background-color: #1F3039;
+  position: fixed;
+  height: 100vh;
+  padding-top: 33vh;
+  width: 8vw;
+  z-index: 50;
+  border-radius: 0;
+  background-color: #1F3039;
 }
-
 .NavBar .box .nav-item {
-    color: #F8F9F9;
-    cursor: pointer;
-    padding: 0.15rem;
-    padding-top: 0.33vw;
-    padding-bottom: 0.33vw;
-    font-size: 0.6rem;
-    display: inline-block;
-    border-radius: 6px 6px 6px;
-    width: 100%;
+  color: #F8F9F9;
+  cursor: pointer;
+  padding: 0.15rem;
+  padding-top: 0.33vw;
+  padding-bottom: 0.33vw;
+  font-size: 0.6rem;
+  display: inline-block;
+  border-radius: 6px 6px 6px;
+  width: 100%;
 }
-
 .NavBar .box .nav-item:hover {
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 .NavBar .box .nav-item:active {
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 .NavBar .box .nav-item-active {
-    border: 1px solid white;
+  border: 1px solid white;
 }
 
 .NavBar-mobile .box {
-    padding-top: 0;
-    width: 100%;
-    height: 5vh;
+  padding-top: 0;
+  width: 100%;
+  height: 5vh;
 }
-
 .NavBar-mobile .nav-item {
-    width: 25% !important;
-    float: left;
-    font-size: 1.4rem !important;
+  width: 25% !important;
+  float: left;
+  font-size: 1.4rem !important;
 }
 
 @media screen and (min-width: 340px) and (max-width: 400px) {
-    .NavBar-mobile .nav-item {
-        font-size: 1.7rem !important;
-    }
+  .NavBar-mobile .nav-item {
+    font-size: 1.7rem !important;
+  }
 }
 
 .NavBar-hidden {
-    margin-left: -8vw;
+  margin-left: -8vw;
 }
 
 .Intro {
-    position: relative;
+  position: relative;
 }
-
 .Intro .box {
-    width: 60vw;
-    height: 17.5vw;
-    padding: 2.5vw;
+  width: 60vw;
+  height: 17.5vw;
+  padding: 2.5vw;
 }
-
 .Intro .box .header {
-    color: #F8F9F9;
-    font-size: 1.2rem;
+  color: #F8F9F9;
+  font-size: 1.2rem;
 }
-
 .Intro .box .chevron-box .down-chevs {
-    margin: 1vw;
-    width: 3vw;
+  margin: 1vw;
+  width: 3vw;
 }
-
 .Intro .box .chevron-box-mobile .down-chevs {
-    margin: 0.5vw;
-    width: 7vw;
+  margin: 0.5vw;
+  width: 7vw;
 }
-
 .Intro .box #profile-picture img {
-    width: 50vw;
-    margin: 2.5vw;
-    margin-top: 2vh;
+  width: 50vw;
+  margin: 2.5vw;
+  margin-top: 2vh;
 }
-
 .Intro .box #profile-picture div {
-    font-size: 0.6em;
-    margin: auto;
+  font-size: 0.6em;
+  margin: auto;
 }
-
 .Intro #neeko-blomgren {
-    color: #ED942C;
+  color: #ED942C;
 }
 
 .Background-Intro {
-    background-color: #31425F;
-    color: blue;
-    font-family: "Montserrat-Regular";
+  background-color: #31425F;
+  color: blue;
+  font-family: "Montserrat-Regular";
 }
 
 #About .box {
-    top: 6.5vh;
-    height: 80vh;
+  top: 6.5vh;
+  height: 80vh;
 }
-
 #About .box h3 {
-    padding-top: 2.5vh;
+  padding-top: 2.5vh;
 }
-
 #About .header {
-    display: inline-block;
-    text-align: center !important;
+  display: inline-block;
+  text-align: center !important;
 }
-
 #About #profile-picture img {
-    width: 90%;
-    margin: 5%;
-    margin-top: 5vh;
+  width: 90%;
+  margin: 5%;
+  margin-top: 5vh;
 }
-
 #About #profile-picture div {
-    font-size: 0.6em;
-    margin: auto;
+  font-size: 0.6em;
+  margin: auto;
 }
-
 #About #profile-picture .icon-list {
-    margin-top: 1vw;
+  margin-top: 1vw;
 }
-
 #About #profile-picture .icon-list a {
-    margin: 0.25vw;
+  margin: 0.25vw;
 }
-
 #About #profile-picture .icon-list img {
-    width: 3.5vw !important;
-    margin: 5px !important;
+  width: 3.5vw !important;
+  margin: 5px !important;
 }
-
 #About #profile-picture .icon-list img:hover {
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 #About #profile-picture .icon-list img:active {
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 #About #about-content .hexagon {
-    position: absolute;
-    transition: top 1s ease 0s;
+  position: absolute;
+  transition: top 1s ease 0s;
 }
-
 #About #about-content .hexagon:nth-child(2n-1) {
-    right: 8vw;
+  right: 8vw;
 }
-
 #About #about-content .expandable-row1-shown {
-    top: 6.5vw;
+  top: 6.5vw;
 }
-
 #About #about-content .expandable-row2-shown {
-    top: 10.5vw;
+  top: 10.5vw;
 }
-
 #About #about-content .expandable-row3-shown {
-    top: 14.5vw;
+  top: 14.5vw;
 }
-
 #About #about-content .expandable-row4-shown {
-    top: 18.5vw;
+  top: 18.5vw;
 }
-
 #About #about-content p {
-    font-size: 0.55rem;
-    width: 85%;
-    margin: auto;
-    margin-top: 2vh;
-    margin-bottom: 2vh;
+  font-size: 0.55rem;
+  width: 85%;
+  margin: auto;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
 }
-
 #About #about-content .inner-emblem {
-    padding-top: 4vh;
-    width: 16vw;
-    line-height: 1.2;
+  padding-top: 4vh;
+  width: 16vw;
+  line-height: 1.2;
 }
-
 #About #about-content .inner-emblem-list {
-    line-height: 0.85;
+  line-height: 0.85;
 }
 
 @media screen and (min-width: 250px) and (max-width: 750px) {
-    #About #about-content .emblem-box {
-        width: 100%;
-    }
+  #About #about-content .emblem-box {
+    width: 100%;
+  }
 
-    #About #about-content .emblem-box .emblem-section {
-        width: 90%;
-        margin: auto;
-    }
+  #About #about-content .emblem-box .emblem-section {
+    width: 90%;
+    margin: auto;
+  }
 
-    #About #about-content .emblem-box .emblem {
-        width: 50%;
-        font-size: 1.2rem !important;
-        height: 7vw !important;
-    }
+  #About #about-content .emblem-box .emblem {
+    width: 50%;
+    font-size: 1.2rem !important;
+    height: 7vw !important;
+  }
 
-    #About #about-content .emblem-box .hexagon {
-        width: 23.5vw;
-        top: -0.2vw;
-        position: relative;
-        font-size: 0.85rem !important;
-    }
+  #About #about-content .emblem-box .hexagon {
+    width: 23.5vw;
+    top: -0.2vw;
+    position: relative;
+    font-size: 0.85rem !important;
+  }
 
-    #About #about-content .emblem-box .hexagon:nth-child(2n-1) {
-        right: 0;
-    }
+  #About #about-content .emblem-box .hexagon:nth-child(2n-1) {
+    right: 0;
+  }
 
-    #About #about-content .emblem-box .inner-emblem {
-        padding-top: 1.5vw;
-        padding-bottom: 2.5vw;
-        width: auto !important;
-    }
+  #About #about-content .emblem-box .inner-emblem {
+    padding-top: 1.5vw;
+    padding-bottom: 2.5vw;
+    width: auto !important;
+  }
 
-    #About #about-content .emblem-box .subEmblem {
-        margin-top: 0 !important;
-    }
+  #About #about-content .emblem-box .subEmblem {
+    margin-top: 0 !important;
+  }
 }
-
 #About #about-content .content-section .emblem {
-    z-index: 5;
-    height: 6vw;
-    font-size: 0.65rem;
-    background-color: #323A6A;
+  z-index: 5;
+  height: 6vw;
+  font-size: 0.65rem;
+  background-color: #323A6A;
 }
-
 #About #about-content .content-section .subEmblem {
-    z-index: 4;
-    margin-top: -12vh;
+  z-index: 4;
+  margin-top: -12vh;
 }
 
 .hexagon {
-    font-size: 0.45rem;
-    display: inline-block;
-    margin: 0.2vw;
-    margin-top: -2vh;
-    padding: 0.8vw;
-    line-height: 1;
-    width: 7.5vw;
-    height: 4vw;
-    top: 2vw;
-    background-color: #323A6A;
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  font-size: 0.45rem;
+  display: inline-block;
+  margin: 0.2vw;
+  margin-top: -2vh;
+  padding: 0.8vw;
+  line-height: 1;
+  width: 7.5vw;
+  height: 4vw;
+  top: 2vw;
+  background-color: #323A6A;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .hexagon-shape {
-    clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
 .Background-About {
-    background-color: #323A6A;
-    font-family: "Montserrat-Regular";
+  background-color: #323A6A;
+  font-family: "Montserrat-Regular";
 }
 
 #Experience .header {
-    height: 10% !important;
-    padding-top: 1vw;
+  height: 10% !important;
+  padding-top: 1vw;
 }
-
 #Experience .banner {
-    cursor: pointer;
-    border: 1px solid white;
-    border-radius: 10px 10px 10px;
-    font-size: 0.6rem !important;
-    overflow-y: hidden;
-    height: 10%;
-    transition: height 0.6s linear;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px 10px 10px;
+  font-size: 0.6rem !important;
+  overflow-y: hidden;
+  height: 10%;
+  transition: height 0.6s linear;
 }
-
 #Experience .banner .sub-header {
-    font-size: 0.6rem;
-    margin-bottom: 1vw;
+  font-size: 0.6rem;
+  margin-bottom: 1vw;
 }
-
 #Experience .banner .contributions {
-    margin-bottom: 2.5vw !important;
+  margin-bottom: 2.5vw !important;
 }
-
 #Experience .banner .job-description {
-    font-size: 0.5rem;
+  font-size: 0.5rem;
 }
-
 #Experience .banner:hover {
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 #Experience .banner:active {
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 #Experience .banner .hexagon-shape {
-    background-color: #323A6A;
-    width: 90%;
-    padding: 1vw;
+  background-color: #323A6A;
+  width: 90%;
+  padding: 1vw;
 }
-
 #Experience .banner-expanded {
-    height: 70%;
-    cursor: default;
-    border: none;
-    z-index: 5000;
-    -webkit-box-shadow: none !important;
-    -moz-box-shadow: none !important;
-    box-shadow: none !important;
+  height: 70%;
+  cursor: default;
+  border: none;
+  z-index: 5000;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
 }
-
 #Experience .hexagon {
-    margin-top: 0;
-    height: auto;
-    font-size: 0.45rem;
-    cursor: pointer;
+  margin-top: 0;
+  height: auto;
+  font-size: 0.45rem;
+  cursor: pointer;
 }
-
 #Experience .innerHex {
-    z-index: 500;
-    padding: 0.35vw;
+  z-index: 500;
+  padding: 0.35vw;
 }
-
 #Experience .innerHex:hover {
-    -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
-    border-radius: 5rem;
+  -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  border-radius: 5rem;
 }
-
 #Experience .hex-description {
-    height: 5vw;
-    transition: all 0.5s linear;
-    margin-top: 8vw;
-    padding: 1.5vw !important;
-    font-size: 0.525rem !important;
+  height: 5vw;
+  transition: all 0.5s linear;
+  margin-top: 8vw;
+  padding: 1.5vw !important;
+  font-size: 0.525rem !important;
 }
-
 #Experience .hex-description-expanded {
-    margin-top: 10vw;
-    padding-top: 4vw !important;
-    height: 20vw !important;
+  margin-top: 10vw;
+  padding-top: 4vw !important;
+  height: 20vw !important;
 }
 
 @media screen and (min-width: 250px) and (max-width: 750px) {
-    #Experience .header {
-        height: 5% !important;
-    }
+  #Experience .header {
+    height: 5% !important;
+  }
 
-    #Experience .banner-expanded {
-        height: 75% !important;
-    }
+  #Experience .banner-expanded {
+    height: 75% !important;
+  }
 
-    #Experience .sub-header {
-        font-size: 1.4rem !important;
-    }
+  #Experience .sub-header {
+    font-size: 1.4rem !important;
+  }
 
-    #Experience .job-description {
-        font-size: 1.1rem !important;
-    }
+  #Experience .job-description {
+    font-size: 1.1rem !important;
+  }
 
-    #Experience .hexagon {
-        width: 11vw;
-    }
+  #Experience .hexagon {
+    width: 11vw;
+  }
 
-    #Experience .hexagon .innerHex {
-        font-size: 0.9rem !important;
-    }
+  #Experience .hexagon .innerHex {
+    font-size: 0.9rem !important;
+  }
 
-    #Experience .hex-description {
-        font-size: 1rem !important;
-        height: 10vw;
-    }
+  #Experience .hex-description {
+    font-size: 1rem !important;
+    height: 10vw;
+  }
 
-    #Experience .hex-description-expanded {
-        font-size: 1rem !important;
-        padding-top: 6.5vw !important;
-        height: 25vw !important;
-    }
+  #Experience .hex-description-expanded {
+    font-size: 1rem !important;
+    padding-top: 6.5vw !important;
+    height: 25vw !important;
+  }
 }
 
 .Background-Experience {
-    background-color: #3D5179;
-    font-family: "Montserrat-Regular";
+  background-color: #3D5179;
+  font-family: "Montserrat-Regular";
 }
 
 #Projects .box {
-    top: 5vh;
+  top: 5vh;
 }
 
 .Background-Projects {
-    background-color: #3A7BAB;
-    font-family: "Montserrat-Regular";
+  background-color: #3A7BAB;
+  font-family: "Montserrat-Regular";
 }
 
 .princess-wrapper {
-    position: absolute;
-    background: white;
-    margin: 2.5vw;
-    margin-top: 1vw;
+  position: absolute;
+  background: white;
+  margin: 2.5vw;
+  margin-top: 1vw;
 }
-
 .princess-wrapper .princess-box {
-    width: 31%;
-    float: left;
-    margin: 1%;
-    border: 1px solid grey;
+  width: 31%;
+  float: left;
+  margin: 1%;
+  border: 1px solid grey;
 }
-
 .princess-wrapper .princess-box img {
-    width: 100% !important;
+  width: 100% !important;
 }
-
 .princess-wrapper .princess-box .text-box {
-    text-align: left;
-    padding: 5%;
+  text-align: left;
+  padding: 5%;
 }
-
 .princess-wrapper .princess-box .text-box h6 {
-    font-size: 0.65rem;
-    color: dodgerblue;
+  font-size: 0.65rem;
+  color: dodgerblue;
 }
-
 .princess-wrapper .princess-box .text-box span {
-    font-size: 0.45rem;
-    color: black;
-    font-weight: 500;
+  font-size: 0.45rem;
+  color: black;
+  font-weight: 500;
 }
 
 /*# sourceMappingURL=main.css.map */

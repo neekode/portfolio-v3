@@ -1,18 +1,21 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import ezair from "./../assets/ezair.png";
 import incentive from "./../assets/incentive.png";
 import reservations from "./../assets/reservations.png";
 import PrincessBox from "./princess/PrincessBox";
+import {useLocation} from "react-router-dom";
+import {ThemeContext} from "../scripts/context";
+import {themeChange} from "../scripts/library";
 
 const princessObjects = [
-        {
-            title: "Pre-pay Crew Incentive",
-            description: "For your convenience, crew incentive may be pre-paid up to two days prior to your departure",
-            img: incentive,
-        },
-        {
-            title: "Princess EZAir",
-            description: "Search hassle-free, low price flights, to your embarkation port with included benefits like Late Arrival Protection",
+    {
+        title: "Pre-pay Crew Incentive",
+        description: "For your convenience, crew incentive may be pre-paid up to two days prior to your departure",
+        img: incentive,
+    },
+    {
+        title: "Princess EZAir",
+        description: "Search hassle-free, low price flights, to your embarkation port with included benefits like Late Arrival Protection",
             img: ezair,
         },
         {
@@ -24,18 +27,39 @@ const princessObjects = [
 ;
 
 function Sandbox() {
+    const location = useLocation();
+    const {setIsSandbox} = useContext(ThemeContext);
     const [solution, setSolution] = useState("Solution Here!")
+    useEffect(() => {
+        if (location.pathname === "/sandbox") {
+            setIsSandbox(true);
+        }
+    }, [location])
     /** Current Problem:
-     * Given an integer array nums sorted in non-decreasing order, remove the duplicates in-place such that each unique element appears only once.
-     * The relative order of the elements should be kept the same.
-     Since it is impossible to change the length of the array in some languages, you must instead have the result be placed in the first part of the array nums.
-     More formally, if there are k elements after removing the duplicates, then the first k elements of nums should hold the final result.
-     It does not matter what you leave beyond the first k elements.
+     * You are given a large integer represented as an integer array digits,
+     * where each digits[i] is the ith digit of the integer.
+     * The digits are ordered from most significant to least significant
+     * in left-to-right order. The large integer does not contain any leading 0's.
      */
-    const removeDupes = () => {
-        // setSolution("Solution Here")
-    }
-    useEffect(removeDupes, []);
+        // What's wrong with this test? why do the last digits become zeroes?
+        // I'm pretty sure it becomes a bigint and parseInt cant handle that? Keep working.
+    const test1 = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]
+    const plusOne = function (digits) {
+        let asString = digits.join('');
+
+        // if (asString.length > 16) {
+        //     let big = BigInt(asString)
+        //     parseInt(big);
+        // } else {
+        //     parseInt(asString);
+        // }
+        let asInt = parseInt(asString);
+        asInt++;
+        let asString2 = asInt.toString();
+        let asArray = asString2.split('');
+        setSolution(asArray);
+    };
+    useEffect(() => plusOne(test1), []);
 
     return (
         <div className="section" id="Sandbox">
@@ -48,6 +72,7 @@ function Sandbox() {
                 </div>
 
                 <div className={'center tests'}>
+                    <span>Leetcode practice: </span>
                     {solution}
                 </div>
             </div>

@@ -195,6 +195,15 @@ img {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+  @media screen and (min-width: 500px) and (max-width: 800px) {
+    img {
+      width: 4.5vw !important;
+      height: 4.5vw !important;
+    }
+    width: 5vw !important;
+    height: 5vw !important;
+    margin-top: 7.5vw;
+  }
 }
 
 .sandbox-button-hidden {
@@ -224,7 +233,7 @@ img {
 
   .tests {
     border: 1px solid grey;
-    height: 5vh;
+    height: auto;
     width: 25vw;
     font-size: 0.7rem;
     z-index: 10000;

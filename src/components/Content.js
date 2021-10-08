@@ -6,9 +6,8 @@ import {ThemeContext} from "./../scripts/context";
 import {useContext, useEffect} from "react";
 import {
     BrowserRouter as Router,
-    Switch,
     Route,
-    Link
+
 } from "react-router-dom";
 
 // Big Wrapper
@@ -31,6 +30,7 @@ function Content() {
             window.addEventListener("load", handleResize, false);
         }
     }, [handleResize, handleScroll]);
+
 
     return (
         <div id="Content" className={`${isSandbox ? 'content-sandbox' : ''}`}>
