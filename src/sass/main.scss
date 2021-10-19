@@ -346,14 +346,29 @@ img {
     right: 2vw;
     font-size: 0.35rem;
 
+    .limit {
+      font-size: 0.3rem;
+      @media screen and (max-width: 900px) {
+        font-size: .7rem !important;
+      }
+    }
+
     .header {
       font-family: $header-font;
       font-size: 0.35rem;
+
+      .sub-header {
+        font-size: 0.33rem;
+        float: right;
+        color: #94A1B6;
+        @media screen and (max-width: 900px) {
+          font-size: .7rem !important;
+        }
+      }
     }
 
     div {
       margin-top: 1.5vh;
-
       padding-bottom: 0.5vh;
     }
 

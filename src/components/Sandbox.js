@@ -6,16 +6,17 @@ import PrincessBox from "./princess/PrincessBox";
 import {useLocation} from "react-router-dom";
 import {ThemeContext} from "../scripts/context";
 import {themeChange} from "../scripts/library";
+/* global BigInt */
 
 const princessObjects = [
-    {
-        title: "Pre-pay Crew Incentive",
-        description: "For your convenience, crew incentive may be pre-paid up to two days prior to your departure",
-        img: incentive,
-    },
-    {
-        title: "Princess EZAir",
-        description: "Search hassle-free, low price flights, to your embarkation port with included benefits like Late Arrival Protection",
+        {
+            title: "Pre-pay Crew Incentive",
+            description: "For your convenience, crew incentive may be pre-paid up to two days prior to your departure",
+            img: incentive,
+        },
+        {
+            title: "Princess EZAir",
+            description: "Search hassle-free, low price flights, to your embarkation port with included benefits like Late Arrival Protection",
             img: ezair,
         },
         {
@@ -36,30 +37,13 @@ function Sandbox() {
         }
     }, [location])
     /** Current Problem:
-     * You are given a large integer represented as an integer array digits,
-     * where each digits[i] is the ith digit of the integer.
-     * The digits are ordered from most significant to least significant
-     * in left-to-right order. The large integer does not contain any leading 0's.
+     *
      */
-        // What's wrong with this test? why do the last digits become zeroes?
-        // I'm pretty sure it becomes a bigint and parseInt cant handle that? Keep working.
-    const test1 = [6, 1, 4, 5, 3, 9, 0, 1, 9, 5, 1, 8, 6, 7, 0, 5, 5, 4, 3]
-    const plusOne = function (digits) {
-        let asString = digits.join('');
-
-        // if (asString.length > 16) {
-        //     let big = BigInt(asString)
-        //     parseInt(big);
-        // } else {
-        //     parseInt(asString);
-        // }
-        let asInt = parseInt(asString);
-        asInt++;
-        let asString2 = asInt.toString();
-        let asArray = asString2.split('');
-        setSolution(asArray);
-    };
-    useEffect(() => plusOne(test1), []);
+    const validParentheses = function (s) {
+            // setSolution(isValid.toString());
+        }
+    ;
+    useEffect(() => validParentheses(), []);
 
     return (
         <div className="section" id="Sandbox">
