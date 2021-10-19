@@ -93,7 +93,7 @@ function ControllerRenderer(props) {
                     <button onClick={handleRandomize} id="randomer" name="random">
                         Randomize
                     </button>
-                    <button onClick={handleLimitedRender} id="renderer" name="render">
+                    <button onClick={isLimited ? handleLimitedRender : handleRender} id="renderer" name="render">
                         Re-Render
                     </button>
                 </div>
