@@ -36,27 +36,29 @@ function Sandbox() {
             setIsSandbox(true);
         }
     }, [location])
+
     /** Current Problem:
      *
+     *
      */
-    const validParentheses = function (s) {
-            // setSolution(isValid.toString());
-        }
-    ;
-    useEffect(() => validParentheses(), []);
+    const test1 = 0;
+    const someFunction = function () {
+        setSolution();
+    };
+    useEffect(() => someFunction(), []);
 
     return (
         <div className="section" id="Sandbox">
             <div className="box center">
                 <h2 className="header">Sandbox:</h2>
-                <span className=''>Here's a little sandbox where I experiment, do coding exercises, etc. Currently I'm showcasing a little assignment from Princess Cruiselines:</span>
+                <span className=''>Here's a little sandbox where I experiment, do coding exercises, etc. </span>
 
-                <div className='princess-wrapper'>
-                    {princessObjects.map(obj => (<PrincessBox princessObject={obj}/>))}
-                </div>
+                {/*Currently I'm showcasing a little assignment from Princess Cruiselines:<div className='princess-wrapper'>*/}
+                {/*    {princessObjects.map(obj => (<PrincessBox princessObject={obj}/>))}*/}
+                {/*</div>*/}
 
                 <div className={'center tests'}>
-                    <span>Leetcode practice: </span>
+                    <span>Solution: </span>
                     {solution}
                 </div>
             </div>

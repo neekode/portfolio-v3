@@ -4,47 +4,28 @@ import {ThemeContext} from "../scripts/context";
 
 function ControllerRenderer(props) {
     const {scrollY, isMobile, isSandbox} = useContext(ThemeContext);
-    const {setBallpitVars, ballpitVars, handleRandomize, handleRender} = props;
+    const {setBallpitVars, ballpitVars, handleRandomize, handleRender, warning, setWarning} = props;
     const [isLimited, setIsLimited] = useState(true);
-    const [warning, setWarning] = useState({amount: false, radius: false, speed: false});
 
-    /**
-     * TODO: Needs to be refactored! i failed to consider the scenario of the randomizer.
-     * randomizer doesn't take this into consideration so when the warnings are on,
-     * then user hits randomize, the warnings dont turn off.
-     * The state should probably be in the higher component anyway, maybe it could help with the scenario i'm
-     * struggling with of turning off individual warnings after the limits been satisfied for only one.
-     */
-    const handleLimitedRender = () => {
-        let render = true;
-        if (ballpitVars.amount > 20000 || ballpitVars.amount < 1) {
-            setWarning({...warning, amount: true});
-            render = false;
+    const handleChange = (e) => {
+        let val = e.target.value;
+        let isWarning = false;
+        // Is there a way to simplify this? use a map or something i think.
+        switch (e.target.id) {
+            case "amount":
+                isWarning = val > 20000 || val < 1;
+                break;
+            case "radius":
+                isWarning = val > 500 || val < 0.05;
+                break;
+            case "speed":
+                isWarning = val > 5 || val < 0;
+                break;
+            default:
+                break;
         }
-        if (ballpitVars.radius > 500 || ballpitVars.radius < 0.05) {
-            setWarning({...warning, radius: true});
-            render = false;
-        }
-        if (ballpitVars.speed > 5 || ballpitVars.speed < 0) {
-            setWarning({...warning, speed: true});
-            render = false;
-        }
-        if (render) {
-            handleRender();
-            setWarning({amount: false, radius: false, speed: false});
-        }
-    }
-
-    const handleAmtChange = (e) => {
-        setBallpitVars({...ballpitVars, amount: e.target.value});
-    };
-
-    const handleRadChange = (e) => {
-        setBallpitVars({...ballpitVars, radius: e.target.value});
-    };
-
-    const handleSpdChange = (e) => {
-        setBallpitVars({...ballpitVars, speed: e.target.value});
+        setWarning({...warning, [e.target.id]: isWarning});
+        setBallpitVars({...ballpitVars, [e.target.id]: val});
     };
 
     const handleSetLimit = (e) => {
@@ -63,8 +44,8 @@ function ControllerRenderer(props) {
                                    className={'limit'}>{isLimited ? `(1 < x < 20000)` : ''}</span></div>
 
                 <input
-                    onChange={handleAmtChange}
-                    id="amtInput"
+                    onChange={handleChange}
+                    id="amount"
                     value={ballpitVars.amount}
                     type="text"
                 />
@@ -73,8 +54,8 @@ function ControllerRenderer(props) {
                                                className={'limit'}>{isLimited ? `(.05 < x < 500)` : ''}</span></div>
 
                 <input
-                    onChange={handleRadChange}
-                    id="radInput"
+                    onChange={handleChange}
+                    id="radius"
                     value={ballpitVars.radius}
                     type="text"
                 />
@@ -82,8 +63,8 @@ function ControllerRenderer(props) {
                                   className={'limit'}>{isLimited ? `(0 < x < 5)` : ''}</span></div>
 
                 <input
-                    onChange={handleSpdChange}
-                    id="spdInput"
+                    onChange={handleChange}
+                    id="speed"
                     value={ballpitVars.speed}
                     type="text"
                 />
@@ -93,7 +74,9 @@ function ControllerRenderer(props) {
                     <button onClick={handleRandomize} id="randomer" name="random">
                         Randomize
                     </button>
-                    <button onClick={isLimited ? handleLimitedRender : handleRender} id="renderer" name="render">
+                    <button disabled={warning.amount || warning.radius || warning.speed} onClick={handleRender}
+                            id="renderer" name="render">
+
                         Re-Render
                     </button>
                 </div>

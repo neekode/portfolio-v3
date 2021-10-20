@@ -36,6 +36,7 @@ import {
 
 function Background() {
     const {section, isSandbox} = useContext(ThemeContext);
+    const [warning, setWarning] = useState({amount: false, radius: false, speed: false});
     const [ballpitVars, setBallpitVars] = useState({
         amount: 250,
         radius: 2,
@@ -112,6 +113,11 @@ function Background() {
             speed: newSpd,
             radius: newRad,
         });
+        setWarning({
+            amount: false,
+            speed: false,
+            radius: false,
+        })
 
         setIntObj(init(newAmt, newRad, newSpd));
 
@@ -145,6 +151,8 @@ function Background() {
                 ballpitVars={ballpitVars}
                 handleRender={handleRender}
                 handleRandomize={handleRandomize}
+                warning={warning}
+                setWarning={setWarning}
             />
         </div>
     );
