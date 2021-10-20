@@ -19,6 +19,23 @@ export const themeChange = (el, scrollY, setSection) => {
     }
 }
 
+export const controllerInputs = [{
+    id: 'amount',
+    title: 'Amount',
+    limit: (x) => x > 20000 || x < 1,
+    limitString: '(1 < x < 20000)'
+}, {
+    id: 'speed',
+    title: 'Speed',
+    limit: (x) => x > 500 || x < 0.05,
+    limitString: '(0.05 < x < 500)'
+}, {
+    id: 'radius',
+    title: 'Radius',
+    limit: (x) => x > 5 || x < 0,
+    limitString: '(0 < x < 5)'
+}]
+
 export const jobs = [
     {
         title: "Microsoft (Allyis Contract) : Nov. 2019 - July 2021",
