@@ -19,6 +19,21 @@ export const themeChange = (el, scrollY, setSection) => {
     }
 }
 
+export const emblems = [
+    {
+        title: "Technologies",
+        topicList: ["React Hooks", "ES6 JavaScript", "TypeScript", "AngularJS", "GraphQL", "SASS", "Git", "Jest"],
+    },
+    {
+        title: "Code Contribution",
+        topicList: ["Well-Composed", "Pure, Functional", "Modular", "Efficient", "Refined, Refactored", "Follows Paradigm"]
+    },
+    {
+        title: "Methodology",
+        topicList: ["Researches Codebase", "Cooperative Workflow", "Studies Tooling", "Empathetic Solutions", "UX-Educated", "Takes Notes"]
+    }
+]
+
 export const controllerInputs = [{
     id: 'amount',
     title: 'Amount',

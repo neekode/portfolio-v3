@@ -39,13 +39,13 @@ function Sandbox() {
 
     /** Current Problem:
      *
-     *
      */
+
     const test1 = 0;
-    const someFunction = function () {
+    const someFunction = function (x) {
         setSolution();
     };
-    useEffect(() => someFunction(), []);
+    useEffect(() => someFunction(test1), []);
 
     return (
         <div className="section" id="Sandbox">
@@ -53,7 +53,8 @@ function Sandbox() {
                 <h2 className="header">Sandbox:</h2>
                 <span className=''>Here's a little sandbox where I experiment, do coding exercises, etc. </span>
 
-                {/*Currently I'm showcasing a little assignment from Princess Cruiselines:<div className='princess-wrapper'>*/}
+                {/*Currently I'm showcasing a little assignment from Princess Cruiselines:*/}
+                {/*<div className='princess-wrapper'>*/}
                 {/*    {princessObjects.map(obj => (<PrincessBox princessObject={obj}/>))}*/}
                 {/*</div>*/}
 

@@ -834,13 +834,6 @@ img {
   color: map-get($experience-colors, font);
 }
 
-// Projects
-#Projects {
-  .box {
-    top: 5vh;
-  }
-}
-
 .Background-Projects {
   background-color: map-get($projects-colors, primary);
   color: map-get($projects-colors, font);
@@ -849,6 +842,8 @@ img {
 
 
 .princess-wrapper {
+  display: flex;
+  flex-flow: row wrap;
   position: absolute;
   background: white;
   margin: 2.5vw;
@@ -856,7 +851,6 @@ img {
 
   .princess-box {
     width: 31%;
-    float: left;
     margin: 1%;
     border: 1px solid grey;
 
@@ -878,6 +872,59 @@ img {
         color: black;
         font-weight: 500;
       }
+    }
+  }
+}
+
+#Projects {
+  .box {
+    top: 5vh;
+  }
+
+  .header {
+    height: 10%;
+    padding-top: 2.5vh;
+    @media screen and (min-width: 250px) and (max-width: 750px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+
+    .thumbnail {
+      border: 1px solid white;
+      border-radius: 10px 10px 10px;
+      width: 50%;
+      height: 66%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &:hover {
+        -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+        box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
+      }
+
+      &:active {
+        -webkit-box-shadow: none !important;
+        -moz-box-shadow: none !important;
+        box-shadow: none !important;
+      }
+
+      .title {
+        font-size: 1.3rem;
+
+      }
+    }
+
+    .project {
+      width: 100%;
+
     }
   }
 }
