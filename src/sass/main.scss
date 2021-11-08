@@ -895,11 +895,22 @@ img {
     align-items: center;
     height: 90%;
 
+    .closeButton {
+      position: absolute;
+      top: 2.5vw;
+      right: 2.5vw;
+
+      img:hover {
+        cursor: pointer;
+      }
+    }
+
     .thumbnail {
       border: 1px solid white;
       border-radius: 10px 10px 10px;
       width: 50%;
       height: 66%;
+      margin: 7.5%;
       display: flex;
       justify-content: center;
       align-items: center;

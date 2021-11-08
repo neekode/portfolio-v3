@@ -2,6 +2,8 @@ import React, {useRef, useEffect, useContext, useState} from 'react';
 import {themeChange} from "../scripts/library";
 import {ThemeContext} from "../scripts/context";
 import Project from "./Project"
+import resume from "../assets/resume.png";
+import close from "./../assets/close.svg";
 
 const projects = [{
     title: 'neekode.com',
@@ -48,7 +50,9 @@ function Projects() {
                 <h2 className="header">Projects:</h2>
 
                 <div className={'wrapper'}>
-                    {showAsList() ? <button onClick={() => handleProjectVisible(-1, true)}>button</button> : ''}
+                    {showAsList() ? <span className='closeButton'
+                                          onClick={() => handleProjectVisible(-1, true)}><img className="" alt="profile"
+                                                                                              src={close}/></span> : ''}
 
                     {
                         !showAsList() ? projectsState.map((obj, index) => (

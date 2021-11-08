@@ -41,7 +41,6 @@ img {
   position: relative;
   z-index: 2;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   .section {
     height: 150vh;
@@ -93,7 +92,6 @@ img {
   width: 80vw !important;
   top: 46vw !important;
 }
-
 @media screen and (min-width: 340px) {
   .introBoxMobile {
     height: 88vw !important;
@@ -136,14 +134,12 @@ img {
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .sandbox-button {
     width: 5vw !important;
     height: 5vw !important;
     margin-top: 7.5vw;
   }
-
   .sandbox-button img {
     width: 4.5vw !important;
     height: 4.5vw !important;
@@ -166,13 +162,11 @@ img {
   width: 85vw !important;
   height: 85vh !important;
 }
-
 @media screen and (min-width: 500px) {
   .content-sandbox .box {
     margin-top: 50vh !important;
   }
 }
-
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .content-sandbox .box {
     font-size: 0.8rem;
@@ -186,7 +180,6 @@ img {
   z-index: 10000;
   margin-top: 65vh;
 }
-
 @media screen and (min-width: 500px) and (max-width: 800px) {
   .content-sandbox .tests {
     font-size: 1rem;
@@ -281,7 +274,6 @@ img {
 #Background .animation-controller .limit {
   font-size: 0.3rem;
 }
-
 @media screen and (max-width: 900px) {
   #Background .animation-controller .limit {
     font-size: 0.7rem !important;
@@ -296,7 +288,6 @@ img {
   float: right;
   color: #94A1B6;
 }
-
 @media screen and (max-width: 900px) {
   #Background .animation-controller .header .sub-header {
     font-size: 0.7rem !important;
@@ -374,7 +365,6 @@ img {
   float: left;
   font-size: 1.4rem !important;
 }
-
 @media screen and (min-width: 340px) and (max-width: 400px) {
   .NavBar-mobile .nav-item {
     font-size: 1.7rem !important;
@@ -498,40 +488,33 @@ img {
 #About #about-content .inner-emblem-list {
   line-height: 0.85;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #About #about-content .emblem-box {
     width: 100%;
   }
-
   #About #about-content .emblem-box .emblem-section {
     width: 90%;
     margin: auto;
   }
-
   #About #about-content .emblem-box .emblem {
     width: 50%;
     font-size: 1.2rem !important;
     height: 7vw !important;
   }
-
   #About #about-content .emblem-box .hexagon {
     width: 23.5vw;
     top: -0.2vw;
     position: relative;
     font-size: 0.85rem !important;
   }
-
   #About #about-content .emblem-box .hexagon:nth-child(2n-1) {
     right: 0;
   }
-
   #About #about-content .emblem-box .inner-emblem {
     padding-top: 1.5vw;
     padding-bottom: 2.5vw;
     width: auto !important;
   }
-
   #About #about-content .emblem-box .subEmblem {
     margin-top: 0 !important;
   }
@@ -645,37 +628,29 @@ img {
   padding-top: 4vw !important;
   height: 20vw !important;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #Experience .header {
     height: 5% !important;
   }
-
   #Experience .banner-expanded {
     height: 75% !important;
   }
-
   #Experience .sub-header {
     font-size: 1.4rem !important;
   }
-
   #Experience .job-description {
     font-size: 1.1rem !important;
   }
-
   #Experience .hexagon {
     width: 11vw;
   }
-
   #Experience .hexagon .innerHex {
     font-size: 0.9rem !important;
   }
-
   #Experience .hex-description {
     font-size: 1rem !important;
     height: 10vw;
   }
-
   #Experience .hex-description-expanded {
     font-size: 1rem !important;
     padding-top: 6.5vw !important;
@@ -713,12 +688,10 @@ img {
   text-align: left;
   padding: 5%;
 }
-
 .princess-wrapper .princess-box .text-box h6 {
   font-size: 0.65rem;
   color: dodgerblue;
 }
-
 .princess-wrapper .princess-box .text-box span {
   font-size: 0.45rem;
   color: black;
@@ -728,12 +701,10 @@ img {
 #Projects .box {
   top: 5vh;
 }
-
 #Projects .header {
   height: 10%;
   padding-top: 2.5vh;
 }
-
 @media screen and (min-width: 250px) and (max-width: 750px) {
   #Projects .header {
     font-size: 1.4rem;
@@ -747,32 +718,39 @@ img {
   height: 90%;
 }
 
+#Projects .wrapper .closeButton {
+  position: absolute;
+  top: 2.5vw;
+  right: 2.5vw;
+}
+
+#Projects .wrapper .closeButton img:hover {
+  cursor: pointer;
+}
+
 #Projects .wrapper .thumbnail {
   border: 1px solid white;
   border-radius: 10px 10px 10px;
   width: 50%;
   height: 66%;
+  margin: 7.5%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
 #Projects .wrapper .thumbnail:hover {
   -webkit-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   -moz-box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
   box-shadow: 3px 6px 14px 7px rgba(0, 0, 0, 0.29);
 }
-
 #Projects .wrapper .thumbnail:active {
   -webkit-box-shadow: none !important;
   -moz-box-shadow: none !important;
   box-shadow: none !important;
 }
-
 #Projects .wrapper .thumbnail .title {
   font-size: 1.3rem;
 }
-
 #Projects .wrapper .project {
   width: 100%;
 }

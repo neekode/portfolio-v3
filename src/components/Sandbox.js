@@ -40,12 +40,11 @@ function Sandbox() {
     /** Current Problem:
      *
      */
-
     const test1 = 0;
-    const someFunction = function (x) {
+    const findMajority = function (nums) {
         setSolution();
     };
-    useEffect(() => someFunction(test1), []);
+    useEffect(() => findMajority(test1), []);
 
     return (
         <div className="section" id="Sandbox">
